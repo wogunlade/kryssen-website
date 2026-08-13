@@ -1,586 +1,206 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Kryssen Growth Studio — B2B SaaS Growth Architecture</title>
-  <meta name="description" content="Kryssen helps revenue-stage B2B SaaS teams stop Random Growth, prove one demand motion, and make an objective Scale / Fix / Kill decision in 45 days.">
-  <link rel="stylesheet" href="style.css">
+  <meta name="theme-color" content="#0e231e">
+  <title>Kryssen Growth Studio — B2B Demand Motion</title>
+  <meta name="description" content="Kryssen builds one repeatable demand motion for B2B companies running sales-led, product-led or hybrid growth.">
+  <link rel="canonical" href="https://kryssengrowth.com/">
+  <meta property="og:title" content="Kryssen — Build a B2B demand motion that produces revenue">
+  <meta property="og:description" content="A productized 45-day sprint for B2B companies running sales-led, PLG or hybrid growth.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://kryssengrowth.com/">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-
-  <!-- NAVIGATION HEADER (STRICTLY 4 MENU ITEMS TO PREVENT OVERLAP) -->
-  <header class="header">
-    <div class="container header-inner">
-      <a href="#top" class="brand">
-        <span class="brand-mark">KRYSSEN</span>
-        <span class="brand-name">GROWTH <span>STUDIO</span></span>
-      </a>
-      
-      <ul class="nav-links">
-        <li><a href="#diagnosis" class="nav-link">Diagnosis</a></li>
-        <li><a href="#method" class="nav-link">Method</a></li>
-        <li><a href="#assurance" class="nav-link">Assurance</a></li>
-        <li><a href="#team" class="nav-link">Operators</a></li>
-      </ul>
-
-      <div class="header-cta">
-        <button class="btn btn-primary js-open-modal">CLAIM YOUR 45-DAY PIPELINE AUDIT</button>
-      </div>
+  <a class="skip-link" href="#content">Skip to content</a>
+  <header class="site-header">
+    <div class="shell nav-wrap">
+      <a class="brand" href="index.html" aria-label="Kryssen Growth Studio home"><span class="brand-mark">KRYSSEN</span> GROWTH <em>STUDIO</em></a>
+      <button class="menu-button" type="button" data-menu-button aria-expanded="false" aria-controls="primary-nav" aria-label="Open navigation">☰</button>
+      <nav class="nav-links" id="primary-nav" data-nav aria-label="Primary navigation">
+        <a href="#motions">Your motion</a>
+        <a href="#sprint">The sprint</a>
+        <a href="proof.html">Proof</a>
+        <a href="#fit">Fit</a>
+        <a class="button" href="apply.html">Apply for the sprint <span aria-hidden="true">→</span></a>
+      </nav>
     </div>
   </header>
 
-  <main id="top">
-
-    <!-- HERO SECTION — 2-COLUMN SIDE-BY-SIDE HERO LAYOUT -->
+  <main id="content">
     <section class="hero">
-      <div class="container">
-        <div class="hero-grid">
-          <div class="hero-text-col">
-            <h1>Stop Guessing How Your Business Will Grow</h1>
-            <p class="hero-subheadline">
-              We Build A Demand System That Gives You More Qualified B2B Buyers<br>
-              Than You Can Handle, in 45 Days.
-            </p>
-            
-            <div class="hero-cta-single">
-              <button class="btn btn-primary js-open-modal">CLAIM YOUR 45-DAY PIPELINE AUDIT →</button>
-            </div>
+      <div class="shell hero-grid">
+        <div>
+          
+          <h1>Build a demand motion you can trust to <em>produce revenue.</em></h1>
+          <p class="lead">Your product works. But demand is still uneven. Kryssen finds the break, builds one focused motion and proves what to scale—in 45 days.</p>
+          <div class="button-row">
+            <a class="button" href="apply.html">Apply for the 45-Day Sprint <span aria-hidden="true">→</span></a>
+            <a class="button button--ghost" href="#sprint">See exactly what we build</a>
           </div>
+          <div class="fit-chips"><span>Paying B2B customers or clear usage</span><span>Senior operators only</span><span>Nigeria-built, growth-market aware</span></div>
+        </div>
 
-          <div class="hero-img-col">
-            <div class="hero-image-frame-compact">
-              <img src="assets/simple_hero_arch.jpg" alt="Simplified Kryssen Growth Pipeline Architecture Diagram: Demand Motion -> Verified Pipeline -> Scale Decision">
-            </div>
-          </div>
+        <aside class="revenue-card" aria-label="Operator revenue experience">
+          <div class="revenue-label">Revenue influenced</div>
+          <div class="revenue-number">$200m+</div>
+          <p>Contributed by our operators across mobility, payments and SaaS—not consumer campaign vanity metrics.</p>
+          <div class="sector-row"><span>Mobility</span><span>Payments</span><span>SaaS</span></div>
+          <div class="motion-path" aria-label="Demand to revenue"></div>
+        </aside>
+      </div>
+    </section>
+
+    <section class="logo-strip" aria-label="Operator experience">
+      <div class="shell logo-wrap">
+        <div class="logo-label">Operator experience across teams including</div>
+        <div class="logos"><img src="assets/logos-v4/max.svg" width="96" height="46" alt="MAX"><img src="assets/logos-v4/voguepay.webp" width="170" height="22" alt="VoguePay"><img src="assets/logos-v4/zedvance.svg" width="150" height="21" alt="Zedvance"><img src="assets/logos-v4/mkobo.webp" width="62" height="52" alt="Mkobo"><img src="assets/logos-v4/gigm.webp" width="52" height="52" alt="GIG Mobility"><img src="assets/logos-v4/wesley.webp" width="145" height="38" alt="Wesley Microfinance Bank"><img src="assets/logos-v4/sabi.webp" width="135" height="40" alt="Sabi"><img src="assets/logos-v4/rensource.webp" width="135" height="45" alt="Rensource"></div>
+      </div>
+    </section>
+
+    <section class="section section--surface">
+      <div class="shell truth-grid">
+        <div class="truth-statement"><p>Most agencies know consumer campaigns. <em>B2B revenue is a different job.</em></p></div>
+        <div class="truth-list">
+          <article class="truth-item"><b>01</b><div><h3>The buyer is not one person.</h3><p>You need the user, champion, blocker and budget owner to move—not a broad audience.</p></div></article>
+          <article class="truth-item"><b>02</b><div><h3>A signup is not revenue.</h3><p>PLG fails when users do not activate, stay, pay or create a sales-ready account.</p></div></article>
+          <article class="truth-item"><b>03</b><div><h3>An MQL is not pipeline.</h3><p>Sales-led growth needs accounts with fit, authority and a real reason to buy now.</p></div></article>
+          <article class="truth-item"><b>04</b><div><h3>A campaign is not a motion.</h3><p>Revenue needs demand, product, sales and measurement to work as one system.</p></div></article>
         </div>
       </div>
     </section>
 
-    <!-- CREDIBILITY LOGO STRIP — ORIGINAL BRAND COLORS WITH EXPANDED VOGUEPAY, SABI & MKOBO LOGOS -->
-    <section class="experience-bar-light">
-      <div class="container experience-inner">
-        <span class="experience-label-light">OPERATOR EXPERIENCE ACROSS TEAMS INCLUDING</span>
-        <div class="logo-images-grid-light">
-          <div class="logo-img-item" title="MAX.NG">
-            <img src="assets/logos/max.svg" alt="MAX.NG Logo">
-          </div>
-          <div class="logo-img-item logo-voguepay" title="VoguePay">
-            <img src="assets/logos/voguepay.jpeg" alt="VoguePay Logo">
-          </div>
-          <div class="logo-img-item logo-sabi" title="Sabi.am">
-            <img src="assets/logos/sabi.jpg" alt="Sabi.am Logo">
-          </div>
-          <div class="logo-img-item" title="RenSource">
-            <img src="assets/logos/rensource.png" alt="RenSource Logo">
-          </div>
-          <div class="logo-img-item" title="GIG Mobility">
-            <img src="assets/logos/gigm.jpg" alt="GIG Mobility Logo">
-          </div>
-          <div class="logo-img-item" title="Wesley MFB">
-            <img src="assets/logos/wesley.jpg" alt="Wesley MFB Logo">
-          </div>
-          <div class="logo-img-item logo-mkobo" title="MKobo">
-            <img src="assets/logos/mkobo.jpg" alt="MKobo Logo">
-          </div>
-          <div class="logo-img-item" title="Zedvance">
-            <img src="assets/logos/zedvance.svg" alt="Zedvance Logo">
-          </div>
+    <section class="section" id="motions">
+      <div class="shell">
+        <div class="section-head">
+          <div><div class="eyebrow">Start with your motion</div><h2>How does your business turn demand into revenue?</h2></div>
+          <p>We do not force every B2B company into the same lead funnel. Choose the motion you actually run.</p>
         </div>
-      </div>
-    </section>
-
-    <!-- COHESIVE INTEGRATED DIAGNOSIS SECTION -->
-    <section id="diagnosis" class="editorial-sec">
-      <div class="container">
-        <div class="cohesive-diag-intro">
-          <h2>You have product proof. But do you have growth proof?</h2>
-          <p class="lead">
-            Most B2B SaaS teams have paying customers and high daily activity. What they lack is a defensible, repeatable answer to which buyer, offer, and distribution channel creates predictable pipeline.
-          </p>
-        </div>
-
-        <!-- INTERACTIVE DIAGNOSTIC WIDGET WITH BIGGER CALLOUT HEADING & DELINEATED PANEL -->
-        <div id="diagnostic" class="diagnostic-widget">
-          <div class="diag-widget-header">
-            <h3>Where is your pipeline breaking?</h3>
-          </div>
-
-          <div class="diag-options-grid">
-            <div class="diag-option-card selected" data-diag-key="icp">
-              <span class="num">01 — AUDIENCE</span>
-              <h4>ICP Friction</h4>
-              <p>Mismatched leads or unclear segment</p>
-            </div>
-            <div class="diag-option-card" data-diag-key="offer">
-              <span class="num">02 — POSITIONING</span>
-              <h4>Offer Resistance</h4>
-              <p>Prospects lack purchasing urgency</p>
-            </div>
-            <div class="diag-option-card" data-diag-key="motion">
-              <span class="num">03 — DISTRIBUTION</span>
-              <h4>Channel Sprawl</h4>
-              <p>Budget split across unproven tactics</p>
-            </div>
-            <div class="diag-option-card" data-diag-key="followup">
-              <span class="num">04 — CONVERSION</span>
-              <h4>Qualification Fall-off</h4>
-              <p>Leads drop off before demo booking</p>
-            </div>
-          </div>
-
-          <!-- CLEARLY DELINEATED PROBLEM VS SOLUTION PANEL -->
-          <div class="diag-delineated-panel">
-            <div class="diag-box problem-box">
-              <div>
-                <span class="diag-box-tag">THE REVENUE LEAK (PROBLEM)</span>
-                <h4 id="diag-problem-title">The Revenue Leak: ICP Mismatch</h4>
-                <p id="diag-problem-desc">Your budget is being burned across broad audiences who lack urgent commercial pain or buying authority.</p>
-              </div>
-            </div>
-
-            <div class="diag-box solution-box">
-              <div>
-                <span class="diag-box-tag">THE KRYSSEN SPRINT FIX (SOLUTION)</span>
-                <h4 id="diag-solution-title">The 45-Day Fix: 1-Buyer Restraint</h4>
-                <p id="diag-solution-desc">We isolate one named decision-maker profile with validated purchasing urgency before funding distribution.</p>
-              </div>
-              <div style="margin-top:20px;">
-                <button class="btn btn-lime js-open-modal" style="padding:14px 24px;">CLAIM PIPELINE AUDIT →</button>
-              </div>
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </section>
-
-    <!-- REVENUE GROWTH LEVERS SECTION -->
-    <section class="levers-sec">
-      <div class="container">
-        <div class="sec-header">
-          <h2>The 3 Mathematical Levers That Force a B2B SaaS Business to Scale</h2>
-          <p>Every commercial expansion reduces to 3 fundamental levers. Kryssen's 45-Day Sprint optimizes all three simultaneously.</p>
-        </div>
-
-        <div class="levers-grid">
-          <article class="lever-card">
-            <div class="lever-num">01</div>
-            <h3>Increase Account Acquisition</h3>
-            <p>We replace random lead volume with qualified, high-intent buyer accounts who meet your ideal customer profile (ICP).</p>
+        <div class="motion-grid">
+          <article class="motion-card" data-code="01 / SALES">
+            <h3>Sales-led</h3>
+            <p>For high-value or complex deals that need a human close.</p>
+            <ul><li>Fewer, better-fit accounts</li><li>Buying-committee messaging</li><li>Sales-accepted pipeline</li></ul>
+            <div class="metric"><span>We connect</span>Target account → opportunity → closed-won</div>
+            <p><a href="apply.html?motion=sales">Choose sales-led →</a></p>
           </article>
-
-          <article class="lever-card">
-            <div class="lever-num">02</div>
-            <h3>Increase Average Deal ACV</h3>
-            <p>We re-engineer your core offer narrative so buyers evaluate your product on high-value business outcomes rather than feature price-wars.</p>
+          <article class="motion-card" data-code="02 / PRODUCT">
+            <h3>Product-led</h3>
+            <p>For products where users can start and reach value before sales.</p>
+            <ul><li>Faster activation</li><li>Clear upgrade triggers</li><li>Retention by segment</li></ul>
+            <div class="metric"><span>We connect</span>Signup → value → retained → paid</div>
+            <p><a href="apply.html?motion=plg">Choose PLG →</a></p>
           </article>
-
-          <article class="lever-card">
-            <div class="lever-num">03</div>
-            <h3>Increase Conversion Velocity</h3>
-            <p>We build automated qualification gates and nurture pathways that reduce sales cycle length and convert leads into active demos faster.</p>
+          <article class="motion-card" data-code="03 / HYBRID">
+            <h3>Hybrid</h3>
+            <p>For products that use product signals to trigger sales help or expansion.</p>
+            <ul><li>Account-level product signals</li><li>Useful PQL rules</li><li>Product-to-sales handoff</li></ul>
+            <div class="metric"><span>We connect</span>Activated account → PQL → expansion</div>
+            <p><a href="apply.html?motion=hybrid">Choose hybrid →</a></p>
           </article>
         </div>
       </div>
     </section>
 
-    <!-- CONSOLIDATED SECTION: THE 45-DAY PIPELINE PROOF SPRINT & WORK PRODUCT -->
-    <section id="method" class="editorial-sec dark-sec">
-      <div class="container">
-        <div class="sec-header">
-          <h2 style="color:#FFFFFF;">The 45-Day Pipeline Proof Sprint</h2>
-          <p style="color:var(--text-on-dark-muted);">
-            We do not sell monthly retainers or vague reports. Every stage of our sprint engineers a tangible, fully operational asset that stays with your team.
-          </p>
+    <section class="section section--dark">
+      <div class="shell agency-compare">
+        <div class="agency-copy">
+          <div class="eyebrow">Why general agencies miss</div>
+          <h2>Attention is useful. Revenue is the point.</h2>
+          <p>Consumer tactics can create clicks and leads. They do not automatically create a B2B buying decision, product value or sales-ready account.</p>
+          <a class="button button--lime" href="proof.html">Why trust Kryssen <span aria-hidden="true">→</span></a>
         </div>
-
-        <div class="consolidated-sprint-grid">
-          <!-- STAGE 01 -->
-          <article class="sprint-stage-row">
-            <div class="sprint-stage-time">DAY 01 – 07</div>
-            <div class="sprint-stage-info">
-              <h3>01 — Diagnose Primary Constraint</h3>
-              <p>We audit your existing buyer data, positioning, and traffic channels to isolate the single highest-leverage commercial bottleneck.</p>
-            </div>
-            <div class="sprint-stage-deliverable">
-              <label>DELIVERABLE FILE 01</label>
-              <h4>Revenue Signal Scan</h4>
-              <p>Empirical baseline audit documenting exact constraint and target metrics.</p>
-            </div>
-          </article>
-
-          <!-- STAGE 02 -->
-          <article class="sprint-stage-row">
-            <div class="sprint-stage-time">DAY 08 – 14</div>
-            <div class="sprint-stage-info">
-              <h3>02 — Decide Single Commercial Bet</h3>
-              <p>We lock in the named ICP profile, core buyer problem, offer outcome narrative, channel motion, and objective proof event threshold.</p>
-            </div>
-            <div class="sprint-stage-deliverable">
-              <label>DELIVERABLE FILE 02</label>
-              <h4>One-Motion Decision Architecture</h4>
-              <p>Documented strategy locking in buyer, offer, channel, and proof criteria.</p>
-            </div>
-          </article>
-
-          <!-- STAGE 03 -->
-          <article class="sprint-stage-row">
-            <div class="sprint-stage-time">DAY 15 – 21</div>
-            <div class="sprint-stage-info">
-              <h3>03 — Engineer Demand System</h3>
-              <p>We build the conversion page, messaging angles, qualification routing, follow-up nurture sequence, and attribution tracking.</p>
-            </div>
-            <div class="sprint-stage-deliverable">
-              <label>DELIVERABLE FILE 03</label>
-              <h4>Live Demand System</h4>
-              <p>Operational conversion asset, qualification engine, and tracking instrumentation.</p>
-            </div>
-          </article>
-
-          <!-- STAGE 04 -->
-          <article class="sprint-stage-row">
-            <div class="sprint-stage-time">DAY 22 – 40</div>
-            <div class="sprint-stage-info">
-              <h3>04 — Launch & Prove</h3>
-              <p>We deploy the live acquisition motion, monitor buyer response signals, measure lead quality, and execute one controlled optimization.</p>
-            </div>
-            <div class="sprint-stage-deliverable">
-              <label>LIVE PROOF</label>
-              <h4>Market Validation</h4>
-              <p>Verified commercial conversation data captured from active buyers.</p>
-            </div>
-          </article>
-
-          <!-- STAGE 05 -->
-          <article class="sprint-stage-row">
-            <div class="sprint-stage-time">DAY 41 – 45</div>
-            <div class="sprint-stage-info">
-              <h3>05 — Executive Growth Decision</h3>
-              <p>We deliver an empirical Scale / Fix / Kill memo for leadership, giving your board and sales lead clear direction for future spend.</p>
-            </div>
-            <div class="sprint-stage-deliverable">
-              <label>DELIVERABLE FILE 04</label>
-              <h4>Growth Decision Memo</h4>
-              <p>Formal Scale / Fix / Kill synthesis report and 90-day execution roadmap.</p>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- SECTION 5: PIPELINE PROOF ASSURANCE -->
-    <section id="assurance" class="editorial-sec">
-      <div class="container">
-        <div class="assurance-banner">
-          <h2 style="color:#FFFFFF;">The Kryssen Pipeline Proof Assurance</h2>
-          <p style="color:var(--text-on-dark-muted); max-width:760px; margin-top:16px;">
-            We reduce your risk by putting part of our own fee on the table. This is not a vague revenue promise—it is a transparent delivery and proof commitment.
-          </p>
-
-          <div class="assurance-terms">
-            <div class="term-item">
-              <b>50%</b>
-              <span>Paid before Day 1 to initiate the Signal Scan and system build.</span>
-            </div>
-            <div class="term-item">
-              <b>30%</b>
-              <span>Paid upon completion and sign-off of the Day 21 live market launch.</span>
-            </div>
-            <div class="term-item">
-              <b>20%</b>
-              <span>Held until the agreed Pipeline Proof Event is objectively verified.</span>
-            </div>
+        <div class="compare" role="table" aria-label="General agency compared with Kryssen">
+          <div class="compare-row" role="row">
+            <div class="compare-cell" role="cell"><small>General agency</small><b>Broad audience</b><p>Demographics, reach and platform targeting.</p></div>
+            <div class="compare-cell" role="cell"><small>Kryssen</small><b>Account and buying group</b><p>User, champion, blocker and budget owner.</p></div>
           </div>
-
-          <p class="fine-print">
-            <strong>Assurance Terms:</strong> If Kryssen fails to launch by Day 21 due to internal execution delay, service fees received are refunded. If a compliant campaign misses the agreed proof event, we execute one 21-day optimization extension without additional management fees. The client remains responsible for product functionality, pricing, prompt sales lead follow-up, and direct ad/software costs.
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <!-- SECTION 6: QUALIFICATION MATRIX -->
-    <section id="qualification" class="editorial-sec" style="background-color:var(--bg-surface);">
-      <div class="container">
-        <div class="sec-header">
-          <h2>We are selective about who we work with.</h2>
-          <p>Because our work requires intense focus and shared risk, we only accept companies equipped to execute.</p>
-        </div>
-
-        <div class="qual-grid">
-          <article class="qual-card">
-            <h3>This is for you if:</h3>
-            <p>You have product proof and operational readiness to run a focused commercial test.</p>
-            <ul class="qual-list">
-              <li>10+ paying customer accounts or proven product-market fit</li><li>Annual Customer Value (ACV) of $3,000+ or equivalent</li><li>Dedicated sales lead or founder handling sales calls</li><li>Allocated direct budget for direct media/tools ($1k–$3k)</li><li>Capacity for 2-business-day approval turnarounds</li><li>Willingness to pause unrelated, unproven channel tests</li>
-            </ul>
-          </article>
-
-          <article class="qual-card dark">
-            <h3 style="color:#FFFFFF;">We should not work together if:</h3>
-            <p style="color:var(--text-on-dark-muted);">We are transparent when a team is not ready for a pipeline sprint.</p>
-            <ul class="qual-list">
-              <li>You are pre-revenue without validated paying customer proof</li><li>You require an outsourced cold-calling sales agency</li><li>You require guaranteed revenue contracts without sales control</li><li>You cannot fund direct ad spend or basic software tools</li><li>Your sales team takes 4+ days to follow up with qualified leads</li><li>You insist on launching 5 channels simultaneously</li>
-            </ul>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- SECTION 7: TEAM / OPERATOR AUTHORITY WITH CLICKABLE LINKEDIN LINKS -->
-    <section id="team" class="editorial-sec">
-      <div class="container">
-        <div class="team-layout">
-          <div class="team-portraits-grid">
-            <article class="team-card">
-              <div class="team-img-frame">
-                <img src="assets/ade_oluwade.jpg" alt="Ade Oluwade — Founder & Commercial Growth Lead">
-              </div>
-              <div class="team-card-info">
-                <h4>Ade Oluwade</h4>
-                <span>Founder & Commercial Lead</span>
-                <a href="https://www.linkedin.com/in/ade-oluwade" target="_blank" rel="noopener" class="linkedin-link">
-                  <svg viewBox="0 0 24 24"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.46 10.9v8.37H9.25V10.9H6.46M7.86 6.74a1.6 1.6 0 1 0 0 3.2 1.6 1.6 0 0 0 0-3.2z"/></svg>
-                  Connect on LinkedIn
-                </a>
-              </div>
-            </article>
-
-            <article class="team-card">
-              <div class="team-img-frame">
-                <img src="assets/idorenyin.jpg" alt="Idorenyin — Growth Intelligence Lead">
-              </div>
-              <div class="team-card-info">
-                <h4>Idorenyin</h4>
-                <span>Systems & Intelligence Lead</span>
-                <a href="https://www.linkedin.com/in/idorenyin-growth" target="_blank" rel="noopener" class="linkedin-link">
-                  <svg viewBox="0 0 24 24"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.46 10.9v8.37H9.25V10.9H6.46M7.86 6.74a1.6 1.6 0 1 0 0 3.2 1.6 1.6 0 0 0 0-3.2z"/></svg>
-                  Connect on LinkedIn
-                </a>
-              </div>
-            </article>
+          <div class="compare-row" role="row">
+            <div class="compare-cell" role="cell"><small>General agency</small><b>Campaign output</b><p>Ads, content, events and lead volume.</p></div>
+            <div class="compare-cell" role="cell"><small>Kryssen</small><b>Revenue motion</b><p>Demand, activation, sales handoff and expansion.</p></div>
           </div>
-
-          <div class="team-copy">
-            <h2>You work directly with the operators diagnosing the problem.</h2>
-            <p class="lead" style="font-size:1.08rem; margin:16px 0 24px;">
-              No junior account managers. No outsourced freelancers. You deal directly with senior growth strategists.
-            </p>
-            <p style="color:var(--text-muted); margin-bottom:16px;">
-              <strong>Ade Oluwade</strong> leads commercial strategy, positioning, offer mechanics, revenue diagnostics, and leadership alignment.
-            </p>
-            <p style="color:var(--text-muted); margin-bottom:24px;">
-              <strong>Idorenyin</strong> directs market intelligence, conversion architecture, tracking instrumentation, analytics, and execution systems.
-            </p>
-            <p style="font-size:0.9rem; color:var(--text-muted); padding-top:20px; border-top:1px solid var(--border-line);">
-              Together, Kryssen combines growth strategy, direct-response principles, and technical measurement without turning your company into an agency experiment.
-            </p>
+          <div class="compare-row" role="row">
+            <div class="compare-cell" role="cell"><small>General agency</small><b>CPL and engagement</b><p>The report ends before the money.</p></div>
+            <div class="compare-cell" role="cell"><small>Kryssen</small><b>Commercial proof</b><p>Activation, PQL, accepted pipeline and revenue.</p></div>
+          </div>
+          <div class="compare-row" role="row">
+            <div class="compare-cell" role="cell"><small>General agency</small><b>Lead handoff</b><p>Sales receives a spreadsheet and the agency moves on.</p></div>
+            <div class="compare-cell" role="cell"><small>Kryssen</small><b>Connected system</b><p>Product, CRM, nurture and follow-up rules work together.</p></div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- SECTION 8: PRICING & ENGAGEMENT -->
-    <section class="editorial-sec" style="background-color:var(--bg-surface);">
-      <div class="container">
-        <article class="pricing-card">
-          <h2>Stop funding scattered marketing. Prove one motion first.</h2>
-          <p style="color:var(--text-muted); max-width:680px; margin:0 auto 24px;">
-            The 45-day Pipeline Proof Engine is a complete senior-led commercial implementation for revenue-stage B2B SaaS companies.
-          </p>
-
-          <div class="price-tag">₦1.25m – ₦1.75m</div>
-          <p style="font-size:0.88rem; color:var(--text-muted); margin-bottom:36px;">
-            Structured under the 50 / 30 / 20 Pipeline Proof Assurance model. Direct media and tool spend paid by your company.
-          </p>
-
-          <button class="btn btn-primary js-open-modal">CLAIM YOUR 45-DAY PIPELINE AUDIT →</button>
-        </article>
+    <section class="section section--surface" id="sprint">
+      <div class="shell">
+        <div class="section-head">
+          <div><div class="eyebrow">One productized service</div><h2>The 45-Day Demand Proof Sprint</h2></div>
+          <p>One segment. One offer. One motion. One proof target. No open-ended agency retainer.</p>
+        </div>
+        <div class="sprint-grid">
+          <article class="sprint-step"><span class="day">DAYS 01–07</span><h3>Find the break</h3><p>We audit buyer, product, sales and funnel data.</p><strong>Revenue Signal Scan</strong></article>
+          <article class="sprint-step"><span class="day">DAYS 08–14</span><h3>Choose the bet</h3><p>We lock the segment, value, motion and proof target.</p><strong>One-Motion Plan</strong></article>
+          <article class="sprint-step"><span class="day">DAYS 15–21</span><h3>Build and launch</h3><p>We create the path from demand to value to revenue.</p><strong>Live Demand System</strong></article>
+          <article class="sprint-step"><span class="day">DAYS 22–45</span><h3>Prove the signal</h3><p>We measure, improve once and make the next call.</p><strong>Scale / Fix / Kill Memo</strong></article>
+        </div>
+        <div class="build-list" aria-label="Sprint capabilities"><span>ICP and buying group</span><span>Offer and message</span><span>Landing or onboarding</span><span>Nurture</span><span>PQL or qualification</span><span>CRM and product tracking</span></div>
       </div>
     </section>
 
-    <!-- SECTION 9: CENTRALIZED FAQ ACCORDION -->
-    <section id="faq" class="editorial-sec">
-      <div class="container">
-        <div class="sec-header-centered">
-          <h2>Frequently Asked Questions</h2>
-          <p>Clear scope. Transparent expectations. No fine-print surprises.</p>
-        </div>
-
-        <div class="faq-container-centered">
-          <div class="faq-item">
-            <div class="faq-question">Do you guarantee revenue?</div>
-            <div class="faq-answer">
-              No serious growth studio guarantees revenue, because final revenue depends on product quality, market pricing, sales demo execution, proposal speed, and customer retention. We guarantee system launch by Day 21, an objective verified proof event metric, a 20% fee holdback, and a 21-day optimization extension if proof metrics fall short.
-            </div>
-          </div>
-
-          <div class="faq-item">
-            <div class="faq-question">Do you replace our internal sales team?</div>
-            <div class="faq-answer">
-              No. Your team owns demo calls, proposals, negotiation, and closing. Kryssen engineers the targeted demand, high-authority positioning, qualification routing, and tracking system that makes those sales calls far more qualified and productive.
-            </div>
-          </div>
-
-          <div class="faq-item">
-            <div class="faq-question">Can we run multiple growth channels at once?</div>
-            <div class="faq-answer">
-              No. Spreading focus across 4+ unproven channels is precisely why Random Growth occurs. The Pipeline Proof Engine exists to prove one buyer, one offer, and one channel motion before adding capital complexity.
-            </div>
-          </div>
-
-          <div class="faq-item">
-            <div class="faq-question">What inputs does our team need to provide?</div>
-            <div class="faq-answer">
-              We require access to existing customer data, product context, ad/analytics accounts, a dedicated sales lead for demo calls, and guaranteed 2-business-day approval turnarounds on assets.
-            </div>
-          </div>
-
-          <div class="faq-item">
-            <div class="faq-question">What happens after Day 45?</div>
-            <div class="faq-answer">
-              You receive a formal Scale / Fix / Kill Growth Decision Memo. If the test produces verified proof, you can scale the motion internally using our documentation or engage Kryssen for ongoing quarterly optimization.
-            </div>
-          </div>
-
-          <div class="faq-item">
-            <div class="faq-question">Why not just hire a Head of Growth?</div>
-            <div class="faq-answer">
-              Hiring a full-time Head of Growth before you know which distribution motion works is an expensive gamble ($100k+ salary). Kryssen identifies and validates the exact playbook a future growth hire should scale.
-            </div>
-          </div>
+    <section class="section section--tight">
+      <div class="shell proof-band">
+        
+        <div class="proof-copy">
+          <div class="eyebrow">Operators, not account managers</div>
+          <h2 style="color:var(--lime)">We have worked where the revenue decision gets made.</h2>
+          <p>Our operators have contributed to revenue across mobility, payments and SaaS. You work with the people diagnosing and building the motion.</p>
+          <div class="proof-points"><div><b>Mobility</b><span>Multi-sided demand</span></div><div><b>Payments</b><span>Trust and transaction growth</span></div><div><b>SaaS</b><span>Pipeline and product growth</span></div></div>
+          <a class="button button--lime" href="proof.html">See proof and operators <span aria-hidden="true">→</span></a>
         </div>
       </div>
     </section>
 
-    <!-- SECTION 10: FINAL CONVERSION WITH SPACED FOOTER EMAIL NOTE -->
-    <section class="final-cta-sec">
-      <div class="container">
-        <h2 style="color:#FFFFFF;">If growth is active but pipeline is unpredictable, let's talk.</h2>
-        <p>
-          We will evaluate whether a 45-day commercial sprint is justified for your company—or tell you clearly if you are not ready.
-        </p>
-
-        <button class="btn btn-lime js-open-modal">CLAIM YOUR 45-DAY PIPELINE AUDIT →</button>
-
-        <p class="final-email-note">
-          Prefer to start over email? Reach us at <a href="mailto:info@kryssengrowth.com">info@kryssengrowth.com</a>.
-        </p>
+    <section class="section section--surface" id="fit">
+      <div class="shell">
+        <div class="section-head"><div><div class="eyebrow">Fit before pitch</div><h2>This works when there is something real to prove.</h2></div><p>We will tell you quickly if the sprint is too early—or the wrong tool.</p></div>
+        <div class="fit-grid">
+          <article class="fit-card"><h3>Good fit</h3><ul class="checks"><li>Paying B2B customers or clear recurring usage</li><li>A known sales, activation or handoff problem</li><li>An owner across growth, product or sales</li><li>Fast access to data and decisions</li></ul></article>
+          <article class="fit-card fit-card--dark"><h3>Not yet</h3><ul class="checks"><li>No paying customer or product-use evidence</li><li>You only want posts, ads or outsourced cold calls</li><li>No one owns sales or product follow-up</li><li>You need guaranteed revenue without shared execution</li></ul></article>
+        </div>
       </div>
     </section>
 
+    <section class="section section--dark">
+      <div class="shell offer">
+        <div class="offer-copy"><div class="eyebrow">Stop random growth</div><h2>Prove one motion before you fund five.</h2><p>Forty-five days. Senior operators. A live system your team keeps.</p></div>
+        <aside class="offer-card"><div class="offer-label">45-Day Demand Proof Sprint</div><div class="price">₦1.25m–₦1.75m</div><p>Direct media, data and software are separate.</p><ul><li>Senior-led diagnosis and build</li><li>Live by Day 21</li><li>One controlled improvement</li><li>50 / 30 / 20 assurance model</li></ul><a class="button button--full" href="apply.html">Apply for the sprint <span aria-hidden="true">→</span></a><p class="micro" style="text-align:center;margin:10px 0 0">We review fit before recommending the engagement.</p></aside>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="shell faq-grid">
+        <div><div class="eyebrow">Straight answers</div><h2>Before you apply.</h2></div>
+        <div class="faq-list">
+          <details><summary>Do you guarantee revenue?</summary><div class="faq-answer"><p>No. We guarantee the agreed build, launch and proof process. Your product, pricing and sales execution also affect revenue.</p></div></details>
+          <details><summary>What counts as proof?</summary><div class="faq-answer"><p>A motion-specific commercial event: accepted opportunity for sales-led, activated or paid account for PLG, or product-qualified account progressing to revenue for hybrid.</p></div></details>
+          <details><summary>Do you replace sales?</summary><div class="faq-answer"><p>No. We make demand, product signals and qualification more useful to the team that closes and serves the customer.</p></div></details>
+          <details><summary>What happens after Day 45?</summary><div class="faq-answer"><p>You get a Scale / Fix / Kill decision and the system documentation. Keep it in-house or scope the next phase separately.</p></div></details>
+        </div>
+      </div>
+    </section>
   </main>
 
-  <!-- FOOTER -->
   <footer class="site-footer">
-    <div class="container">
+    <div class="shell">
       <div class="footer-top">
-        <div>
-          <div class="brand-name" style="color:#FFFFFF; font-size:1.15rem; margin-bottom:8px;">
-            KRYSSEN <span style="color:var(--accent-lime);">GROWTH</span>
-          </div>
-          <p style="font-size:0.85rem; max-width:400px; color:var(--text-on-dark-muted);">
-            Growth Operating Studio for B2B SaaS. Stop Random Growth. Prove One Demand Motion Creates Qualified Pipeline.
-          </p>
-        </div>
-
-        <nav class="footer-nav">
-          <a href="#diagnosis">Diagnosis</a>
-          <a href="#method">Method</a>
-          <a href="#assurance">Assurance</a>
-          <a href="#team">Operators</a>
-        </nav>
+        <div><a class="brand" href="index.html"><span class="brand-mark">KRYSSEN</span></a><p>B2B demand systems for sales-led, product-led and hybrid revenue.</p></div>
+        <nav class="footer-links" aria-label="Footer navigation"><a href="#motions">Your motion</a><a href="#sprint">The sprint</a><a href="proof.html">Proof</a><a href="apply.html">Apply</a><a href="mailto:info@kryssengrowth.com">Email</a></nav>
       </div>
-
-      <div class="footer-bottom">
-        <span>© 2026 Kryssen Growth Consulting. All rights reserved.</span>
-        <span>Senior-Led B2B Commercial Architecture</span>
-      </div>
+      <div class="footer-bottom"><span>© 2026 KRYSSEN GROWTH STUDIO</span><span>PRIVACY · TERMS · OPERATOR-LED B2B GROWTH</span></div>
     </div>
   </footer>
-
-  <!-- STRATEGY CALL BOOKING DRAWER -->
-  <div id="strategy-modal" class="modal-overlay">
-    <div class="modal-drawer">
-      <div>
-        <div class="modal-header">
-          <div>
-            <h3 style="font-size:1.6rem; color:var(--accent-pine); margin-top:4px;">Claim Your 45-Day Pipeline Audit</h3>
-          </div>
-          <button id="modal-close-btn" class="modal-close">✕</button>
-        </div>
-
-        <div class="step-indicator">
-          <div id="step-dot-1" class="step-dot active"></div>
-          <div id="step-dot-2" class="step-dot"></div>
-          <div id="step-dot-3" class="step-dot"></div>
-        </div>
-
-        <!-- FORM STEP 1 -->
-        <div id="form-step-1">
-          <p style="font-size:0.92rem; color:var(--text-muted); margin-bottom:24px;">
-            We keep our consultations confidential, focused, and operator-led. Tell us about your current SaaS stage.
-          </p>
-
-          <div class="form-group">
-            <label for="modal-company">Company Name & Website</label>
-            <input type="text" id="modal-company" class="form-control" placeholder="e.g. Acme SaaS (acme.com)">
-          </div>
-
-          <div class="form-group">
-            <label for="modal-acv">Target Annual Customer Value (ACV)</label>
-            <select id="modal-acv" class="form-control">
-              <option value="">Select ACV Range</option>
-              <option value="3k-10k">$3,000 – $10,000</option>
-              <option value="10k-30k">$10,000 – $30,000</option>
-              <option value="30k+">$30,000+</option>
-            </select>
-          </div>
-
-          <button id="btn-next-step" class="btn btn-primary" style="width:100%; margin-top:12px;">Next: Bottleneck & Details →</button>
-        </div>
-
-        <!-- FORM STEP 2 -->
-        <form id="strategy-booking-form">
-          <div id="form-step-2" style="display:none;">
-            <div class="form-group">
-              <label for="modal-challenge">Primary Commercial Growth Bottleneck</label>
-              <textarea id="modal-challenge" class="form-control" placeholder="Briefly describe what channel or motion is underperforming..."></textarea>
-            </div>
-
-            <div class="form-group">
-              <label for="modal-name">Your Full Name & Title</label>
-              <input type="text" id="modal-name" class="form-control" placeholder="e.g. Sarah Chen, CEO / Founder" required>
-            </div>
-
-            <div class="form-group">
-              <label for="modal-email">Work Email Address</label>
-              <input type="email" id="modal-email" class="form-control" placeholder="sarah@acme.com" required>
-            </div>
-
-            <button type="submit" class="btn btn-primary" style="width:100%; margin-top:12px;">CONFIRM & CLAIM PIPELINE AUDIT →</button>
-          </div>
-        </form>
-
-        <!-- FORM SUCCESS STEP -->
-        <div id="form-success" style="display:none; text-align:center; padding:40px 0;">
-          <h3 style="font-size:2rem; color:var(--accent-pine); margin-bottom:16px;">Pipeline Audit Requested</h3>
-          <p style="font-size:0.95rem; color:var(--text-muted); line-height:1.6; margin-bottom:24px;">
-            Thank you. Ade Oluwade or Idorenyin will review your company details and confirm your consultation date within 24 hours.
-          </p>
-          <button onclick="document.getElementById('strategy-modal').classList.remove('active'); document.body.style.overflow='';" class="btn btn-outline">Close Window</button>
-        </div>
-      </div>
-
-      <div style="padding-top:24px; border-top:1px solid var(--border-line); margin-top:32px;">
-        <span style="font-family:var(--font-mono); font-size:0.7rem; color:var(--text-muted);">
-          KRYSSEN CONFIDENTIAL — SENIOR OPERATOR EVALUATION
-        </span>
-      </div>
-    </div>
-  </div>
-
-  <script src="script.js"></script>
+  <script src="app.js"></script>
 </body>
 </html>
