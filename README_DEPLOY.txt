@@ -69,6 +69,6 @@ PRE-LAUNCH CHECKLIST
 
 ASSET SOURCES
 -------------
-Company logos were supplied for MAX, VoguePay, Zedvance, Mkobo, GIG Mobility, Wesley,
+Company logos were supplied for MAX, VoguePay, Zedvance, Mkobo, GIG Mobility, Gamma Mobility,
 Sabi, and Rensource. Local optimized copies are included so the live website does not depend
 on third-party image servers.
