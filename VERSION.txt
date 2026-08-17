@@ -1,0 +1,3 @@
+Kryssen Website Version 5
+Built from the approved V2 architecture.
+Generated: 17 August 2026

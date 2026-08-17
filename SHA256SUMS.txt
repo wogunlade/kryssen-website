@@ -1,6 +1,9 @@
-03f3182629c50693be99e5210a56733450541bcb95839bedc31becea18b5ed7f  ./README_DEPLOY.txt
+918e19210067ae3c5314fff00beaa4907656b6deda9b0d5e5cbfa8714a7f0bb0  ./README_DEPLOY.txt
+609b887dcc4b8cc751150db77437303e01cc2e78110f439d192f68b6ad1fd70e  ./VERSION.txt
 4d935aafe2c81df630358e6a167f132b601c5d446919b1747a53b2b63d30a793  ./app.js
 b233eeb55e8984ad034fff3d797a49e6dda484c93e3ff306d87ac41395216115  ./apply.html
+fb0d2309f65536920f864a6ccafc7291c7d07655c9894381f50ad78139415bf2  ./assets/case-studies/coopify-homepage.webp
+006005f9eb54cbddcb5ac2f1677084a07db625c7004fa916c90dce25ef892646  ./assets/case-studies/voguepay-growth.jpg
 f330521c5e55ce5af4b31fb00dec2fb5bbdef5858b10b489cb32467a515d0ccc  ./assets/idorenyin.jpg
 4160384b41da3db713ac659b8332b45c1f00b26613e97814a53130a6b007bfea  ./assets/logos-v4/gamma-mobility.svg
 a967e378c4fe934f7aa8c319fcdded1e920ca259e84b5d30e0edd109e5058309  ./assets/logos-v4/gigm.webp
@@ -9,9 +12,10 @@ f9a9f330e032f24c30b5fa41eb9960285745c002dda6fbc958cfdc9d09bf04cc  ./assets/logos
 9f4064d6b1b1b955417d1ffdfd3ffa435abc3d5c600620a68a2dbe4746377d32  ./assets/logos-v4/rensource.webp
 6620535dff78160a636d2b51839c598bbf951e7d4291ae53a7d02a38dc7eae48  ./assets/logos-v4/sabi.webp
 4a605799c51db2481665d7854aa375cf8cfb89868c4cf5194b3dfe96fcfaa84d  ./assets/logos-v4/voguepay.webp
+293aca78dfa2c1a09e9d731966ae84ea6880f29058912edbd80e89365b32b674  ./assets/logos-v4/wesley.webp
 6b4cc238ddc644d54be92ec3bc97ee43c95d02048b01cb8e0c0008742b979a8a  ./assets/logos-v4/zedvance.svg
 bbceb08b241f5bdd9ef70bbcb881beb4f78dfac4dc4504fcdb7320e52fc7498e  ./assets/oluwole.jpg
-76c6de323542b57698489905a57ab8a6c7b0be1cf48a12cacd913d5f62e46e0e  ./index.html
-fd17c4783166aea900ae12cdaf2279b010677dfe8f8e92d27bf5f142ae0d087e  ./proof.html
-2ceccc28b8ef5c7d589139ba0a3460f793eb7be1f2381d13908e60190ade1d71  ./styles.css
-24a97e6a624ba07b424a4770e7704b1ee2a4161480b5bac86e892f0ea9c75b9c  ./submission-received.html
+04a297179db7f5c3a528bc87e383cadc327a19ea82974955963672494a35d50d  ./index.html
+26b697e9feadcebc81a1f6b63c915580dbe50c7bf3debebbcaf769c8af8e9317  ./proof.html
+5c66ae39041b36e2419ba5887900af54f1ab01adcafb698ae56582cc05b920f8  ./styles.css
+50abb8ca54cc0d526d80986efa9db7a49a55b1b78330d4ba85c716e9c1843926  ./submission-received.html
