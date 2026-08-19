@@ -1,0 +1,14 @@
+{
+  "$schema": "./node_modules/wrangler/config-schema.json",
+  "name": "kryssen-website",
+  "main": "worker/index.js",
+  "compatibility_date": "2026-05-03",
+  "workers_dev": true,
+  "preview_urls": true,
+  "assets": {
+    "directory": "./",
+    "binding": "ASSETS",
+    "html_handling": "none",
+    "run_worker_first": ["/api/*"]
+  }
+}

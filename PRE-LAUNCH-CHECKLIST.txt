@@ -1,0 +1,64 @@
+KRYSSEN VERSION 6 — PRE-LAUNCH CHECKLIST
+=========================================
+
+DEPLOYMENT SAFETY
+[ ] application-workflow preview branch is being tested
+[ ] main has not been changed
+[ ] current production deployment is available for rollback
+[ ] preview URL uses HTTPS
+
+WORKER CONFIGURATION
+[ ] /api/health returns success: true
+[ ] googleReceiver is true
+[ ] turnstile is true
+[ ] no secret appears in GitHub or browser source
+[ ] /api/apply rejects GET requests
+
+FORM EXPERIENCE
+[ ] form CTA says Submit for Operator Review
+[ ] no Gmail or email application opens
+[ ] browser autofill works for name, role, work email, company and website
+[ ] Managed Turnstile completes successfully
+[ ] submit button is disabled until the security check succeeds
+[ ] submit button changes to Submitting your application…
+[ ] repeated clicks cannot create repeated requests
+
+SUCCESSFUL SUBMISSION
+[ ] only one new Sheet row is created
+[ ] all submitted fields are in the correct columns
+[ ] Submitted At is correct for Africa/Lagos
+[ ] Application ID begins KRY-
+[ ] Review Status is New
+[ ] Confirmation Email Status is Sent or records a clear failure
+[ ] Internal Notification Status is Sent or records a clear failure
+[ ] applicant receives responsive HTML confirmation
+[ ] applicant can view a plain-text version
+[ ] confirmation repeats the full submitted application
+[ ] confirmation promises a response within 24 business hours
+[ ] VoguePay and Coopify proof links work
+[ ] info@kryssengrowth.com receives the internal notification
+[ ] successful submission redirects to submission-received.html
+[ ] success page displays the same Application ID
+
+FAILURE AND RETRY
+[ ] invalid email is rejected without leaving the page
+[ ] incomplete required field is rejected
+[ ] security-check failure gives a useful retry message
+[ ] entered answers remain after a failed attempt
+[ ] security token refreshes before retry
+[ ] success page never opens after a failed submission
+
+RESPONSIVE AND ACCESSIBILITY
+[ ] apply page works on a narrow mobile screen
+[ ] Turnstile does not overflow the form card
+[ ] keyboard focus is visible
+[ ] status and validation messages are announced
+[ ] navigation menu still works
+[ ] reduced-motion preference is respected
+
+PRODUCTION
+[ ] Wole approves the complete preview workflow
+[ ] application-workflow is merged into main
+[ ] Cloudflare production deployment succeeds
+[ ] one final controlled production submission succeeds
+[ ] production Sheet row and both emails are confirmed

@@ -1,0 +1,61 @@
+KRYSSEN APPLICATION RECEIVER — PASTE AND DEPLOY
+================================================
+
+1. Open the Google Sheet named "Kryssen Revenue Breakout Applications".
+2. Confirm the tab is named "Applications".
+3. Select Extensions > Apps Script.
+4. Open Code.gs.
+5. Delete the sample myFunction code.
+6. Open the supplied Code.gs from this folder.
+7. Copy everything and paste it into Google Apps Script.
+8. Click Save.
+
+SET SCRIPT TIME ZONE
+--------------------
+1. In Apps Script, open Project Settings.
+2. Set the time zone to Africa/Lagos.
+
+ADD SCRIPT PROPERTIES
+---------------------
+In Apps Script > Project Settings > Script Properties, add:
+
+WEBHOOK_SECRET = create a private random password with at least 32 characters
+SPREADSHEET_ID = copy the characters between /d/ and /edit in the Google Sheet URL
+SHEET_NAME = Applications
+INTERNAL_NOTIFICATION_EMAIL = info@kryssengrowth.com
+REPLY_TO_EMAIL = info@kryssengrowth.com
+RESPONSE_TIME = 24 business hours
+WEBSITE_URL = https://kryssengrowth.com
+SENDER_NAME = Kryssen Revenue Team
+
+Do not send the WEBHOOK_SECRET in chat or commit it to GitHub.
+
+AUTHORIZE ONCE BEFORE DEPLOYING
+-------------------------------
+1. In the Apps Script editor, select authorizeSetup from the function menu.
+2. Click Run.
+3. Select Review permissions.
+4. Sign in with the same Google account that owns the Sheet.
+5. Approve access.
+6. Confirm the execution finishes successfully. This test does not alter the Sheet or send an email.
+
+DEPLOY
+------
+1. Select Deploy > New deployment.
+2. Select the gear icon > Web app.
+3. Description: Kryssen Application Receiver V1
+4. Execute as: Me
+5. Who has access: Anyone
+6. Select Deploy.
+7. Approve Google permissions.
+8. Copy the Web App URL ending in /exec.
+
+TEST AVAILABILITY
+-----------------
+Open the Web App URL in a browser.
+It should return JSON similar to:
+
+{"success":true,"service":"Kryssen Application Receiver","message":"Receiver is available."}
+
+The Web App URL will later be stored in Cloudflare as GOOGLE_APPS_SCRIPT_URL.
+The same webhook password will later be stored in Cloudflare as GOOGLE_APPS_SCRIPT_SECRET.

@@ -1,0 +1,96 @@
+KRYSSEN VERSION 6 — CLOUDFLARE WORKER SETUP
+=============================================
+
+Worker name: kryssen-website
+GitHub production branch: main
+Website files: repository root
+Preview branch: application-workflow
+
+IMPORTANT
+---------
+- Do not put any secret in GitHub.
+- Do not merge into main until the preview passes every test.
+- Keep the current production deployment available for rollback.
+- The existing Worker currently contains only static assets. Cloudflare will allow runtime variables only after the first Version 6 preview uploads worker/index.js.
+
+A. CREATE TURNSTILE WIDGET
+--------------------------
+1. In Cloudflare, open Turnstile and select Add widget.
+2. Name: Kryssen Revenue Breakout Application
+3. Widget mode: Managed
+4. Add these hostnames:
+   kryssengrowth.com
+   www.kryssengrowth.com
+5. Find the current workers.dev address under Worker > Settings > Domains & Routes.
+   If it resembles kryssen-website.ACCOUNT-SUBDOMAIN.workers.dev, add:
+   ACCOUNT-SUBDOMAIN.workers.dev
+   Adding that parent hostname authorizes its versioned preview subdomains.
+6. Create the widget.
+7. Save the site key and secret key privately.
+   The site key is public. The secret key must never enter GitHub or chat.
+
+B. CREATE THE PREVIEW BRANCH
+----------------------------
+1. In GitHub, open the repository used by kryssen-website.
+2. Create a new branch from main named:
+   application-workflow
+3. Upload the CONTENTS of the Version 6 folder to the repository root on that branch.
+4. Commit the changes.
+5. Do not merge.
+
+C. ENABLE NON-PRODUCTION BUILDS IF NEEDED
+-----------------------------------------
+1. In Cloudflare, open Workers & Pages > kryssen-website.
+2. Open Settings > Builds.
+3. Confirm non-production branch builds are enabled.
+4. Production branch: main
+5. Production deploy command: npx wrangler deploy
+6. Preview/non-production deploy command: npx wrangler versions upload
+7. Cloudflare should build application-workflow and create a versioned workers.dev preview URL.
+
+D. ADD RUNTIME VARIABLES AFTER THE FIRST PREVIEW BUILD
+------------------------------------------------------
+After Cloudflare has accepted a version containing worker/index.js:
+
+1. Open Worker > Settings > Variables and Secrets.
+2. Add these runtime values:
+
+   GOOGLE_APPS_SCRIPT_URL
+   Value: the deployed Apps Script URL ending in /exec
+   Type: Secret/Encrypt
+
+   GOOGLE_APPS_SCRIPT_SECRET
+   Value: the same password stored as WEBHOOK_SECRET in Apps Script
+   Type: Secret/Encrypt
+
+   TURNSTILE_SITE_KEY
+   Value: the public site key from the Turnstile widget
+   Type: Plaintext is acceptable; Secret is also supported
+
+   TURNSTILE_SECRET_KEY
+   Value: the private Turnstile secret key
+   Type: Secret/Encrypt
+
+3. Save.
+4. Redeploy the application-workflow preview so the new version includes the bindings.
+
+E. CHECK CONFIGURATION
+----------------------
+Open this path on the versioned preview URL:
+
+/api/health
+
+Expected configuration flags:
+
+googleReceiver: true
+turnstile: true
+
+The endpoint never displays the secret values.
+
+F. TEST BEFORE PRODUCTION
+-------------------------
+1. Open apply.html through the HTTPS preview URL.
+2. Complete one controlled test application.
+3. Verify the Sheet row and both emails.
+4. Test duplicate-click protection and a deliberate validation error.
+5. Approve the preview before merging application-workflow into main.

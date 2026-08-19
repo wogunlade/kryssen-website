@@ -8,6 +8,7 @@
   <meta name="description" content="Apply for Kryssen's 45-Day Revenue Breakout for sales-led, product-led and hybrid B2B companies.">
   <meta name="robots" content="noindex,follow">
   <link rel="stylesheet" href="styles.css">
+  <script src="https://challenges.cloudflare.com/turnstile/v0/api.js?render=explicit" defer></script>
 </head>
 <body>
   <a class="skip-link" href="#content">Skip to content</a>
@@ -43,13 +44,20 @@
         <h2 id="apply-title">45-Day Revenue Breakout</h2>
         <p class="form-note">About four minutes. Your answers help us avoid a generic discovery call.</p>
 
-        <form data-apply-form action="mailto:info@kryssengrowth.com" method="post" enctype="text/plain">
+        <form data-apply-form action="/api/apply" method="post" autocomplete="on">
+          <input type="hidden" name="sourcePage" data-source-page>
+          <input type="hidden" name="utmSource" data-utm-source>
+          <input type="hidden" name="utmMedium" data-utm-medium>
+          <input type="hidden" name="utmCampaign" data-utm-campaign>
+          <input type="hidden" name="formStartedAt" data-form-started-at>
+          <div class="bot-field" aria-hidden="true"><label for="company-fax">Leave this field empty</label><input id="company-fax" name="companyFax" tabindex="-1" autocomplete="off"></div>
+
           <div class="form-grid">
-            <div class="field"><label for="name">Your name</label><input id="name" name="name" autocomplete="name" required></div>
-            <div class="field"><label for="role">Your role</label><input id="role" name="role" placeholder="Founder, CEO, Growth, Sales…" required></div>
-            <div class="field"><label for="email">Work email</label><input id="email" name="email" type="email" autocomplete="email" required></div>
-            <div class="field"><label for="company">Company</label><input id="company" name="company" autocomplete="organization" required></div>
-            <div class="field field--full"><label for="website">Company website</label><input id="website" name="website" type="url" inputmode="url" placeholder="https://" required></div>
+            <div class="field"><label for="name">Your name</label><input id="name" name="name" autocomplete="name" maxlength="120" required></div>
+            <div class="field"><label for="role">Your role</label><input id="role" name="role" autocomplete="organization-title" maxlength="120" placeholder="Founder, CEO, Growth, Sales…" required></div>
+            <div class="field"><label for="email">Work email</label><input id="email" name="email" type="email" autocomplete="email" maxlength="180" required></div>
+            <div class="field"><label for="company">Company</label><input id="company" name="company" autocomplete="organization" maxlength="180" required></div>
+            <div class="field field--full"><label for="website">Company website</label><input id="website" name="website" type="url" inputmode="url" autocomplete="url" maxlength="300" placeholder="https://" required></div>
           </div>
 
           <fieldset class="field">
@@ -72,14 +80,23 @@
 
           <div class="field"><label for="constraint">Where is the motion breaking?</label><select id="constraint" name="constraint" required><option value="">Choose one</option><option>We are reaching the wrong accounts</option><option>Our offer does not create urgency</option><option>Signups do not activate</option><option>Usage does not become payment</option><option>Sales and product handoff is broken</option><option>We cannot see what creates revenue</option><option>We are spread across too many channels</option></select></div>
 
-          <div class="field"><label for="context">What is happening now?</label><textarea id="context" name="context" placeholder="A short answer is enough. What are you seeing in the funnel, product or sales process?" required></textarea></div>
+          <div class="field"><label for="context">What is happening now?</label><textarea id="context" name="context" minlength="20" maxlength="3000" placeholder="A short answer is enough. What are you seeing in the funnel, product or sales process?" required></textarea></div>
 
-          <div class="field"><label for="outcome">What would make the next 45 days valuable? <span class="micro">Optional</span></label><textarea id="outcome" name="outcome" placeholder="For example: five accepted opportunities, better activation, or a clear Scale / Fix / Kill decision."></textarea></div>
+          <div class="field"><label for="outcome">What would make the next 45 days valuable? <span class="micro">Optional</span></label><textarea id="outcome" name="outcome" maxlength="2000" placeholder="For example: five accepted opportunities, better activation, or a clear Scale / Fix / Kill decision."></textarea></div>
 
-          <button class="button button--full" type="submit">Continue in email <span aria-hidden="true">→</span></button>
-          <p class="submit-note">Your email app will open with your answers. Nothing is submitted until you press Send.</p>
-          <div class="form-status" data-form-status role="status" aria-live="polite"></div>
-          <p class="direct-email">Prefer a normal email? Write to <a href="mailto:info@kryssengrowth.com?subject=Revenue%20Motion%20Fit%20Call">info@kryssengrowth.com</a>.</p>
+          <div class="turnstile-wrap" data-turnstile-wrap>
+            <div class="turnstile-label">Secure submission</div>
+            <div data-turnstile-container></div>
+            <p class="micro" data-turnstile-message>Preparing the security check…</p>
+          </div>
+
+          <button class="button button--full" type="submit" data-submit-button disabled>
+            <span data-submit-label>Preparing secure submission…</span>
+            <span aria-hidden="true">→</span>
+          </button>
+          <p class="submit-note">Your application is submitted directly to Kryssen. No email app will open.</p>
+          <div class="form-status" data-form-status role="status" aria-live="polite" tabindex="-1"></div>
+          <p class="direct-email">Your answers stay on this page if submission fails, so you can retry without starting again.</p>
         </form>
       </section>
     </div>

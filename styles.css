@@ -344,9 +344,18 @@ fieldset.field { padding: 0; border: 0; }
 .choice label span { display: block; margin-top: 3px; color: var(--muted); font-size: 9px; font-weight: 600; line-height: 1.35; }
 .choice input:checked + label { border-color: var(--orange); background: #fff6f2; box-shadow: inset 0 0 0 1px var(--orange); }
 .choice input:focus-visible + label { outline: 3px solid var(--orange); outline-offset: 3px; }
+.bot-field { position: absolute !important; width: 1px !important; height: 1px !important; overflow: hidden !important; clip: rect(0 0 0 0) !important; white-space: nowrap !important; }
+.turnstile-wrap { margin: 4px 0 18px; padding: 15px; border: 1px solid var(--line); background: var(--paper); }
+.turnstile-label { margin-bottom: 10px; color: var(--pine); font-size: 11px; font-weight: 850; }
+.turnstile-wrap .micro { margin: 8px 0 0; }
+[data-turnstile-container] { min-height: 65px; }
+.button:disabled { cursor: not-allowed; transform: none; border-color: #9e988e; background: #9e988e; opacity: .8; }
+.button:disabled:hover { transform: none; border-color: #9e988e; background: #9e988e; }
 .submit-note { margin: 10px 0 0; color: var(--muted); font-size: 10px; text-align: center; }
 .form-status { display: none; margin-top: 16px; padding: 13px; border: 1px solid var(--line); background: var(--paper-2); color: var(--pine); font-size: 11px; }
 .form-status.is-visible { display: block; }
+.form-status.is-error { border-color: #c85236; background: #fff3ef; color: #7d2d1b; }
+.form-status.is-info { border-color: #8da27a; background: #f4f9ec; }
 .form-status > strong, .form-status > span { display: block; }
 .form-status > strong { margin-bottom: 4px; }
 .form-fallback-actions { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 13px; }
@@ -360,6 +369,8 @@ fieldset.field { padding: 0; border: 0; }
 .received-mark { display: inline-grid; width: 60px; height: 60px; place-items: center; margin-bottom: 25px; background: var(--lime); color: var(--pine); font-size: 28px; font-weight: 900; }
 .received-card h1 { font-size: clamp(45px,6vw,70px); }
 .received-card .lead { margin-inline: auto; }
+.application-reference { display: inline-block; margin: 8px 0 0; padding: 10px 13px; border-left: 3px solid var(--orange); background: var(--paper); color: var(--muted); font: 700 10px/1.5 var(--mono); }
+.application-reference strong { color: var(--pine); }
 .next-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 9px; margin: 30px 0; text-align: left; }
 .next-grid div { padding: 18px; border: 1px solid var(--line); }
 .next-grid b { display: block; color: var(--orange); font: 800 9px var(--mono); }
