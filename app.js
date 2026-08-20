@@ -382,15 +382,18 @@
     }
 
     function receiveSubmissionResult(event) {
-      if (!iframe || event.source !== iframe.contentWindow) return;
-      let messageHost = '';
-      try { messageHost = new URL(event.origin).hostname; } catch { return; }
-      const trustedGoogleOrigin = event.origin === 'https://script.google.com' ||
-        messageHost === 'script.googleusercontent.com' ||
-        messageHost.endsWith('.script.googleusercontent.com');
+      if (!iframe || !submitting) return;
+      let trustedGoogleOrigin = event.origin === 'null';
+      if (!trustedGoogleOrigin) {
+        let messageHost = '';
+        try { messageHost = new URL(event.origin).hostname; } catch { return; }
+        trustedGoogleOrigin = event.origin === 'https://script.google.com' ||
+          messageHost === 'script.googleusercontent.com' ||
+          messageHost.endsWith('.script.googleusercontent.com');
+      }
       if (!trustedGoogleOrigin) return;
       const result = event.data;
-      if (!result || typeof result !== 'object' || typeof result.success !== 'boolean') return;
+      if (!result || typeof result !== 'object' || result.source !== 'kryssen-v7-receiver' || typeof result.success !== 'boolean') return;
 
       clearTimeout(submitTimeout);
       if (result.success) {
