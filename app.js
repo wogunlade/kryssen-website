@@ -197,7 +197,6 @@
 
     const draftKey = 'kryssen-v7-application-draft';
     const draftFields = ['name', 'role', 'email', 'company', 'website', 'motion', 'stage', 'constraint', 'context', 'outcome'];
-    const iframe = document.querySelector('[data-submission-frame]');
     const status = form.querySelector('[data-form-status]');
     const submitButton = form.querySelector('[data-submit-button]');
     const submitLabel = form.querySelector('[data-submit-label]');
@@ -217,7 +216,6 @@
     let turnstileToken = '';
     let turnstileWidgetId = null;
     let turnstileInitialised = false;
-    let submitTimeout = null;
 
     setTrackingFields();
     restoreDraft();
@@ -234,7 +232,7 @@
     });
     form.querySelector('[data-previous-step]').addEventListener('click', () => showStep(1));
     form.addEventListener('submit', submitApplication);
-    window.addEventListener('message', receiveSubmissionResult);
+    handleReturnStatus();
     document.addEventListener('kryssen:consent-ready', () => {
       sendApplyView();
       if (formStarted) sendFormStart();
@@ -368,71 +366,29 @@
       submitButton.setAttribute('aria-busy', 'true');
       submitLabel.textContent = 'Submitting your application…';
       showStatus('Securely storing your application. Keep this page open.', 'info');
+      try {
+        sessionStorage.setItem('kryssen-pending-lead-event', JSON.stringify({
+          revenue_motion: selectedValue('motion') || 'unknown',
+          recordedAt: Date.now()
+        }));
+      } catch {}
       form.submit();
-
-      clearTimeout(submitTimeout);
-      submitTimeout = setTimeout(() => {
-        if (!submitting) return;
-        submitting = false;
-        submitButton.removeAttribute('aria-busy');
-        submitLabel.textContent = 'Submit for a fit review';
-        showStatus('The receiver took too long to respond. Your answers are still here—please try again.', 'error');
-        resetTurnstile();
-      }, 45000);
     }
 
-    function receiveSubmissionResult(event) {
-      if (!iframe || !submitting) return;
-      let trustedGoogleOrigin = event.origin === 'null';
-      if (!trustedGoogleOrigin) {
-        let messageHost = '';
-        try { messageHost = new URL(event.origin).hostname; } catch { return; }
-        trustedGoogleOrigin = event.origin === 'https://script.google.com' ||
-          messageHost === 'script.googleusercontent.com' ||
-          messageHost.endsWith('.script.googleusercontent.com');
-      }
-      if (!trustedGoogleOrigin) return;
-      const result = event.data;
-      if (!result || typeof result !== 'object' || result.source !== 'kryssen-v7-receiver' || typeof result.success !== 'boolean') return;
-
-      clearTimeout(submitTimeout);
-      if (result.success) {
-        submitting = false;
-        clearDraft();
-        track('form_submit', { revenue_motion: selectedValue('motion') || 'unknown' });
-        try {
-          sessionStorage.setItem('kryssen-pending-lead-event', JSON.stringify({
-            revenue_motion: selectedValue('motion') || 'unknown',
-            recordedAt: Date.now()
-          }));
-        } catch {}
-        const destination = new URL('/received', window.location.origin);
-        if (result.applicationId && /^KRY-[A-Z0-9-]+$/.test(result.applicationId)) {
-          destination.searchParams.set('application', result.applicationId);
-        }
-        window.location.assign(destination.toString());
-        return;
-      }
-
-      submitting = false;
-      submitButton.removeAttribute('aria-busy');
-      submitLabel.textContent = 'Submit for a fit review';
-      showStatus(result.message || 'We could not store your application. Your answers are still here—please try again.', 'error');
-      focusField(result.field);
-      resetTurnstile();
-    }
-
-    function resetTurnstile() {
-      turnstileToken = '';
-      setSubmitReady(false);
-      if (window.turnstile && turnstileWidgetId !== null) {
-        try {
-          window.turnstile.reset(turnstileWidgetId);
-          turnstileMessage.textContent = 'Refreshing the security check for your retry…';
-        } catch {
-          turnstileMessage.textContent = 'Refresh the page to restart the security check. Your answers will be restored.';
-        }
-      }
+    function handleReturnStatus() {
+      const params = new URLSearchParams(window.location.search);
+      if (params.get('submission') !== 'failed') return;
+      try { sessionStorage.removeItem('kryssen-pending-lead-event'); } catch {}
+      const message = params.get('message') || 'We could not store your application. Your answers are still here—please try again.';
+      const field = params.get('field') || '';
+      showStep(2);
+      showStatus(message, 'error');
+      focusField(field);
+      params.delete('submission');
+      params.delete('message');
+      params.delete('field');
+      const cleanUrl = `${window.location.pathname}${params.toString() ? `?${params}` : ''}`;
+      window.history.replaceState({}, '', cleanUrl);
     }
 
     function setSubmitReady(ready) {
@@ -455,6 +411,13 @@
 
     function setTrackingFields() {
       const params = new URLSearchParams(window.location.search);
+      const failureUrl = new URL(window.location.href);
+      failureUrl.searchParams.delete('submission');
+      failureUrl.searchParams.delete('message');
+      failureUrl.searchParams.delete('field');
+      failureUrl.hash = '';
+      setValue('[data-success-url]', new URL('/received', window.location.origin).toString());
+      setValue('[data-failure-url]', failureUrl.toString());
       setValue('[data-source-page]', window.location.href.slice(0, 500));
       setValue('[data-utm-source]', (params.get('utm_source') || '').slice(0, 150));
       setValue('[data-utm-medium]', (params.get('utm_medium') || '').slice(0, 150));
@@ -526,6 +489,11 @@
     const received = document.querySelector('[data-received-page]');
     if (!received) return;
 
+    try {
+      sessionStorage.removeItem('kryssen-v7-application-draft');
+      sessionStorage.removeItem('kryssen-v7-application-draft-step');
+    } catch {}
+
     const reference = document.querySelector('[data-application-reference]');
     const applicationId = new URLSearchParams(window.location.search).get('application') || '';
     if (reference && /^KRY-\d{8}-[A-Z0-9]{6}$/.test(applicationId)) {
@@ -537,6 +505,7 @@
       try {
         const pending = JSON.parse(sessionStorage.getItem('kryssen-pending-lead-event') || 'null');
         if (pending && Date.now() - pending.recordedAt < 10 * 60 * 1000) {
+          track('form_submit', { revenue_motion: pending.revenue_motion || 'unknown' });
           const sent = track('generate_lead', { revenue_motion: pending.revenue_motion || 'unknown' });
           if (sent) sessionStorage.removeItem('kryssen-pending-lead-event');
         }
