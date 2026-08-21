@@ -529,11 +529,5 @@
       if (calendarSetupNote) calendarSetupNote.hidden = true;
     }
 
-    window.addEventListener('message', (event) => {
-      const name = event.data?.event || event.data?.type || '';
-      if (name === 'calendly.event_scheduled' || /bookingSuccessful/i.test(name)) {
-        track('call_booked', { calendar_provider: event.origin, meeting_type: 'provisional_operator_review' });
-      }
-    });
   }
 })();
