@@ -650,9 +650,14 @@ fieldset.field { padding: 0; border: 0; }
 .form-privacy { margin: 18px 0 0; padding-top: 16px; border-top: 1px solid var(--line); color: var(--muted); font-size: 11px; }
 .form-privacy a { color: var(--pine); font-weight: 850; }
 .submission-frame { position: absolute; width: 1px; height: 1px; border: 0; opacity: 0; pointer-events: none; }
+.received-card { max-width: 860px; padding: 58px; border-top: 4px solid var(--orange); }
+.received-card h1 { max-width: 760px; margin-inline: auto; }
 .application-reference { display: inline-block; margin: 8px 0 0; padding: 10px 13px; border-left: 3px solid var(--orange); background: var(--paper); color: var(--muted); font: 700 10px/1.5 var(--mono); }
 .application-reference strong { color: var(--pine); }
-.calendar-card { max-width: 900px; margin: 24px auto 0; padding: 42px; border: 1px solid var(--line); background: #fff; }
+.received-inbox-note { display: grid; grid-template-columns: 34px 1fr; gap: 10px; align-items: center; max-width: 540px; margin: 28px auto; padding: 17px 18px; border: 1px solid var(--line); background: var(--paper); text-align: left; }
+.received-inbox-note b { color: var(--orange); font: 800 9px/1 var(--mono); }
+.received-inbox-note span { color: var(--pine); font-size: 12px; font-weight: 750; }
+.calendar-card { max-width: 900px; margin: 24px auto 0; padding: 46px; border: 1px solid var(--line); border-top: 4px solid var(--lime); background: #fff; }
 .calendar-card h2 { max-width: 720px; }
 .calendar-card > p { max-width: 720px; color: var(--muted); font-size: 14px; }
 .calendar-frame { width: 100%; min-height: 700px; margin: 20px 0; border: 1px solid var(--line); background: var(--paper); }
@@ -699,7 +704,9 @@ fieldset.field { padding: 0; border: 0; }
   .form-head h2 { font-size: 34px; }
   .form-actions { grid-template-columns: 1fr; }
   .form-actions .button { width: 100%; }
-  .calendar-card { padding: 28px 22px; }
+  .received-card { padding: 38px 22px; }
+  .received-inbox-note { grid-template-columns: 28px 1fr; }
+  .calendar-card { padding: 32px 22px; }
   .calendar-frame { min-height: 620px; }
   .consent-card { padding: 24px 20px; }
   .consent-actions { grid-template-columns: 1fr; }
