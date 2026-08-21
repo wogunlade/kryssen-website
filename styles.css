@@ -663,19 +663,22 @@ fieldset.field { padding: 0; border: 0; }
 .calendar-frame { width: 100%; min-height: 700px; margin: 20px 0; border: 1px solid var(--line); background: var(--paper); }
 .calendar-setup-note { margin-top: 15px; font-size: 11px !important; }
 
-.consent-layer { position: fixed; inset: 0; z-index: 1000; display: grid; place-items: center; padding: 20px; background: rgba(6,19,15,.64); }
-.consent-card { width: min(680px,100%); max-height: calc(100vh - 40px); overflow: auto; padding: 30px; border: 1px solid #315147; background: var(--paper); box-shadow: 0 24px 80px rgba(0,0,0,.28); }
-.consent-card h2 { max-width: 570px; margin-bottom: 12px; font-size: clamp(32px,5vw,46px); }
-.consent-card > p { color: var(--muted); font-size: 13px; }
-.consent-card > p a { color: var(--pine); font-weight: 850; }
-.consent-options { display: grid; gap: 8px; margin: 20px 0; }
-.consent-options label { display: grid; grid-template-columns: auto 1fr; gap: 12px; align-items: start; padding: 13px; border: 1px solid var(--line); background: #fff; }
-.consent-options input { width: 18px; height: 18px; margin-top: 2px; accent-color: var(--orange); }
+.consent-layer { position: fixed; right: 0; bottom: 0; left: 0; z-index: 1000; padding: 14px; pointer-events: none; }
+.consent-card { width: min(920px,100%); max-height: min(72vh,620px); margin-inline: auto; overflow: auto; padding: 20px 22px; border: 1px solid var(--line); border-top: 3px solid var(--lime); background: rgba(251,249,245,.98); box-shadow: 0 15px 46px rgba(6,19,15,.2); pointer-events: auto; backdrop-filter: blur(12px); }
+.consent-copy { display: grid; grid-template-columns: .8fr 1.2fr; gap: 24px; align-items: start; }
+.consent-card h2 { margin: 0; font-size: clamp(24px,3vw,34px); line-height: 1.04; }
+.consent-copy > p { margin: 1px 0 0; color: var(--muted); font-size: 12px; line-height: 1.6; }
+.consent-copy > p a { color: var(--pine); font-weight: 850; }
+.consent-options { display: grid; grid-template-columns: repeat(3,1fr); gap: 7px; margin: 16px 0; }
+.consent-options label { display: grid; grid-template-columns: auto 1fr; gap: 9px; align-items: start; padding: 11px; border: 1px solid var(--line); background: #fff; }
+.consent-options input { width: 17px; height: 17px; margin-top: 2px; accent-color: var(--orange); }
 .consent-options b, .consent-options small { display: block; }
-.consent-options b { color: var(--pine); font-size: 12px; }
-.consent-options small { margin-top: 3px; color: var(--muted); font-size: 11px; }
-.consent-actions { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 8px; }
-.consent-actions .button { min-height: 46px; padding: 0 12px; font-size: 11px; }
+.consent-options b { color: var(--pine); font-size: 11px; }
+.consent-options small { margin-top: 2px; color: var(--muted); font-size: 10px; line-height: 1.4; }
+.consent-actions { display: flex; flex-wrap: wrap; justify-content: flex-end; gap: 8px 18px; align-items: center; }
+.consent-actions .button { min-height: 42px; padding: 0 18px; font-size: 11px; }
+.consent-text-action { min-height: 36px; padding: 0; border: 0; border-bottom: 1px solid currentColor; background: transparent; color: var(--pine); font-size: 11px; font-weight: 800; }
+.consent-text-action:hover { color: var(--orange); }
 .privacy-settings { position: fixed; right: 15px; bottom: 15px; z-index: 90; padding: 8px 10px; border: 1px solid #52645c; background: var(--pine); color: #fff; font-size: 10px; font-weight: 800; }
 
 .privacy-page { background: var(--paper); }
@@ -708,7 +711,11 @@ fieldset.field { padding: 0; border: 0; }
   .received-inbox-note { grid-template-columns: 28px 1fr; }
   .calendar-card { padding: 32px 22px; }
   .calendar-frame { min-height: 620px; }
-  .consent-card { padding: 24px 20px; }
-  .consent-actions { grid-template-columns: 1fr; }
+  .consent-layer { padding: 9px; }
+  .consent-card { max-height: 78vh; padding: 18px 17px; }
+  .consent-copy { grid-template-columns: 1fr; gap: 8px; }
+  .consent-options { grid-template-columns: 1fr; }
+  .consent-actions { justify-content: flex-start; gap: 7px 15px; }
+  .consent-actions .button { width: 100%; order: -1; }
   .privacy-settings { right: 10px; bottom: 10px; }
 }

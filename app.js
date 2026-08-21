@@ -63,20 +63,21 @@
       const layer = document.createElement('section');
       layer.className = 'consent-layer';
       layer.dataset.consentLayer = '';
-      layer.setAttribute('aria-label', 'Privacy choices');
+      layer.setAttribute('aria-label', 'Session information and privacy choices');
       layer.innerHTML = `
-        <div class="consent-card" role="dialog" aria-modal="true" aria-labelledby="consent-title">
-          <div class="eyebrow">Your privacy choices</div>
-          <h2 id="consent-title">Choose what Kryssen may measure.</h2>
-          <p>Necessary security and application processing always work. Analytics and marketing tools load only with your permission. Read the <a href="privacy.html">Privacy Policy</a>.</p>
+        <div class="consent-card" role="region" aria-labelledby="consent-title">
+          <div class="consent-copy">
+            <h2 id="consent-title">We collect basic information about this session.</h2>
+            <p>Here is some information about how this session is handled. Necessary functions stay on; optional analytics and marketing remain off until you choose them. Read the <a href="privacy.html">Privacy Policy</a>.</p>
+          </div>
           <div class="consent-options" ${isSettings ? '' : 'hidden'} data-consent-options>
             <label><input type="checkbox" checked disabled> <span><b>Necessary</b><small>Security, Turnstile and application processing.</small></span></label>
             <label><input type="checkbox" data-consent-analytics ${current.analytics ? 'checked' : ''}> <span><b>Analytics</b><small>GA4 and Microsoft Clarity.</small></span></label>
             <label><input type="checkbox" data-consent-marketing ${current.marketing ? 'checked' : ''}> <span><b>Marketing</b><small>Hey Oliver marketing automation.</small></span></label>
           </div>
           <div class="consent-actions">
-            <button class="button button--dark" type="button" data-consent-reject>Reject non-essential</button>
-            <button class="button button--ghost" type="button" data-consent-manage>${isSettings ? 'Save choices' : 'Manage choices'}</button>
+            <button class="consent-text-action" type="button" data-consent-reject>Reject non-essential</button>
+            <button class="consent-text-action" type="button" data-consent-manage>${isSettings ? 'Save choices' : 'Manage choices'}</button>
             <button class="button button--dark" type="button" data-consent-accept>Accept all</button>
           </div>
         </div>`;
