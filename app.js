@@ -68,7 +68,7 @@
         <div class="consent-card" role="region" aria-labelledby="consent-title">
           <div class="consent-copy">
             <h2 id="consent-title">We collect basic information about this session.</h2>
-            <p>Here is some information about how this session is handled. Necessary functions stay on; optional analytics and marketing remain off until you choose them. Read the <a href="privacy.html">Privacy Policy</a>.</p>
+            <p>Here is some information about how this session is handled. Necessary functions stay on; optional analytics and marketing remain off until you choose them. Read the <a href="/privacy">Privacy Policy</a>.</p>
           </div>
           <div class="consent-options" ${isSettings ? '' : 'hidden'} data-consent-options>
             <label><input type="checkbox" checked disabled> <span><b>Necessary</b><small>Security, Turnstile and application processing.</small></span></label>
@@ -196,7 +196,7 @@
     const form = document.querySelector('[data-apply-form]');
     if (!form) return;
 
-    const draftKey = 'kryssen-v7-application-draft';
+    const draftKey = 'kryssen-v8-application-draft';
     const draftFields = ['name', 'role', 'email', 'company', 'website', 'motion', 'stage', 'constraint', 'context', 'outcome'];
     const status = form.querySelector('[data-form-status]');
     const submitButton = form.querySelector('[data-submit-button]');
@@ -206,6 +206,8 @@
     const currentStepText = document.querySelector('[data-step-current]');
     const turnstileContainer = form.querySelector('[data-turnstile-container]');
     const turnstileMessage = form.querySelector('[data-turnstile-message]');
+    const stageBranchNote = form.querySelector('[data-stage-branch-note]');
+    const websiteField = form.querySelector('#website');
     const endpoint = String(config.appsScriptUrl || '').trim();
     const siteKey = String(config.turnstileSiteKey || '').trim();
 
@@ -222,12 +224,15 @@
     restoreDraft();
     prefillMotion();
     configureEndpoint();
+    bindWebsiteNormalization();
+    bindStageLogic();
     saveDraftOnChange();
     showStep(Number(sessionStorage.getItem(`${draftKey}-step`) || 1) === 2 ? 2 : 1);
 
     form.addEventListener('input', markFormStarted, { once: true });
     form.addEventListener('change', markFormStarted, { once: true });
     form.querySelector('[data-next-step]').addEventListener('click', () => {
+      normalizeWebsiteField();
       if (!validateStep(1)) return;
       showStep(2);
     });
@@ -247,6 +252,39 @@
         return;
       }
       showStatus('The application receiver has not been connected yet.', 'error');
+    }
+
+    function bindWebsiteNormalization() {
+      if (!websiteField) return;
+      websiteField.addEventListener('blur', normalizeWebsiteField);
+    }
+
+    function bindStageLogic() {
+      form.querySelectorAll('input[name="stage"]').forEach((input) => {
+        input.addEventListener('change', updateBranchState);
+      });
+      updateBranchState();
+    }
+
+    function updateBranchState() {
+      const isNotYet = selectedValue('stage') === 'pre-revenue or no recurring usage yet';
+      if (stageBranchNote) stageBranchNote.hidden = !isNotYet;
+      const successUrl = new URL('/received', window.location.origin);
+      if (isNotYet) successUrl.searchParams.set('result', 'not-yet');
+      setValue('[data-success-url]', successUrl.toString());
+    }
+
+    function normalizeWebsiteField() {
+      if (!websiteField) return;
+      websiteField.value = normalizeWebsiteValue(websiteField.value);
+    }
+
+    function normalizeWebsiteValue(value) {
+      const trimmed = String(value || '').trim();
+      if (!trimmed) return '';
+      if (/^https?:\/\//i.test(trimmed)) return trimmed;
+      if (/^[^\s]+\.[^\s]{2,}/.test(trimmed)) return `https://${trimmed.replace(/^\/+/, '')}`;
+      return trimmed;
     }
 
     function markFormStarted() {
@@ -352,6 +390,8 @@
 
     function submitApplication(event) {
       event.preventDefault();
+      normalizeWebsiteField();
+      updateBranchState();
       if (submitting || !validateStep(2)) return;
       if (!form.action || form.action === window.location.href || !/^https:\/\/script\.google\.com\//.test(form.action)) {
         showStatus('The application receiver has not been connected yet.', 'error');
@@ -394,7 +434,7 @@
 
     function setSubmitReady(ready) {
       submitButton.disabled = !ready || submitting;
-      if (!submitting) submitLabel.textContent = ready ? 'Submit for a fit review' : 'Preparing secure submission…';
+      if (!submitting) submitLabel.textContent = ready ? 'Submit application' : 'Preparing secure submission…';
     }
 
     function showStatus(message, type) {
@@ -461,6 +501,7 @@
           });
         });
       } catch {}
+      updateBranchState();
     }
 
     function saveDraftOnChange() {
@@ -477,13 +518,6 @@
       form.addEventListener('input', schedule);
       form.addEventListener('change', schedule);
     }
-
-    function clearDraft() {
-      try {
-        sessionStorage.removeItem(draftKey);
-        sessionStorage.removeItem(`${draftKey}-step`);
-      } catch {}
-    }
   }
 
   function initReceivedPage() {
@@ -491,15 +525,30 @@
     if (!received) return;
 
     try {
-      sessionStorage.removeItem('kryssen-v7-application-draft');
-      sessionStorage.removeItem('kryssen-v7-application-draft-step');
+      sessionStorage.removeItem('kryssen-v8-application-draft');
+      sessionStorage.removeItem('kryssen-v8-application-draft-step');
     } catch {}
 
+    const params = new URLSearchParams(window.location.search);
+    const result = params.get('result') || '';
     const reference = document.querySelector('[data-application-reference]');
-    const applicationId = new URLSearchParams(window.location.search).get('application') || '';
+    const applicationId = params.get('application') || '';
     if (reference && /^KRY-\d{8}-[A-Z0-9]{6}$/.test(applicationId)) {
       reference.textContent = applicationId;
       reference.closest('[data-reference-wrap]')?.removeAttribute('hidden');
+    }
+
+    if (result === 'not-yet') {
+      document.querySelector('[data-received-headline]')?.replaceChildren(document.createTextNode('You are not yet at the right stage for the 45-Day Revenue Breakout.'));
+      document.querySelector('[data-received-lead]')?.replaceChildren(document.createTextNode('We have your application. Because you marked pre-revenue or no recurring usage yet, Kryssen will reply in writing with a clear next step. We will not ask you to book a call.'));
+      document.querySelector('[data-received-note]')?.replaceChildren(document.createTextNode('Check your inbox for the copy of your application and a written follow-up from Kryssen.'));
+      document.querySelector('[data-received-footnote]')?.replaceChildren(document.createTextNode('If the confirmation email is not visible within a few minutes, check your spam or promotions folder.'));
+      document.querySelector('[data-received-proof-button]')?.replaceChildren(document.createTextNode('See the operator proof '));
+      const arrow = document.createElement('span');
+      arrow.setAttribute('aria-hidden', 'true');
+      arrow.textContent = '→';
+      document.querySelector('[data-received-proof-button]')?.appendChild(arrow);
+      document.querySelector('[data-calendar-card]')?.setAttribute('hidden', 'hidden');
     }
 
     const sendPendingLead = () => {
@@ -515,6 +564,8 @@
     sendPendingLead();
     document.addEventListener('kryssen:consent-ready', sendPendingLead);
 
+    if (result === 'not-yet') return;
+
     const calendarFrame = document.querySelector('[data-calendar-frame]');
     const calendarFallback = document.querySelector('[data-calendar-fallback]');
     const calendarSetupNote = document.querySelector('.calendar-setup-note');
@@ -528,6 +579,5 @@
       }
       if (calendarSetupNote) calendarSetupNote.hidden = true;
     }
-
   }
 })();
