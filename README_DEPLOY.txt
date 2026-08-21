@@ -1,32 +1,51 @@
-KRYSSEN WEBSITE — VERSION 5 DEPLOYMENT PACKAGE
-==============================================
+KRYSSEN WEBSITE — VERSION 7
+===========================
 
-This package contains only the approved V2 architecture, relabelled as Version 5 and converted to production filenames.
+Version 7 is a static website with a custom two-step application form.
 
-There are no duplicate V1/V2 page files in this package.
+Application architecture:
+Custom HTML form -> Google Apps Script -> Turnstile verification -> Google Sheet -> applicant/internal emails -> /received
 
-FILES
------
-index.html                 Version 5 homepage with case-study previews
-proof.html                 Version 5 VoguePay/Coopify proof hub
-apply.html                 Version 5 application page
-submission-received.html   Version 5 confirmation page
-styles.css                 Version 5 combined styling
-app.js                     Navigation and email-application logic
-assets/                    Local images and logos
+There is no Cloudflare Worker, Wrangler configuration, package.json or node_modules dependency.
 
-DEPLOYMENT
-----------
-1. Back up the current live site or keep its last Cloudflare deployment available for rollback.
-2. Upload the CONTENTS of this folder to the GitHub redesign branch—not the enclosing folder.
-3. Confirm index.html is at the repository root.
-4. Let Cloudflare create a preview deployment.
-5. Test index.html, proof.html, apply.html and the email fallbacks.
-6. Merge the redesign branch into main only after approval.
+PUBLIC WEBSITE FILES
+--------------------
+index.html
+proof.html
+apply.html
+received.html
+submission-received.html (compatibility redirect)
+privacy.html
+styles.css
+app.js
+config.js
+assets/
 
-This is a static site. No build tool or package installation is required.
-Cloudflare Pages settings: Framework None, build command exit 0, output directory .
+NON-WEBSITE SETUP MATERIALS
+---------------------------
+google-apps-script/Code.gs
+gtm/HEY-OLIVER-CUSTOM-HTML.html
+TRACKING-VALUES.txt
+PRE-LAUNCH-CHECKLIST.txt
+SETUP-CLOUDFLARE.txt
 
-APPLICATION FLOW
-----------------
-The form opens a prefilled Gmail compose window. Fallbacks allow the applicant to use the default email application or copy the application. Nothing is submitted until the applicant presses Send.
+DEPLOYMENT SAFETY
+-----------------
+1. Start a new GitHub branch named version-7 from the clean main branch.
+2. Do not reuse application-workflow, which contains the retired Version 6 implementation.
+3. Upload only the contents of the Version 7 website deployment ZIP.
+4. Confirm there is no worker/, wrangler.jsonc or package.json on the version-7 branch.
+5. Let Cloudflare create a static preview.
+6. Add the exact preview hostname to ALLOWED_TURNSTILE_HOSTNAMES in Apps Script and to the Turnstile widget.
+7. Test before merging.
+8. Publish GTM only after consent tests pass in Preview mode.
+
+PUBLIC CONFIGURATION
+--------------------
+config.js contains browser-visible values only:
+- Apps Script /exec URL
+- Turnstile Site Key
+- Google Calendar embed URL
+- GTM container ID
+
+No secret belongs in config.js or GitHub.

@@ -4,93 +4,145 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#0e231e">
-  <title>45-Day Revenue Breakout — Kryssen</title>
+  <title>Apply for 45-Day Revenue Breakout — Kryssen</title>
   <meta name="description" content="Apply for Kryssen's 45-Day Revenue Breakout for sales-led, product-led and hybrid B2B companies.">
   <meta name="robots" content="noindex,follow">
+  <link rel="canonical" href="https://kryssengrowth.com/apply">
+  <meta property="og:title" content="Apply for 45-Day Revenue Breakout — Kryssen">
+  <meta property="og:description" content="Tell senior operators where revenue is getting stuck. Kryssen replies with a fit decision within 24 business hours.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://kryssengrowth.com/apply">
+  <meta property="og:image" content="https://kryssengrowth.com/assets/social/kryssen-og.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Apply for 45-Day Revenue Breakout — Kryssen">
+  <meta name="twitter:description" content="Tell senior operators where revenue is getting stuck.">
+  <meta name="twitter:image" content="https://kryssengrowth.com/assets/social/kryssen-og.png">
+  <link rel="icon" href="assets/social/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="assets/social/favicon-32.png" sizes="32x32" type="image/png">
+  <link rel="apple-touch-icon" href="assets/social/apple-touch-icon.png">
   <link rel="stylesheet" href="styles.css">
+  <script src="config.js"></script>
+  <script src="https://challenges.cloudflare.com/turnstile/v0/api.js?render=explicit" defer></script>
 </head>
-<body>
-  <a class="skip-link" href="#content">Skip to content</a>
-  <header class="site-header">
-    <div class="shell nav-wrap">
+<body class="apply-page">
+  <a class="skip-link" href="#content">Skip to application</a>
+  <header class="apply-header">
+    <div class="shell apply-nav">
       <a class="brand" href="index.html" aria-label="Kryssen home"><span class="brand-mark">KRYSSEN</span></a>
-      <button class="menu-button" type="button" data-menu-button aria-expanded="false" aria-controls="primary-nav" aria-label="Open navigation">☰</button>
-      <nav class="nav-links" id="primary-nav" data-nav aria-label="Primary navigation">
-        <a href="index.html#motions">Your motion</a>
-        <a href="index.html#sprint">The sprint</a>
-        <a href="proof.html">Proof</a>
-        <a href="index.html#fit">Fit</a>
-        <a class="button" href="apply.html" aria-current="page">Apply for 45-Day Revenue Breakout <span aria-hidden="true">→</span></a>
-      </nav>
+      <a class="apply-back" href="index.html" data-track="cta_click" data-cta-name="apply_back" data-cta-location="apply_header">← Back</a>
     </div>
   </header>
 
   <main id="content" class="section section--surface">
     <div class="shell apply-layout">
       <aside class="apply-side">
-        <div class="eyebrow">Revenue Motion Fit Call</div>
+        <div class="eyebrow">Senior operator fit review</div>
         <h1>Tell us where revenue is getting stuck.</h1>
         <p class="lead">No long pitch. We review the motion, tell you if the sprint fits and explain the next step.</p>
-        <div class="apply-steps">
+
+        <div class="apply-steps" aria-label="What happens next">
           <div class="apply-step"><b>01</b><span>You share the break</span></div>
           <div class="apply-step"><b>02</b><span>Senior operators review it</span></div>
           <div class="apply-step"><b>03</b><span>We confirm fit or tell you no</span></div>
         </div>
-        <p class="micro" style="margin-top:18px">Best for B2B companies with paying customers or clear recurring product usage.</p>
+
+        <div class="apply-proof">
+          <strong>$200m+</strong>
+          <span>in measurable revenue influenced or supported across operator work.</span>
+        </div>
+        <p class="apply-assurance"><b>20% remains at risk</b> until the agreed revenue proof is verified.</p>
+        <p class="apply-response">Expect a human fit decision within <strong>24 business hours</strong>.</p>
       </aside>
 
-      <section class="form-card" aria-labelledby="apply-title">
-        <h2 id="apply-title">45-Day Revenue Breakout</h2>
+      <section class="form-card" aria-labelledby="apply-title" data-clarity-mask="true">
+        <div class="form-head">
+          <div>
+            <div class="eyebrow">45-Day Revenue Breakout</div>
+            <h2 id="apply-title">Apply for a fit review.</h2>
+          </div>
+          <div class="form-progress-copy" aria-live="polite"><span data-step-current>1</span> of 2</div>
+        </div>
+        <div class="form-progress" role="progressbar" aria-valuemin="1" aria-valuemax="2" aria-valuenow="1" aria-label="Application progress" data-progress>
+          <span data-progress-bar></span>
+        </div>
         <p class="form-note">About four minutes. Your answers help us avoid a generic discovery call.</p>
 
-        <form data-apply-form action="mailto:info@kryssengrowth.com" method="post" enctype="text/plain">
-          <div class="form-grid">
-            <div class="field"><label for="name">Your name</label><input id="name" name="name" autocomplete="name" required></div>
-            <div class="field"><label for="role">Your role</label><input id="role" name="role" placeholder="Founder, CEO, Growth, Sales…" required></div>
-            <div class="field"><label for="email">Work email</label><input id="email" name="email" type="email" autocomplete="email" required></div>
-            <div class="field"><label for="company">Company</label><input id="company" name="company" autocomplete="organization" required></div>
-            <div class="field field--full"><label for="website">Company website</label><input id="website" name="website" type="url" inputmode="url" placeholder="https://" required></div>
-          </div>
+        <form data-apply-form method="post" autocomplete="on" novalidate>
+          <input type="hidden" name="successUrl" data-success-url>
+          <input type="hidden" name="failureUrl" data-failure-url>
+          <input type="hidden" name="sourcePage" data-source-page>
+          <input type="hidden" name="utmSource" data-utm-source>
+          <input type="hidden" name="utmMedium" data-utm-medium>
+          <input type="hidden" name="utmCampaign" data-utm-campaign>
+          <input type="hidden" name="formStartedAt" data-form-started-at>
+          <input type="hidden" name="submissionNonce" data-submission-nonce>
+          <div class="bot-field" aria-hidden="true"><label for="company-fax">Leave this field empty</label><input id="company-fax" name="companyFax" tabindex="-1" autocomplete="off"></div>
 
-          <fieldset class="field">
-            <legend>How do you create revenue?</legend>
-            <div class="choice-grid">
-              <div class="choice"><input type="radio" id="motion-sales" name="motion" value="sales" required><label for="motion-sales"><b>Sales-led</b><span>Human-led deal and close</span></label></div>
-              <div class="choice"><input type="radio" id="motion-plg" name="motion" value="plg" required><label for="motion-plg"><b>Product-led</b><span>Product creates and converts demand</span></label></div>
-              <div class="choice"><input type="radio" id="motion-hybrid" name="motion" value="hybrid" required><label for="motion-hybrid"><b>Hybrid</b><span>Product signal plus sales help</span></label></div>
+          <section class="form-step is-active" data-form-step="1" aria-labelledby="step-one-title">
+            <h3 id="step-one-title" class="form-step-title">Your company and revenue motion</h3>
+            <div class="form-grid">
+              <div class="field"><label for="name">Your name</label><input id="name" name="name" autocomplete="name" maxlength="120" required></div>
+              <div class="field"><label for="role">Your role</label><input id="role" name="role" autocomplete="organization-title" maxlength="120" placeholder="Founder, CEO, Growth, Sales…" required></div>
+              <div class="field"><label for="email">Work email</label><input id="email" name="email" type="email" autocomplete="email" maxlength="180" required></div>
+              <div class="field"><label for="company">Company</label><input id="company" name="company" autocomplete="organization" maxlength="180" required></div>
+              <div class="field field--full"><label for="website">Company website</label><input id="website" name="website" type="text" inputmode="url" autocomplete="url" maxlength="300" placeholder="kryssengrowth.com" required><span class="field-help">You can enter the domain with or without https://</span></div>
             </div>
-          </fieldset>
 
-          <fieldset class="field">
-            <legend>What do you already have?</legend>
-            <div class="choice-grid">
-              <div class="choice"><input type="radio" id="stage-customers" name="stage" value="paying B2B customers" required><label for="stage-customers"><b>Paying customers</b><span>Revenue exists, motion is uneven</span></label></div>
-              <div class="choice"><input type="radio" id="stage-usage" name="stage" value="recurring product usage" required><label for="stage-usage"><b>Recurring usage</b><span>Users return, monetisation is weak</span></label></div>
-              <div class="choice"><input type="radio" id="stage-both" name="stage" value="paying customers and recurring usage" required><label for="stage-both"><b>Both</b><span>Customers and product signals</span></label></div>
+            <fieldset class="field">
+              <legend>How do you create revenue?</legend>
+              <div class="choice-grid">
+                <div class="choice"><input type="radio" id="motion-sales" name="motion" value="sales" required><label for="motion-sales"><b>Sales-led</b><span>Human-led deal and close</span></label></div>
+                <div class="choice"><input type="radio" id="motion-plg" name="motion" value="plg" required><label for="motion-plg"><b>Product-led</b><span>Product creates and converts demand</span></label></div>
+                <div class="choice"><input type="radio" id="motion-hybrid" name="motion" value="hybrid" required><label for="motion-hybrid"><b>Hybrid</b><span>Product signal plus sales help</span></label></div>
+              </div>
+            </fieldset>
+
+            <fieldset class="field">
+              <legend>What do you already have?</legend>
+              <div class="choice-grid">
+                <div class="choice"><input type="radio" id="stage-customers" name="stage" value="paying B2B customers" required><label for="stage-customers"><b>Paying customers</b><span>Revenue exists, motion is uneven</span></label></div>
+                <div class="choice"><input type="radio" id="stage-usage" name="stage" value="recurring product usage" required><label for="stage-usage"><b>Recurring usage</b><span>Users return, monetisation is weak</span></label></div>
+                <div class="choice"><input type="radio" id="stage-both" name="stage" value="paying customers and recurring usage" required><label for="stage-both"><b>Both</b><span>Customers and product signals</span></label></div>
+              </div>
+            </fieldset>
+
+            <button class="button button--full" type="button" data-next-step>Continue to the revenue break <span aria-hidden="true">→</span></button>
+          </section>
+
+          <section class="form-step" data-form-step="2" aria-labelledby="step-two-title" hidden>
+            <h3 id="step-two-title" class="form-step-title">The revenue break</h3>
+            <div class="field"><label for="constraint">Where is the motion breaking?</label><select id="constraint" name="constraint" required><option value="">Choose one</option><option>We are reaching the wrong accounts</option><option>Our offer does not create urgency</option><option>Signups do not activate</option><option>Usage does not become payment</option><option>Sales and product handoff is broken</option><option>We cannot see what creates revenue</option><option>We are spread across too many channels</option></select></div>
+
+            <div class="field"><label for="context">What is happening now?</label><textarea id="context" name="context" minlength="20" maxlength="3000" placeholder="What are you seeing in the funnel, product or sales process?" required></textarea><span class="field-help">Required. A focused paragraph is enough.</span></div>
+
+            <div class="field"><label for="outcome">What would make the next 45 days valuable? <span class="micro">Optional</span></label><textarea id="outcome" name="outcome" maxlength="2000" placeholder="For example: five accepted opportunities, better activation, or a clear Scale / Fix / Kill decision."></textarea></div>
+
+            <div class="turnstile-wrap" data-turnstile-wrap>
+              <div class="turnstile-label">Secure submission</div>
+              <div data-turnstile-container></div>
+              <p class="micro" data-turnstile-message>Preparing the security check…</p>
             </div>
-          </fieldset>
 
-          <div class="field"><label for="constraint">Where is the motion breaking?</label><select id="constraint" name="constraint" required><option value="">Choose one</option><option>We are reaching the wrong accounts</option><option>Our offer does not create urgency</option><option>Signups do not activate</option><option>Usage does not become payment</option><option>Sales and product handoff is broken</option><option>We cannot see what creates revenue</option><option>We are spread across too many channels</option></select></div>
+            <div class="form-actions">
+              <button class="button button--ghost" type="button" data-previous-step>← Back</button>
+              <button class="button" type="submit" data-submit-button disabled><span data-submit-label>Preparing secure submission…</span> <span aria-hidden="true">→</span></button>
+            </div>
+            <p class="submit-note">Your application goes directly to Kryssen. No email app will open.</p>
+          </section>
 
-          <div class="field"><label for="context">What is happening now?</label><textarea id="context" name="context" placeholder="A short answer is enough. What are you seeing in the funnel, product or sales process?" required></textarea></div>
-
-          <div class="field"><label for="outcome">What would make the next 45 days valuable? <span class="micro">Optional</span></label><textarea id="outcome" name="outcome" placeholder="For example: five accepted opportunities, better activation, or a clear Scale / Fix / Kill decision."></textarea></div>
-
-          <button class="button button--full" type="submit">Continue in email <span aria-hidden="true">→</span></button>
-          <p class="submit-note">Your email app will open with your answers. Nothing is submitted until you press Send.</p>
-          <div class="form-status" data-form-status role="status" aria-live="polite"></div>
-          <p class="direct-email">Prefer a normal email? Write to <a href="mailto:info@kryssengrowth.com?subject=Revenue%20Motion%20Fit%20Call">info@kryssengrowth.com</a>.</p>
+          <div class="form-status" data-form-status role="status" aria-live="polite" tabindex="-1"></div>
+          <p class="form-privacy">By submitting, you ask Kryssen to assess fit and contact you about this application. Read our <a href="privacy.html" target="_blank" rel="noopener">Privacy Policy</a>.</p>
         </form>
       </section>
     </div>
   </main>
 
-  <footer class="site-footer">
-    <div class="shell">
-      <div class="footer-top"><div><a class="brand" href="index.html"><span class="brand-mark">KRYSSEN</span></a><p>B2B demand systems for sales-led, product-led and hybrid revenue.</p></div><nav class="footer-links" aria-label="Footer navigation"><a href="index.html#motions">Your motion</a><a href="index.html#sprint">The sprint</a><a href="proof.html">Proof</a><a href="apply.html">Apply</a><a href="mailto:info@kryssengrowth.com">Email</a></nav></div>
-      <div class="footer-bottom"><span>© 2026 KRYSSEN</span><span>CONFIDENTIAL · SENIOR OPERATOR REVIEW</span></div>
-    </div>
+  <footer class="apply-footer">
+    <div class="shell"><span>© 2026 KRYSSEN</span><a href="privacy.html">Privacy</a><a href="mailto:info@kryssengrowth.com">Contact</a></div>
   </footer>
+
   <script src="app.js"></script>
 </body>
 </html>

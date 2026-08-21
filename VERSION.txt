@@ -1,3 +1,4 @@
-Kryssen Website Version 5
-Built from the approved V2 architecture.
-Generated: 17 August 2026
+Kryssen Website — Version 7
+Custom static application workflow with direct Apps Script POST
+No Cloudflare Worker, Wrangler or Node build dependency
+Prepared: 2026-08-20
