@@ -1,5 +1,5 @@
 /*
- * Kryssen Version 7 public configuration.
+ * Kryssen Version 9 public configuration.
  * These values are intentionally browser-visible. Never place secret keys here.
  */
 window.KRYSSEN_CONFIG = Object.freeze({

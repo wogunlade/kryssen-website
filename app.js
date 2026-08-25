@@ -17,6 +17,7 @@
 
   initNavigation();
   initConsent();
+  loadGtm();
   initTracking();
   initApplicationForm();
   initReceivedPage();
@@ -63,39 +64,16 @@
       const layer = document.createElement('section');
       layer.className = 'consent-layer';
       layer.dataset.consentLayer = '';
-      layer.setAttribute('aria-label', 'Session information and privacy choices');
+      layer.setAttribute('aria-label', 'Cookie consent');
       layer.innerHTML = `
-        <div class="consent-card" role="region" aria-labelledby="consent-title">
-          <div class="consent-copy">
-            <h2 id="consent-title">We collect basic information about this session.</h2>
-            <p>Here is some information about how this session is handled. Necessary functions stay on; optional analytics and marketing remain off until you choose them. Read the <a href="privacy.html">Privacy Policy</a>.</p>
-          </div>
-          <div class="consent-options" ${isSettings ? '' : 'hidden'} data-consent-options>
-            <label><input type="checkbox" checked disabled> <span><b>Necessary</b><small>Security, Turnstile and application processing.</small></span></label>
-            <label><input type="checkbox" data-consent-analytics ${current.analytics ? 'checked' : ''}> <span><b>Analytics</b><small>GA4 and Microsoft Clarity.</small></span></label>
-            <label><input type="checkbox" data-consent-marketing ${current.marketing ? 'checked' : ''}> <span><b>Marketing</b><small>Hey Oliver marketing automation.</small></span></label>
-          </div>
+        <div class="consent-bar" role="dialog" aria-live="polite">
+          <p>We use cookies on this site. <a href="privacy.html">Privacy policy</a></p>
           <div class="consent-actions">
-            <button class="consent-text-action" type="button" data-consent-reject>Reject non-essential</button>
-            <button class="consent-text-action" type="button" data-consent-manage>${isSettings ? 'Save choices' : 'Manage choices'}</button>
-            <button class="button button--dark" type="button" data-consent-accept>Accept all</button>
+            <button class="consent-decline" type="button" data-consent-reject>Decline</button>
+            <button class="button" type="button" data-consent-accept>Accept</button>
           </div>
         </div>`;
       document.body.appendChild(layer);
-
-      const options = layer.querySelector('[data-consent-options]');
-      const manage = layer.querySelector('[data-consent-manage]');
-      manage.addEventListener('click', () => {
-        if (options.hidden) {
-          options.hidden = false;
-          manage.textContent = 'Save choices';
-          return;
-        }
-        saveConsent({
-          analytics: layer.querySelector('[data-consent-analytics]').checked,
-          marketing: layer.querySelector('[data-consent-marketing]').checked
-        }, isSettings);
-      });
       layer.querySelector('[data-consent-reject]').addEventListener('click', () => {
         saveConsent({ analytics: false, marketing: false }, isSettings);
       });
@@ -142,7 +120,7 @@
       consent_marketing: choice.marketing ? 'granted' : 'denied'
     });
 
-    if (choice.analytics || choice.marketing) loadGtm();
+    loadGtm();
   }
 
   function loadGtm() {
@@ -162,7 +140,7 @@
     button.type = 'button';
     button.className = 'privacy-settings';
     button.dataset.privacySettings = '';
-    button.textContent = 'Privacy choices';
+    button.textContent = 'Cookies';
     button.addEventListener('click', openSettings);
     document.body.appendChild(button);
   }
@@ -183,7 +161,10 @@
   }
 
   function track(eventName, parameters = {}) {
-    if (!eventName || !consentState.analytics) return false;
+    const conversionEvents = ['form_submit', 'generate_lead', 'call_booked'];
+    const isConversion = conversionEvents.includes(eventName);
+    if (!eventName) return false;
+    if (!isConversion && !consentState.analytics) return false;
     const clean = {};
     Object.entries(parameters).forEach(([key, value]) => {
       if (value !== undefined && value !== null && value !== '') clean[key] = value;
@@ -223,15 +204,22 @@
     prefillMotion();
     configureEndpoint();
     saveDraftOnChange();
-    showStep(Number(sessionStorage.getItem(`${draftKey}-step`) || 1) === 2 ? 2 : 1);
+    const savedStep = Number(sessionStorage.getItem(`${draftKey}-step`) || 1) === 2 ? 2 : 1;
+    showStep(savedStep);
+    if (selectedValue('stage') === 'pre-revenue / no usage') showNotYet();
 
     form.addEventListener('input', markFormStarted, { once: true });
     form.addEventListener('change', markFormStarted, { once: true });
     form.querySelector('[data-next-step]').addEventListener('click', () => {
       if (!validateStep(1)) return;
+      if (selectedValue('stage') === 'pre-revenue / no usage') {
+        showNotYet();
+        return;
+      }
       showStep(2);
     });
     form.querySelector('[data-previous-step]').addEventListener('click', () => showStep(1));
+    form.querySelector('[data-not-yet-back]')?.addEventListener('click', () => showStep(1));
     form.addEventListener('submit', submitApplication);
     handleReturnStatus();
     document.addEventListener('kryssen:consent-ready', () => {
@@ -270,8 +258,23 @@
       });
     }
 
+    function showNotYet() {
+      form.querySelectorAll('[data-form-step]').forEach((section) => {
+        section.hidden = true;
+        section.classList.remove('is-active');
+      });
+      const panel = form.querySelector('[data-not-yet]');
+      if (panel) panel.hidden = false;
+      currentStepText.textContent = '1';
+      progress.setAttribute('aria-valuenow', '1');
+      progressBar.style.width = '50%';
+      document.querySelector('.form-card')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+
     function showStep(step) {
       currentStep = step === 2 ? 2 : 1;
+      const notYet = form.querySelector('[data-not-yet]');
+      if (notYet) notYet.hidden = true;
       form.querySelectorAll('[data-form-step]').forEach((section) => {
         const active = Number(section.dataset.formStep) === currentStep;
         section.hidden = !active;
