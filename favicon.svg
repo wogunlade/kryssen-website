@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Kryssen">
+  <rect width="64" height="64" fill="#0e231e"/>
+  <path d="M18 13v38" fill="none" stroke="#bbe182" stroke-width="8" stroke-linecap="square"/>
+  <path d="M22 33 44 13M22 32l23 19" fill="none" stroke="#bbe182" stroke-width="8" stroke-linecap="square" stroke-linejoin="miter"/>
+  <rect x="48" y="9" width="7" height="7" fill="#c85236"/>
+</svg>

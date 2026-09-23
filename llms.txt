@@ -1,0 +1,36 @@
+# Kryssen Growth Studio
+
+> Kryssen helps Nigerian businesses turn company expertise into Education-Led Growth™: answers, decision tools, customer learning and market insight connected to buyer decisions and observable commercial signals.
+
+## Start
+- [Homepage](https://kryssengrowth.com/): overview of the Education-Led Growth™ system.
+- [Apply for a fit review](https://kryssengrowth.com/apply.html): adaptive application reviewed by Kryssen before a potential call.
+- [Education Opportunity Finder](https://kryssengrowth.com/quiz.html): a no-score starting-point finder with no email gate.
+
+## Audiences
+- [For founders](https://kryssengrowth.com/founders.html)
+- [For growing businesses](https://kryssengrowth.com/business.html)
+
+## Learn
+- [The Education-Led Growth™ Manifesto](https://kryssengrowth.com/manifesto.html)
+- [ELG™ Manifesto Masterclass](https://kryssengrowth.com/workshops.html)
+
+## Industries
+- [Industries](https://kryssengrowth.com/industries.html)
+- Fintech & payments
+- Banking, insurance & asset management
+- Professional services
+- Private healthcare
+- Real estate
+- Private education
+- Energy & solar
+- SaaS & B2B technology
+
+Each listed industry has one canonical page under `/industry-*.html`.
+
+## Company
+- [About](https://kryssengrowth.com/about.html)
+- [Privacy](https://kryssengrowth.com/privacy.html)
+
+## Contact
+info@kryssengrowth.com

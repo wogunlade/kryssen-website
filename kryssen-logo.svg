@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 250 52" role="img" aria-labelledby="title desc">
+  <title id="title">Kryssen Growth Studio</title>
+  <desc id="desc">Kryssen K symbol with the Kryssen Growth Studio wordmark</desc>
+  <rect x="1" y="1" width="50" height="50" fill="#0e231e"/>
+  <path d="M15 11v30M18 26 36 11M18 26l19 15" fill="none" stroke="#bbe182" stroke-width="6" stroke-linecap="square" stroke-linejoin="miter"/>
+  <rect x="39" y="7" width="6" height="6" fill="#c85236"/>
+  <text x="64" y="28" fill="#0e231e" font-family="Georgia, 'Times New Roman', serif" font-size="27" font-weight="600" letter-spacing="-.5">Kryssen</text>
+  <text x="65" y="43" fill="#637069" font-family="Inter, Arial, sans-serif" font-size="8.5" font-weight="700" letter-spacing="2.2">GROWTH STUDIO</text>
+</svg>
