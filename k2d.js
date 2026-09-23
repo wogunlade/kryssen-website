@@ -187,6 +187,9 @@ function initWorkshop(){
   var turnstileStatus=document.getElementById('workshopTurnstileStatus');
   var token='';var widgetId=null;var draftKey='kryssen-masterclass-draft-v1';
   var params=new URLSearchParams(location.search);
+  var websiteInput=form.querySelector('[name="website"]');
+  function normalizeWebsite(){var value=websiteInput.value.trim();if(value&&!/^https?:\/\//i.test(value))websiteInput.value='https://'+value}
+  websiteInput.addEventListener('blur',normalizeWebsite);
   function set(id,value){var el=document.getElementById(id);if(el)el.value=value||''}
   function cleanUrl(){var u=new URL(location.href);['submission','reference','message','field'].forEach(function(k){u.searchParams.delete(k)});history.replaceState({},'',u.pathname+(u.searchParams.toString()?'?'+u.searchParams.toString():''))}
   function setupFields(){
@@ -194,7 +197,7 @@ function initWorkshop(){
     set('wsSourceUrl',location.href.slice(0,800));set('wsUtmSource',params.get('utm_source')||'');set('wsUtmMedium',params.get('utm_medium')||'');set('wsUtmContent',params.get('utm_content')||'');
     set('wsSuccessUrl',base);set('wsFailureUrl',base);set('wsFormStartedAt',String(Date.now()));set('wsSubmissionNonce',k2dNonce());
   }
-  function saveDraft(){var d={};form.querySelectorAll('input,select,textarea').forEach(function(el){if(!el.name||el.type==='hidden'||el.name==='cf-turnstile-response'||el.name==='company_fax')return;d[el.name]=el.type==='checkbox'?el.checked:el.value});try{sessionStorage.setItem(draftKey,JSON.stringify(d))}catch(e){}}
+  function saveDraft(){var d={};form.querySelectorAll('input,select,textarea').forEach(function(el){if(!el.name||el.type==='hidden'||el.name==='cf-turnstile-response'||el.name==='kryssen_guard_field')return;d[el.name]=el.type==='checkbox'?el.checked:el.value});try{sessionStorage.setItem(draftKey,JSON.stringify(d))}catch(e){}}
   function restoreDraft(){var d=null;try{d=JSON.parse(sessionStorage.getItem(draftKey)||'null')}catch(e){}if(!d)return;form.querySelectorAll('input,select,textarea').forEach(function(el){if(!el.name||!Object.prototype.hasOwnProperty.call(d,el.name))return;if(el.type==='checkbox')el.checked=Boolean(d[el.name]);else el.value=d[el.name]})}
   function clearDraft(){try{sessionStorage.removeItem(draftKey)}catch(e){}}
   function showSuccess(reference){
@@ -203,12 +206,12 @@ function initWorkshop(){
     form.hidden=true;if(done){done.hidden=false;var p=done.querySelector('p');if(p)p.textContent='Your priority-list interest was received. This does not confirm a seat or a date. Reference: '+(reference||'Recorded');window.scrollTo({top:done.offsetTop-120,behavior:'smooth'})}
     clearDraft();cleanUrl();track('workshop_priority_list_submitted',{offer:'elg-manifesto-masterclass',reference:reference||'recorded'});
   }
-  function handleReturn(){var state=params.get('submission');if(state==='success'||state==='received'){showSuccess(params.get('reference'));return}if(state==='failed'){restoreDraft();if(status)status.textContent=params.get('message')||'We could not store your priority-list entry. Review the form and try again.';cleanUrl()}}
+  function handleReturn(){var state=params.get('submission');if(state==='success'){showSuccess(params.get('reference'));return}if(state==='received'){restoreDraft();if(status)status.textContent='Your entry could not be confirmed. Please submit again with browser autofill disabled.';cleanUrl();return}if(state==='failed'){restoreDraft();if(status)status.textContent=params.get('message')||'We could not store your priority-list entry. Review the form and try again.';cleanUrl()}}
   function setupTurnstile(){var started=Date.now();function attempt(){if(window.turnstile&&window.turnstile.render){if(!K2D_CONFIG.TURNSTILE_SITE_KEY){turnstileStatus.textContent='Security is not configured.';return}widgetId=window.turnstile.render('#workshopTurnstile',{sitekey:K2D_CONFIG.TURNSTILE_SITE_KEY,action:K2D_CONFIG.WORKSHOP_TURNSTILE_ACTION||'elg-masterclass',callback:function(v){token=v;turnstileStatus.textContent='Security check complete.'},'expired-callback':function(){token='';turnstileStatus.textContent='Security check expired. Complete it again.'},'error-callback':function(){token='';turnstileStatus.textContent='Security check could not load. Refresh to retry.'}});return}if(Date.now()-started>12000){turnstileStatus.textContent='Security check took too long to load. Refresh to retry.';return}setTimeout(attempt,100)}attempt()}
   setupFields();restoreDraft();setupTurnstile();handleReturn();
   form.addEventListener('focusin',function(){if(!form.dataset.started){form.dataset.started='true';track('workshop_form_started',{offer:'elg-manifesto-masterclass'})}});
   form.addEventListener('submit',function(e){
-    e.preventDefault();if(!stepValid(form))return;
+    e.preventDefault();normalizeWebsite();if(!stepValid(form))return;
     if(form.dataset.requiresEndpoint==='true'&&!K2D_CONFIG.FORM_ENDPOINT){if(status)status.textContent='Submission is not connected. Contact info@kryssengrowth.com.';return}
     if(!token){if(status)status.textContent='Complete the security check before submitting.';return}
     saveDraft();form.action=K2D_CONFIG.FORM_ENDPOINT;form.method='post';var button=form.querySelector('button[type=submit]');if(button){button.disabled=true;button.textContent='Submitting securely…'}track('workshop_submit_started',{offer:'elg-manifesto-masterclass'});form.submit();

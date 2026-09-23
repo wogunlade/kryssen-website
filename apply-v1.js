@@ -110,7 +110,7 @@ function buildSnapshot(target){
   addSnapshotCard(target,'Publishing readiness',selected('publish_readiness')==='yes'?'Ready with an approval process':'Internal concerns need resolution');
 }
 function formPayload(){
-  var fd=new FormData(form),out={};fd.forEach(function(v,k){if(k==='company_fax')return;if(Object.prototype.hasOwnProperty.call(out,k)){if(!Array.isArray(out[k]))out[k]=[out[k]];out[k].push(v)}else out[k]=v});
+  var fd=new FormData(form),out={};fd.forEach(function(v,k){if(k==='kryssen_guard_field')return;if(Object.prototype.hasOwnProperty.call(out,k)){if(!Array.isArray(out[k]))out[k]=[out[k]];out[k].push(v)}else out[k]=v});
   out.schema_version='apply-v1.0';out.submitted_at=new Date().toISOString();out.page_url=location.href;return out
 }
 function createNonce(){
@@ -168,7 +168,8 @@ function showReturnSuccess(reference){
 }
 function handleReturnStatus(){
   var state=params.get('submission');if(!state)return false;
-  if(state==='success'||state==='received'){showReturnSuccess(params.get('reference')||'Recorded');return true}
+  if(state==='success'){showReturnSuccess(params.get('reference')||'Recorded');return true}
+  if(state==='received'){restoreDraft();maxStep=4;setBranchRequirements();restoreDraft();showStep(4);document.getElementById('submitError').textContent='Your submission could not be confirmed. Please submit again with browser autofill disabled.';cleanReturnUrl();return true}
   if(state==='failed'){
     maxStep=4;setBranchRequirements();restoreDraft();showStep(4);
     document.getElementById('submitError').textContent=params.get('message')||'We could not store your application. Review your answers and try again.';
@@ -191,7 +192,7 @@ form.addEventListener('submit',function(e){e.preventDefault();if(!validateStep(4
   saveDraft();form.action=config.FORM_ENDPOINT;form.method='post';submit.disabled=true;submit.textContent='Submitting securely…';track('apply_submit_started',{audience:selected('audience'),sector:qs('[name="sector"]',form).value});form.submit()
 });
 form.addEventListener('input',function(e){if(e.target.classList.contains('is-invalid')){e.target.classList.remove('is-invalid');e.target.removeAttribute('aria-invalid')}});
-qs('[name="website"]',form).addEventListener('blur',function(e){var v=e.target.value.trim();if(v&&!/^https?:\/\//i.test(v))e.target.value='https://'+v});
+var websiteInput=qs('[name="website"]',form);function normalizeWebsite(){var v=websiteInput.value.trim();if(v&&!/^https?:\/\//i.test(v))websiteInput.value='https://'+v}websiteInput.addEventListener('blur',normalizeWebsite);form.addEventListener('submit',normalizeWebsite,true);
 form.addEventListener('change',function(e){if(e.target.name==='audience'&&maxStep>=3)setBranchRequirements();if(e.target.name==='sector'&&maxStep>=3)buildSectorQuestion()});
 prefillContext();restoreDraft();buildSectorQuestion();setupSubmissionFields();setupTurnstile();if(config.PREVIEW_MODE||config.STAGING_MODE)document.getElementById('previewFlag').hidden=false;handleReturnStatus();track('apply_started',{audience_source:params.get('audience')||'',sector_source:params.get('sector')||'',opportunity_source:params.get('opportunity')||'',lane_source:params.get('lane')||'',service_route_source:params.get('service_route')||'',support_route_source:params.get('support_route')||'',utm_source:params.get('utm_source')||''});
 })();

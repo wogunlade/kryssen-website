@@ -5,6 +5,10 @@ Every page is self-contained HTML referencing three stylesheets (`kryssen-style-
 
 Includes the 2026-09-18 CRO audit + feedback implementation: analytics.js and k2d.js wired across the site (GTM consent mode, event gating, rotor, WhatsApp controls and section diagnostics), canonical/schema URLs set to kryssengrowth.com, unified "Apply for a fit review" CTAs with full UTM attribution, Inter self-hosted (zero third-party requests).
 
+**v0.73:** Aligned Apply and Masterclass website-address handling so HTTP, HTTPS, `www` and bare domains are accepted consistently and missing protocols are normalised before validation.
+
+**v0.72:** Made both form honeypots resistant to browser autofill, converted anti-spam decoy returns into draft-preserving retry guidance, and aligned the Apply email helper with the restrained confirmation receipt.
+
 **v0.71:** Simplified the quiz interface by removing the extra panel branding marker and sidebar Context label while retaining the full product identity and progress count.
 
 **v0.70:** Widened the founder hero, added explicit profession/industry callouts to all eight sector-page openings, and strengthened the quiz interface and result-state branding with the full Kryssen identity and Education Opportunity Finder attribution.
@@ -81,7 +85,7 @@ The Adewale Yusuf references are operator proof about Ogunlade’s pre-Kryssen w
 | Company | `about.html` · `privacy.html` · `404.html` |
 | Assets | `favicon.svg` · `share.png` · `assets/` (including self-hosted Inter) |
 | SEO / AI | `sitemap.xml` (16 canonical URLs) · `llms.txt` · `robots.txt` |
-| History | `VERSION.md` (full changelog through v0.71) |
+| History | `VERSION.md` (full changelog through v0.73) |
 
 ## Conversion wiring (do not change without intent)
 
