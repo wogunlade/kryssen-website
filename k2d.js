@@ -4,7 +4,7 @@
    live GTM container (GTM-NGKZZ88T) and consent mode defaults.
    ============================================================ */
 var K2D_CONFIG = {
-  FORM_ENDPOINT: "https://script.google.com/macros/s/AKfycbxA8YxTnHsyzo1GR6No0dC0YhpGdPR9i2OImTpUbSkDqleDi3fqqzzscgQxWGtXUidx/exec",
+  FORM_ENDPOINT: "https://script.google.com/macros/s/AKfycbxohCKxEKOQZE7Yy4T53fcnSJxvNPo3ZrhK4z8-X8KcmTBdumYQgK4oqy5qRyZduSs1/exec",
   TURNSTILE_SITE_KEY: "0x4AAAAAAEUupCPuitD89Z6_",
   WORKSHOP_TURNSTILE_ACTION: "elg-masterclass",
   WHATSAPP: "2348158357418"

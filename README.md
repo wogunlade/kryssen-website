@@ -5,6 +5,8 @@ Every page is self-contained HTML referencing three stylesheets (`kryssen-style-
 
 Includes the 2026-09-18 CRO audit + feedback implementation: analytics.js and k2d.js wired across the site (GTM consent mode, event gating, rotor, WhatsApp controls and section diagnostics), canonical/schema URLs set to kryssengrowth.com, unified "Apply for a fit review" CTAs with full UTM attribution, Inter self-hosted (zero third-party requests).
 
+**v0.74:** Switched both forms to the separately deployed production-candidate receiver, removed staging notices and finalised Privacy for the verified providers, Cloudflare Worker hosting and 12-month submission retention.
+
 **v0.73:** Aligned Apply and Masterclass website-address handling so HTTP, HTTPS, `www` and bare domains are accepted consistently and missing protocols are normalised before validation.
 
 **v0.72:** Made both form honeypots resistant to browser autofill, converted anti-spam decoy returns into draft-preserving retry guidance, and aligned the Apply email helper with the restrained confirmation receipt.
@@ -23,7 +25,7 @@ Includes the 2026-09-18 CRO audit + feedback implementation: analytics.js and k2
 
 **v0.65:** Added one full horizontal Kryssen Growth Studio logo and installed it across every page header, including Apply. The compact K remains the favicon because a horizontal wordmark is not legible at browser-tab size.
 
-**v0.64:** Aligned analytics and consent to the current live setup by using GTM container `GTM-NGKZZ88T`, denied-by-default consent mode, one shared `analytics.js` across all 19 pages and consent-gated interaction events. Updated Privacy and footer disclosures, corrected preview application measurement, revised the 404, replaced the homepage wordmark with a symbol, and added a bespoke Kryssen favicon set. **Staging status:** Apply and Masterclass point to the protected staging receiver. Do not merge until preview-host allowlisting and end-to-end tests pass.
+**v0.64:** Aligned analytics and consent to the current live setup by using GTM container `GTM-NGKZZ88T`, denied-by-default consent mode, one shared `analytics.js` across all 19 pages and consent-gated interaction events. Updated Privacy and footer disclosures, corrected preview application measurement, revised the 404, replaced the homepage wordmark with a symbol, and added a bespoke Kryssen favicon set. **Production-candidate status:** Apply and Masterclass point to the separately deployed production-candidate receiver. Verify that endpoint from the Cloudflare branch preview before merge.
 
 **v0.63:** Updated all footer labels to “Read the ELG™ manifesto” and removed the orange footer divider on the About page only so its dark application close flows continuously into the footer.
 
@@ -85,7 +87,7 @@ The Adewale Yusuf references are operator proof about Ogunlade’s pre-Kryssen w
 | Company | `about.html` · `privacy.html` · `404.html` |
 | Assets | `favicon.svg` · `share.png` · `assets/` (including self-hosted Inter) |
 | SEO / AI | `sitemap.xml` (16 canonical URLs) · `llms.txt` · `robots.txt` |
-| History | `VERSION.md` (full changelog through v0.73) |
+| History | `VERSION.md` (full changelog through v0.74) |
 
 ## Conversion wiring (do not change without intent)
 
