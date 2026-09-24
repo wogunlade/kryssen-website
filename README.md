@@ -5,6 +5,8 @@ Every page is self-contained HTML referencing three stylesheets (`kryssen-style-
 
 Includes the 2026-09-18 CRO audit + feedback implementation: analytics.js and k2d.js wired across the site (GTM consent mode, event gating, rotor, WhatsApp controls and section diagnostics), canonical/schema URLs set to kryssengrowth.com, unified "Apply for a fit review" CTAs with full UTM attribution, Inter self-hosted (zero third-party requests).
 
+**v0.75:** Added explicit Cloudflare Workers Static Assets routing so unknown and retired URLs serve the branded `404.html` with HTTP 404, while deployment metadata and repository documentation remain excluded from public assets.
+
 **v0.74:** Switched both forms to the separately deployed production-candidate receiver, removed staging notices and finalised Privacy for the verified providers, Cloudflare Worker hosting and 12-month submission retention.
 
 **v0.73:** Aligned Apply and Masterclass website-address handling so HTTP, HTTPS, `www` and bare domains are accepted consistently and missing protocols are normalised before validation.
@@ -87,7 +89,7 @@ The Adewale Yusuf references are operator proof about Ogunlade’s pre-Kryssen w
 | Company | `about.html` · `privacy.html` · `404.html` |
 | Assets | `favicon.svg` · `share.png` · `assets/` (including self-hosted Inter) |
 | SEO / AI | `sitemap.xml` (16 canonical URLs) · `llms.txt` · `robots.txt` |
-| History | `VERSION.md` (full changelog through v0.74) |
+| History | `VERSION.md` (full changelog through v0.75) |
 
 ## Conversion wiring (do not change without intent)
 
@@ -118,3 +120,7 @@ Notes:
 python3 -m http.server 8080
 # then open http://localhost:8080
 ```
+
+## Cloudflare Worker routing
+
+`wrangler.jsonc` deploys the repository root as static assets and sets `not_found_handling` to `404-page`. `.assetsignore` excludes Git metadata, repository documentation and the Wrangler configuration itself from public assets.
