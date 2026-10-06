@@ -1,0 +1,293 @@
+{
+  "compiled_on": "2026-10-05",
+  "purpose": "Review compilation of explicitly selected latest pages; not a production deployment.",
+  "homepage_rule": "index.html is copied from homepage-v206-O-review.html, not from the older canonical index.html.",
+  "pages": [
+    {
+      "compiled": "index.html",
+      "source": "homepage-v206-O-review.html",
+      "sha256": "a15c111cab187b1d028086a71572769c0d7a0e7cf591ab44844d5f1feaa0ca25",
+      "source_sha256": "a15c111cab187b1d028086a71572769c0d7a0e7cf591ab44844d5f1feaa0ca25"
+    },
+    {
+      "compiled": "workshops.html",
+      "source": "workshops.html",
+      "sha256": "455fcf53636977d2b4cead4dc2ef424d11a04131c7af949f2b29efd7ee1db0fd",
+      "source_sha256": "455fcf53636977d2b4cead4dc2ef424d11a04131c7af949f2b29efd7ee1db0fd"
+    },
+    {
+      "compiled": "quiz.html",
+      "source": "quiz.html",
+      "sha256": "0622389a834391e0c18bfcd97609d3513eaaefc0e3270d2037e576ea4dc28154",
+      "source_sha256": "0622389a834391e0c18bfcd97609d3513eaaefc0e3270d2037e576ea4dc28154"
+    },
+    {
+      "compiled": "founders.html",
+      "source": "founders.html",
+      "sha256": "3d694e8d8066533c65172717fccb3845167f18e1dfd24334ca7933f302d47a88",
+      "source_sha256": "3d694e8d8066533c65172717fccb3845167f18e1dfd24334ca7933f302d47a88"
+    },
+    {
+      "compiled": "business.html",
+      "source": "business.html",
+      "sha256": "fbc80d48fb8a5ef319c6d85e4f091af07cf04372b4b8e0ed739991f1acdd6ba2",
+      "source_sha256": "fbc80d48fb8a5ef319c6d85e4f091af07cf04372b4b8e0ed739991f1acdd6ba2"
+    },
+    {
+      "compiled": "about.html",
+      "source": "about.html",
+      "sha256": "a465f0fc235c5764ad85143c557b69d3b7fb0927d84838829ca35a7bbdb1b2d3",
+      "source_sha256": "a465f0fc235c5764ad85143c557b69d3b7fb0927d84838829ca35a7bbdb1b2d3"
+    },
+    {
+      "compiled": "404.html",
+      "source": "404.html",
+      "sha256": "c7050f05006a9efdfaddcb8a0d6c1dbcc8425d69042aa3fe890d023acbf72c23",
+      "source_sha256": "c7050f05006a9efdfaddcb8a0d6c1dbcc8425d69042aa3fe890d023acbf72c23"
+    },
+    {
+      "compiled": "apply.html",
+      "source": "apply.html",
+      "sha256": "54c8bcd3c9af5c86ad5181dbb98820d9dd28cbd3fed9f53455acc40b3e7b28e5",
+      "source_sha256": "54c8bcd3c9af5c86ad5181dbb98820d9dd28cbd3fed9f53455acc40b3e7b28e5"
+    },
+    {
+      "compiled": "manifesto.html",
+      "source": "manifesto.html",
+      "sha256": "2767378c3de2266ade14ecfe0bb32f72dee8fc241fe25440c8032395f519287d",
+      "source_sha256": "2767378c3de2266ade14ecfe0bb32f72dee8fc241fe25440c8032395f519287d"
+    },
+    {
+      "compiled": "privacy.html",
+      "source": "privacy.html",
+      "sha256": "71b1c6b6c42e56ecb52b5e573658507ce0eb51dcc4ecaa6937435b39a5d1eb6e",
+      "source_sha256": "71b1c6b6c42e56ecb52b5e573658507ce0eb51dcc4ecaa6937435b39a5d1eb6e"
+    },
+    {
+      "compiled": "industries.html",
+      "source": "industries.html",
+      "sha256": "f506ffad3fd08833b191faabab1031ffec6acd137aeba9c5475ce19ac818a5e9",
+      "source_sha256": "f506ffad3fd08833b191faabab1031ffec6acd137aeba9c5475ce19ac818a5e9"
+    },
+    {
+      "compiled": "industry-fintech.html",
+      "source": "industry-fintech.html",
+      "sha256": "4fcb32cdc1c0d6d80dfd506a9fc703539827cf85a83034775ae952c1f432849e",
+      "source_sha256": "4fcb32cdc1c0d6d80dfd506a9fc703539827cf85a83034775ae952c1f432849e"
+    },
+    {
+      "compiled": "industry-banking-insurance.html",
+      "source": "industry-banking-insurance.html",
+      "sha256": "4001919e5a291b4001f8cc8388203dc7ed85b4e9b9593f9dbf429c060e832526",
+      "source_sha256": "4001919e5a291b4001f8cc8388203dc7ed85b4e9b9593f9dbf429c060e832526"
+    },
+    {
+      "compiled": "industry-professional-services.html",
+      "source": "industry-professional-services.html",
+      "sha256": "df73926563b54fdb9b8d1f735650022b1166416bf446d1383af9f03371ac22b0",
+      "source_sha256": "df73926563b54fdb9b8d1f735650022b1166416bf446d1383af9f03371ac22b0"
+    },
+    {
+      "compiled": "industry-healthcare.html",
+      "source": "industry-healthcare.html",
+      "sha256": "0a553e569b3da5a7e2f2ec3e5b9863310c6762e458d60da812ea1c6dd62483dd",
+      "source_sha256": "0a553e569b3da5a7e2f2ec3e5b9863310c6762e458d60da812ea1c6dd62483dd"
+    },
+    {
+      "compiled": "industry-real-estate.html",
+      "source": "industry-real-estate.html",
+      "sha256": "eb5f941b03cdab0f77e1f651a8d1523d490249ce581b203ca800ec20a48ee9dc",
+      "source_sha256": "eb5f941b03cdab0f77e1f651a8d1523d490249ce581b203ca800ec20a48ee9dc"
+    },
+    {
+      "compiled": "industry-education.html",
+      "source": "industry-education.html",
+      "sha256": "757eec5474f809997a3e423e186cc6349bf9195eaf06f254eb52f4b78f6aeb70",
+      "source_sha256": "757eec5474f809997a3e423e186cc6349bf9195eaf06f254eb52f4b78f6aeb70"
+    },
+    {
+      "compiled": "industry-energy-solar.html",
+      "source": "industry-energy-solar.html",
+      "sha256": "483972ea7007e408de140acf3295a26306bb63274cf9be7f93721688b21d1104",
+      "source_sha256": "483972ea7007e408de140acf3295a26306bb63274cf9be7f93721688b21d1104"
+    },
+    {
+      "compiled": "industry-saas-b2b-technology.html",
+      "source": "industry-saas-b2b-technology.html",
+      "sha256": "aa7f521ac4b029c72a592d37bfa46c757f83fa6ed77cc75a1fa3cd5e46da704c",
+      "source_sha256": "aa7f521ac4b029c72a592d37bfa46c757f83fa6ed77cc75a1fa3cd5e46da704c"
+    }
+  ],
+  "support_assets": [
+    {
+      "path": "fonts.css",
+      "sha256": "235c0e3a576239306232bac6821881ee9a3e61991fc998412268cbe1daffba30"
+    },
+    {
+      "path": "kryssen-style-tokens.css",
+      "sha256": "937626a9ddad6a25d8d6f3dabae6840054045de56f5f2346e87cbe2e129ba231"
+    },
+    {
+      "path": "k2d.css",
+      "sha256": "8645fd6e3892fb3a486cd0d00e92ffcaaf41ea3060eebff64686f02d74db7df3"
+    },
+    {
+      "path": "k2d.js",
+      "sha256": "5a0a386685a0c5fdcadae086c0958b637fbec794c44d3c1126a5e350189aaad7"
+    },
+    {
+      "path": "analytics.js",
+      "sha256": "8c2d1d0ce3eb9daed8cad9e67015a7ebfd0297a93741d34172ec4c025d3243d6"
+    },
+    {
+      "path": "founders-v2.css",
+      "sha256": "563188f1e4c91394b6037d9ed610e157e5a0a711b4e4fc10ae0133d8c839578c"
+    },
+    {
+      "path": "business-v2.css",
+      "sha256": "563188f1e4c91394b6037d9ed610e157e5a0a711b4e4fc10ae0133d8c839578c"
+    },
+    {
+      "path": "about-v2.css",
+      "sha256": "6fa7f0bd14019cbf2471d25bd5488c5e48de39a2210b8dcfff19c45e4c24af51"
+    },
+    {
+      "path": "404-v2.css",
+      "sha256": "2d045b6917990cad13a77741df089a39288cb26b84df8bdab310409924a62574"
+    },
+    {
+      "path": "industries-v2.css",
+      "sha256": "d06c9b980d7b6838712086b6ccd9858ae7f87888b6a43e26d9aaad72023c91d7"
+    },
+    {
+      "path": "workshop-v2.css",
+      "sha256": "f28a2bada6296f79124718e8ef3c773fc2874ae428395f871b7229d750c28f45"
+    },
+    {
+      "path": "workshop-v2.js",
+      "sha256": "fd9cf93f94fc85669b37096bdd17beec3baf389cbe1b7b60cb500c13c851b2e8"
+    },
+    {
+      "path": "quiz-v2.css",
+      "sha256": "8e328b45f50fc176452648bd733f68cdfc34260158144b045c6241436f82305b"
+    },
+    {
+      "path": "quiz-v2.js",
+      "sha256": "9cabd3b3dd92611687dc4d0a977cc338b05b9c0206ad8f6d42260f682f0f2cd9"
+    },
+    {
+      "path": "apply-v2.css",
+      "sha256": "89923779ff382a136ab2306cc10c8b55b89c104acf3328ca2a38e8c1e27f7f51"
+    },
+    {
+      "path": "apply-v2-config.js",
+      "sha256": "9b9b8ca24241ad7a2ced704014c608a6652f33c61d8807ec719d75ea9fd6ecea"
+    },
+    {
+      "path": "apply-v2.js",
+      "sha256": "0e906e7fa10d7c531aedd7bfd0d028ade79410013edf6ced5d162bb8ceda237a"
+    },
+    {
+      "path": "kryssen-logo.svg",
+      "sha256": "ead2c9d76e878dfb83d7231447a0c359d27e7fd0922d7d6132ae292142a10ed2"
+    },
+    {
+      "path": "favicon.svg",
+      "sha256": "f78aa543fc8dd977a2d4b8ddaf18a803442bd5d5801470d988d8b248a37b1d3b"
+    },
+    {
+      "path": "favicon-32.png",
+      "sha256": "e52f4168b6c47170d50c7d01d6f20e68f3a7d0db52af3d378944e874c0c7f686"
+    },
+    {
+      "path": "apple-touch-icon.png",
+      "sha256": "bcfa876bc8b48180e7eb51cce53f0fbcd423b8d5cad9f1ef90607e6e81811e49"
+    },
+    {
+      "path": "assets/fonts/inter-var.woff2",
+      "sha256": "3100e775e8616cd2611beecfa23a4263d7037586789b43f035236a2e6fbd4c62"
+    },
+    {
+      "path": "assets/oluwole.jpg",
+      "sha256": "cd865f9c1b097b44b9d24bd77e7d4386c229f01530017452657d4ebdfcd98c0c"
+    },
+    {
+      "path": "assets/oluwole-belt-crop.jpg",
+      "sha256": "e36fe684eba58f07e613693de461d37cff3182b5684e12ab9d242174fefe7aea"
+    },
+    {
+      "path": "assets/adewale-yusuf.jpg",
+      "sha256": "4be81b7bd44ede8846772a69036db0ec1c0ccc08c3cf7eb9ba28df5c064de33e"
+    },
+    {
+      "path": "assets/adewale-yusuf-businessfront.png",
+      "sha256": "72ee16db8f4a6f6af9b32bb4fa1cd1765324cc4e5c38bbbf11861f030e349455"
+    },
+    {
+      "path": "assets/techpoint-africa-logo.png",
+      "sha256": "414737aa69deab1470b8ab540a499aa96a4808750e69f7db65a1aaca65b7cf1e"
+    },
+    {
+      "path": "assets/voguepay-logo-provided.png",
+      "sha256": "a1f805b6b6a1bb0d30b47f3bf3549398a5dac78bfea5514d3c72cf1f1ac263ed"
+    },
+    {
+      "path": "assets/coopify-logo-provided.png",
+      "sha256": "455099a0c765feb1ca9b31572adc905ce208ef30635a64d49116999a0dc220a9"
+    },
+    {
+      "path": "assets/operator-logos/max.svg",
+      "sha256": "f9a9f330e032f24c30b5fa41eb9960285745c002dda6fbc958cfdc9d09bf04cc"
+    },
+    {
+      "path": "assets/operator-logos/rensource-energy.png",
+      "sha256": "83ff1bca2161776be10fe04e8b4322b634bdb164d15c53483ed9e4dd07e61d8f"
+    },
+    {
+      "path": "assets/operator-logos/sabi.svg",
+      "sha256": "262cae3d7ce58948751ca106f9771f3361ce86169744ab782cb089f77022f879"
+    },
+    {
+      "path": "assets/operator-logos/google.png",
+      "sha256": "262084257c2103702ef8a25705e3f8dbc1fa3823103ad7b954d54bdb77e6d89d"
+    },
+    {
+      "path": "assets/operator-logos/tef.png",
+      "sha256": "e4b0e7a677908d9484a70037b52f435957ea077f53c0810a351be8e54501e72c"
+    },
+    {
+      "path": "assets/operator-logos/guardian-cropped.png",
+      "sha256": "3a3ef41ba6ca66636addc98e240da4bb00640068868234b64dba73cdd7d101ba"
+    },
+    {
+      "path": "assets/operator-logos/techcabal.png",
+      "sha256": "f186aef4229a6bddfe6663e8a771cd179cb61a5d31469e8e84f4c36deeb8d90c"
+    },
+    {
+      "path": "assets/operator-logos/techpoint.png",
+      "sha256": "414737aa69deab1470b8ab540a499aa96a4808750e69f7db65a1aaca65b7cf1e"
+    },
+    {
+      "path": "assets/operator-logos/technext.png",
+      "sha256": "dd9b2d0d5ae5da6cb72baf592c3f90c7401449813689ad062b439e8b4f67b5af"
+    },
+    {
+      "path": "assets/operator-logos/techeconomy-cropped.png",
+      "sha256": "b2dad257bc4e92760ac48919ea5c2f2977c64f644dc41cc341defb5e5e43a902"
+    },
+    {
+      "path": "assets/operator-logos/businessday.png",
+      "sha256": "9448dc2fe854b35aca91228b5c831a3dfdb9392ff9265c9df0ae6e95460199c0"
+    },
+    {
+      "path": "assets/operator-logos/tekedia-provided.png",
+      "sha256": "fae80209bbacd19c286b6af77fedd7acc489875e32659a77872664cf01b5b4c1"
+    }
+  ],
+  "excluded_older_files": [
+    "k2d-site/index.html (older than homepage-v206-O-review.html)",
+    "all homepage-v206-*-review files other than Change O",
+    "legacy Workshop, Quiz, Founder, Business and Industry variants",
+    "the prior kryssen-growth-studio-v1.1.zip"
+  ]
+}

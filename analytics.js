@@ -61,7 +61,31 @@
       consent_analytics:consent.analytics?'granted':'denied',
       consent_marketing:consent.marketing?'granted':'denied'
     });
+    /* Do not request GTM until the visitor accepts an optional category. */
+    if(consent.analytics||consent.marketing)loadGTM();
     if(consent.analytics)track('page_view',{consent_state:'granted'});
+  }
+
+  function installConsentStyles(){
+    if(document.querySelector('[data-kryssen-consent-styles]'))return;
+    var style=document.createElement('style');
+    style.dataset.kryssenConsentStyles='';
+    style.textContent='\
+[data-consent-layer].consent{position:fixed;z-index:10000;inset:auto 18px 18px;display:flex;justify-content:center;pointer-events:none}\
+.consent-box{display:flex;align-items:center;justify-content:space-between;gap:24px;width:min(100%,920px);padding:18px 20px;background:#071611;color:#fff;border:1px solid rgba(255,255,255,.2);border-top:4px solid #c85236;box-shadow:0 22px 60px rgba(7,22,17,.3);pointer-events:auto}\
+.consent-box p{margin:0;color:#d4ded9;font:500 12px/1.55 Inter,Arial,sans-serif}\
+.consent-box p a{color:#bbe182;text-underline-offset:4px}\
+.consent-box>span{display:flex;align-items:center;gap:9px;flex:none}\
+.consent-box button{min-height:42px;padding:0 17px;border:1px solid #c85236;background:#c85236;color:#fff;font:800 10px/1 Inter,Arial,sans-serif;cursor:pointer}\
+.consent-box button:hover{background:#a9442d;border-color:#a9442d}\
+.consent-box button.ghost{background:transparent;border-color:rgba(255,255,255,.45);color:#fff}\
+.consent-box button.ghost:hover{background:#fff;color:#0e231e;border-color:#fff}\
+.consent-box button:focus-visible,.privacy-settings:focus-visible{outline:3px solid #bbe182;outline-offset:3px}\
+.privacy-settings{position:fixed;z-index:9998;right:14px;bottom:14px;min-height:35px;padding:0 12px;border:1px solid rgba(255,255,255,.35);background:#0e231e;color:#fff;font:800 9px/1 Inter,Arial,sans-serif;letter-spacing:.04em;cursor:pointer;box-shadow:0 8px 24px rgba(7,22,17,.2)}\
+.privacy-settings:hover{background:#c85236;border-color:#c85236}\
+.consent-open .privacy-settings{display:none}\
+@media(max-width:640px){[data-consent-layer].consent{inset:auto 10px 10px}.consent-box{align-items:stretch;flex-direction:column;gap:15px;padding:17px}.consent-box>span{width:100%}.consent-box button{flex:1}.privacy-settings{right:10px;bottom:10px}}';
+    document.head.appendChild(style);
   }
 
   function addSettingsButton(open){
@@ -76,6 +100,7 @@
   }
 
   function initConsent(){
+    installConsentStyles();
     var saved=null;
     try{saved=JSON.parse(localStorage.getItem(CONSENT_KEY)||'null');}catch(e){saved=null;}
 
@@ -109,7 +134,6 @@
     }
   }
 
-  loadGTM();
   if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',initConsent);
   else initConsent();
 })();
