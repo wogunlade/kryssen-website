@@ -204,12 +204,12 @@ function initWorkshop(){
     var name=(document.getElementById('wsName').value||'').trim();var done=document.getElementById('workshopDone');
     if(name){var who=document.getElementById('wsWho');if(who)who.textContent=', '+name.split(' ')[0]}
     form.hidden=true;if(done){done.hidden=false;var p=done.querySelector('p');if(p)p.textContent='Your priority-list interest was received. This does not confirm a seat or a date. Reference: '+(reference||'Recorded');window.scrollTo({top:done.offsetTop-120,behavior:'smooth'})}
-    clearDraft();cleanUrl();track('workshop_priority_list_submitted',{offer:'elg-manifesto-masterclass',reference:reference||'recorded'});
+    clearDraft();cleanUrl();track('workshop_priority_list_submitted',{offer:'elg-manifesto-masterclass',reference:reference||'recorded'});track('masterclass_submitted',{offer:'elg-manifesto-masterclass'});
   }
   function handleReturn(){var state=params.get('submission');if(state==='success'){showSuccess(params.get('reference'));return}if(state==='received'){restoreDraft();if(status)status.textContent='Your entry could not be confirmed. Please submit again with browser autofill disabled.';cleanUrl();return}if(state==='failed'){restoreDraft();if(status)status.textContent=params.get('message')||'We could not store your priority-list entry. Review the form and try again.';cleanUrl()}}
   function setupTurnstile(){var started=Date.now();function attempt(){if(window.turnstile&&window.turnstile.render){if(!K2D_CONFIG.TURNSTILE_SITE_KEY){turnstileStatus.textContent='Security is not configured.';return}widgetId=window.turnstile.render('#workshopTurnstile',{sitekey:K2D_CONFIG.TURNSTILE_SITE_KEY,action:K2D_CONFIG.WORKSHOP_TURNSTILE_ACTION||'elg-masterclass',callback:function(v){token=v;turnstileStatus.textContent='Security check complete.'},'expired-callback':function(){token='';turnstileStatus.textContent='Security check expired. Complete it again.'},'error-callback':function(){token='';turnstileStatus.textContent='Security check could not load. Refresh to retry.'}});return}if(Date.now()-started>12000){turnstileStatus.textContent='Security check took too long to load. Refresh to retry.';return}setTimeout(attempt,100)}attempt()}
   setupFields();restoreDraft();setupTurnstile();handleReturn();
-  form.addEventListener('focusin',function(){if(!form.dataset.started){form.dataset.started='true';track('workshop_form_started',{offer:'elg-manifesto-masterclass'})}});
+  form.addEventListener('focusin',function(){if(!form.dataset.started){form.dataset.started='true';track('workshop_form_started',{offer:'elg-manifesto-masterclass'});track('masterclass_started',{offer:'elg-manifesto-masterclass'})}});
   form.addEventListener('submit',function(e){
     e.preventDefault();normalizeWebsite();if(!stepValid(form))return;
     if(form.dataset.requiresEndpoint==='true'&&!K2D_CONFIG.FORM_ENDPOINT){if(status)status.textContent='Submission is not connected. Contact info@kryssengrowth.com.';return}
@@ -385,8 +385,12 @@ document.addEventListener('click', function(e){
     });
     var choice = document.getElementById('sectorOpportunityChoice');
     if(choice){
-      var labels = {'discovery-answers':'Discovery and buyer answers selected.','decision-clarity':'Decision clarity selected.','implementation-adoption':'Implementation and adoption selected.','market-authority':'Market authority selected.'};
-      choice.textContent = (labels[opportunity] || 'Opportunity selected.') + ' This context will carry into your application.';
+      var labels = {'discovery-answers':'Discovery and buyer answers','decision-clarity':'Decision clarity','implementation-adoption':'Implementation and adoption','market-authority':'Market authority'};
+      var selectedTitle=opportunityCard.querySelector('strong');
+      choice.textContent='';
+      var strong=document.createElement('strong');strong.textContent=(labels[opportunity]||'Opportunity')+' selected: ';
+      var span=document.createElement('span');span.textContent=(selectedTitle?selectedTitle.textContent+'. ':'')+'This decision context will carry into your Fit Review application.';
+      choice.appendChild(strong);choice.appendChild(span);choice.classList.add('has-selection');
     }
     track('industry_opportunity_selected', {sector:sector, opportunity:opportunity, location:'industry-opportunity-selector'});
     return;
@@ -419,6 +423,14 @@ document.addEventListener('DOMContentLoaded', function(){
     var observer = new IntersectionObserver(function(entries){ entries.forEach(function(entry){ if(!entry.isIntersecting) return; track(item.event,{sector:sector}); observer.disconnect(); }); },{threshold:0.35});
     observer.observe(node);
   });
+});
+
+/* v0.76 · qualification comprehension signal. */
+document.addEventListener('DOMContentLoaded',function(){
+  var node=document.getElementById('home-qualification');if(!node)return;
+  if(!('IntersectionObserver' in window)){track('homepage_qualification_view',{location:'home-hero'});return}
+  var observer=new IntersectionObserver(function(entries){entries.forEach(function(entry){if(!entry.isIntersecting)return;track('homepage_qualification_view',{location:'home-hero'});observer.disconnect()})},{threshold:.75});
+  observer.observe(node);
 });
 
 /* v0.28 · testimonial measurement; placeholders never enter analytics. */

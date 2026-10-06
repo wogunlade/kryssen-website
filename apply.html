@@ -3,55 +3,46 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Apply for a fit review · Kryssen Growth Studio</title>
-<meta name="description" content="Apply for a Kryssen Education-Led Growth fit review.">
-<meta property="og:title" content="Apply for a fit review · Kryssen Growth Studio">
-<meta property="og:description" content="Tell Kryssen about your business, buyer-education opportunity, available evidence and the commercial movement that matters now.">
+<title>Book My Strategy Conversation · Kryssen Growth Studio</title>
+<meta name="description" content="Tell Kryssen how you want to work together and what your business needs content to accomplish.">
+<meta property="og:title" content="Book My Strategy Conversation · Kryssen Growth Studio">
+<meta property="og:description" content="Choose a way to work with Kryssen and describe the business need. Every strategy conversation request receives human review.">
 <meta property="og:type" content="website">
 <meta property="og:image" content="https://kryssengrowth.com/share.png">
 <link rel="canonical" href="https://kryssengrowth.com/apply.html">
-<link rel="stylesheet" href="apply-v1.css">
+<link rel="stylesheet" href="apply-v2.css">
 <link rel="icon" type="image/svg+xml" href="favicon.svg">
 <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
 </head>
-<body data-page="apply-v1">
+<body data-page="apply-v2">
 <header class="site-head">
   <a class="brand kryssen-logo" href="index.html" aria-label="Kryssen home"><img src="kryssen-logo.svg" alt="Kryssen Growth Studio" width="250" height="52"></a>
-  <span class="capacity">Four-company capacity</span>
+  <a class="return-link" href="index.html">← Return to the homepage</a>
 </header>
 
 <main>
   <section class="intro" aria-labelledby="page-title">
-    <div>
-      <p class="eyebrow">Fit review application · V1</p>
-      <h1 id="page-title">Apply for a fit review.</h1>
-      <p id="routeIntro" class="lede">Tell us how your company grows, where buyers lose clarity and what commercial movement matters now.</p>
-      <div class="promise-row" aria-label="What happens next">
-        <span><b>01</b> Map the opportunity</span>
-        <span><b>02</b> Review fit</span>
-        <span><b>03</b> Decide the useful next move</span>
-      </div>
+    <div class="intro-copy">
+      <p class="hero-eyebrow">Start with one real business need</p>
+      <h1 id="page-title">Book My Strategy Conversation</h1>
+      <p class="lede">Tell us how you want to work with Kryssen and what your business needs content to accomplish.</p>
+
     </div>
-    <aside class="intro-aside">
-      <strong>What this application does</strong>
-      <p>Helps us understand your buyer-education opportunity before deciding whether a call would be useful.</p>
-      <small>About six minutes. This is not an automated approval or revenue promise.</small>
+    <aside class="intro-card" aria-label="How to prepare">
+      <svg class="intro-squiggle" viewBox="0 0 180 70" aria-hidden="true"><path d="M5 54c28-53 51 14 80-23s48 23 88-19" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round"/><path d="m158 6 16 6-8 15" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      <div class="intro-card-head"><span>Before you begin</span><b>3 clear parts</b></div>
+      <h2>Bring the business question. You do not need to diagnose the content solution.</h2>
+      <ol><li><b>01</b><span>Tell us about the company.</span></li><li><b>02</b><span>Choose the closest way to work.</span></li><li><b>03</b><span>Describe what needs to change.</span></li></ol>
+      <p>We review every completed request. If the request is a fit, the applicant receives an email with a calendar booking link.</p>
     </aside>
   </section>
 
-  <section class="apply-shell" id="content">
+  <section class="apply-shell" id="content" aria-labelledby="form-title">
     <div class="preview-flag" id="previewFlag" hidden>Protected form · submissions are verified before delivery to Kryssen.</div>
-
-    <nav class="progress" aria-label="Application progress">
-      <button type="button" class="progress-step is-active" data-go="1" aria-current="step"><span>01</span><b>Business</b></button>
-      <button type="button" class="progress-step" data-go="2" disabled><span>02</span><b>Opportunity</b></button>
-      <button type="button" class="progress-step" data-go="3" disabled><span>03</span><b>Readiness</b></button>
-      <button type="button" class="progress-step" data-go="4" disabled><span>04</span><b>Review</b></button>
-    </nav>
-
-    <form id="fitForm" method="post" novalidate>
-      <input type="hidden" name="form_kind" value="fit_review">
+    <form id="strategyForm" method="post" novalidate>
+      <input type="hidden" name="form_kind" value="strategy_conversation">
+      <input type="hidden" name="schema_version" value="apply-v2.1">
       <input type="hidden" name="success_url" id="successUrl">
       <input type="hidden" name="failure_url" id="failureUrl">
       <input type="hidden" name="form_started_at" id="formStartedAt">
@@ -63,174 +54,91 @@
       <input type="hidden" name="lane_source" id="laneSource">
       <input type="hidden" name="service_route_source" id="serviceRouteSource">
       <input type="hidden" name="support_route_source" id="supportRouteSource">
+      <input type="hidden" name="service_source" id="serviceSource">
       <input type="hidden" name="utm_source" id="utmSource">
       <input type="hidden" name="utm_medium" id="utmMedium">
       <input type="hidden" name="utm_content" id="utmContent">
       <input type="text" name="kryssen_guard_field" class="hp" tabindex="-1" autocomplete="one-time-code" aria-hidden="true">
 
-      <section class="form-step is-active" data-step="1" aria-labelledby="step1-title">
-        <div class="step-heading">
-          <p>Step 1 of 4</p>
-          <h2 id="step1-title">Tell us what already works.</h2>
-          <span>We use this to understand commercial readiness—not to judge company size in isolation.</span>
-        </div>
+      <div class="form-intro">
+        <p class="section-number">01</p>
+        <div><h2 id="form-title">Your details</h2><p>Enough information for us to understand who is requesting the conversation and review the company before any conversation is considered.</p></div>
+      </div>
+      <div class="field-grid two">
+        <label>Your name<input name="name" autocomplete="name" required></label>
+        <label>Work email<input name="email" type="email" autocomplete="email" required></label>
+        <label>Your role<input name="role" autocomplete="organization-title" required></label>
+        <label>Company<input name="company" autocomplete="organization" required></label>
+        <label class="wide">Company website<input name="website" type="url" inputmode="url" autocomplete="url" placeholder="example.com or https://example.com" required><small>We use this to understand what the company sells and what is already public.</small></label>
+      </div>
 
-        <div class="field-grid two">
-          <label>Your name<input name="name" autocomplete="name" required></label>
-          <label>Your role<input name="role" autocomplete="organization-title" required></label>
-          <label>Work email<input name="email" type="email" autocomplete="email" required><small>We’ll send a restrained confirmation here after submission.</small></label>
-          <label>Company<input name="company" autocomplete="organization" required></label>
-          <label class="wide">Company website<input name="website" type="url" inputmode="url" autocomplete="url" placeholder="example.com or https://example.com" required><small>Use the company’s main website.</small></label>
+      <div class="form-section">
+        <div class="form-intro">
+          <p class="section-number">02</p>
+          <div><h2>How do you want to work with Kryssen?</h2><p id="routeNotice" class="route-notice" hidden></p></div>
         </div>
-
         <fieldset>
-          <legend>Which operating context best describes the business?</legend>
-          <div class="choice-grid two">
-            <label class="choice"><input type="radio" name="audience" value="founder" required><span><b>Founder-led</b><small>The founder remains close to serious opportunities and key explanations.</small></span></label>
-            <label class="choice"><input type="radio" name="audience" value="growing-business"><span><b>Growing business</b><small>Useful knowledge is spread across leadership, sales, product or support.</small></span></label>
+          <legend class="sr-only">Choose a service</legend>
+          <div class="service-options">
+            <label class="service-choice"><input type="radio" name="service_interest" value="content-sprint" required><span><b>Content Sprint</b><small>Strategy and a focused set of related content assets delivered within 45 days.</small></span></label>
+            <label class="service-choice preferred"><input type="radio" name="service_interest" value="monthly-retainer"><span><em>Preferred for ongoing work</em><b>Monthly Retainer</b><small>Ongoing strategy, content creation, distribution adaptation and performance review.</small></span></label>
+            <label class="service-choice"><input type="radio" name="service_interest" value="project-based"><span><b>Project-Based</b><small>A defined content project with an agreed scope and delivery schedule.</small></span></label>
+            <label class="service-choice uncertain"><input type="radio" name="service_interest" value="not-sure"><span><b>I’m not sure yet</b><small>Describe the need and Kryssen can recommend the most appropriate starting point.</small></span></label>
           </div>
         </fieldset>
+      </div>
 
-        <div class="field-grid two">
-          <label>Industry<select name="sector" id="sector" required><option value="">Choose one</option><option value="fintech">Fintech &amp; payments</option><option value="banking-insurance">Banking, insurance &amp; asset management</option><option value="professional-services">Professional services</option><option value="healthcare">Private healthcare</option><option value="real-estate">Real estate</option><option value="education">Private education</option><option value="energy-solar">Energy &amp; solar</option><option value="saas-b2b">SaaS &amp; B2B technology</option><option value="other">Another industry</option></select></label>
-          <label>How does the company create revenue?<select name="revenue_motion" required><option value="">Choose one</option><option value="sales-led">Sales-led</option><option value="product-led">Product-led</option><option value="hybrid">Hybrid: product signal plus sales</option></select></label>
+      <div class="form-section">
+        <div class="form-intro">
+          <p class="section-number">03</p>
+          <div><h2>Tell us what you need.</h2></div>
         </div>
+        <label class="question" id="needLabel"><span id="needQuestion">What are you trying to help buyers or customers understand or do?</span><textarea name="engagement_need" rows="5" minlength="20" maxlength="600" required placeholder="Describe the business need in your own words."></textarea><small><span id="needHelper">Tell us what needs to change and why it matters now.</span><b><span data-count="engagement_need">0</span>/600</b></small></label>
 
-        <fieldset>
-          <legend>What already exists?</legend>
-          <div class="choice-grid two">
-            <label class="choice"><input type="radio" name="traction" value="paying-customers" required><span><b>Paying customers</b><small>Revenue exists; the motion is uneven or under-explained.</small></span></label>
-            <label class="choice"><input type="radio" name="traction" value="recurring-usage"><span><b>Recurring usage</b><small>People return, but monetisation or progression is weak.</small></span></label>
-            <label class="choice"><input type="radio" name="traction" value="both"><span><b>Both</b><small>Customers and repeat product or service signals exist.</small></span></label>
-            <label class="choice"><input type="radio" name="traction" value="not-yet"><span><b>Not yet</b><small>No paying customers or recurring usage yet.</small></span></label>
-          </div>
-        </fieldset>
-
-        <div class="form-actions"><span></span><button class="btn next" type="button" data-next="2">Continue to the opportunity →</button></div>
-      </section>
-
-      <section class="form-step" data-step="2" aria-labelledby="step2-title" hidden>
-        <div class="step-heading">
-          <p>Step 2 of 4</p>
-          <h2 id="step2-title">Find the education opportunity.</h2>
-          <span>Focus on one buyer decision or commercial movement—not every problem in the company.</span>
-        </div>
-
-        <label class="question">What must buyers understand before they can confidently choose you?<textarea name="buyer_understanding" rows="4" maxlength="700" required placeholder="For example: why our implementation is lower-risk, how settlement works, or why our approach is different."></textarea><small><span data-count="buyer_understanding">0</span>/700</small></label>
-
-        <fieldset data-limit="2">
-          <legend>Where does the buyer’s understanding currently break? <small>Choose up to two.</small></legend>
+        <fieldset class="readiness" data-min="1">
+          <legend>What can your team provide? <small>Select everything currently available.</small></legend>
           <div class="choice-grid two compact">
-            <label class="choice"><input type="checkbox" name="education_gap" value="find-answer"><span>They cannot find a clear answer</span></label>
-            <label class="choice"><input type="checkbox" name="education_gap" value="differentiate"><span>They do not understand the difference</span></label>
-            <label class="choice"><input type="checkbox" name="education_gap" value="trust-evidence"><span>They do not trust the claim or evidence</span></label>
-            <label class="choice"><input type="checkbox" name="education_gap" value="internal-champion"><span>Their champion cannot explain the decision internally</span></label>
-            <label class="choice"><input type="checkbox" name="education_gap" value="implementation-risk"><span>Implementation feels risky</span></label>
-            <label class="choice"><input type="checkbox" name="education_gap" value="activation"><span>They begin but do not activate or use fully</span></label>
-            <label class="choice"><input type="checkbox" name="education_gap" value="team-fragmentation"><span>Our teams explain the offer differently</span></label>
-            <label class="choice"><input type="checkbox" name="education_gap" value="category"><span>The market does not yet understand the category</span></label>
+            <label class="choice"><input type="checkbox" name="work_readiness" value="subject-expert"><span>Access to a subject expert</span></label>
+            <label class="choice"><input type="checkbox" name="work_readiness" value="evidence"><span>Research, customer questions or business evidence</span></label>
+            <label class="choice"><input type="checkbox" name="work_readiness" value="review-approval"><span>Someone who can review and approve the work</span></label>
+            <label class="choice"><input type="checkbox" name="work_readiness" value="existing-content"><span>Existing content Kryssen can assess</span></label>
+            <label class="choice wide"><input type="checkbox" name="work_readiness" value="organising"><span>We are still organising these things</span></label>
           </div>
-          <p class="field-error" data-error="education_gap"></p>
+          <p class="field-error" data-error="work_readiness"></p>
         </fieldset>
 
-        <div class="field-grid two">
-          <label>What commercial movement would make the next 45 days valuable?<select name="commercial_signal" required><option value="">Choose one</option><option value="qualified-opportunities">More qualified opportunities</option><option value="opportunity-progression">Faster progression of existing opportunities</option><option value="activated-accounts">More activated accounts</option><option value="product-qualified">More product-qualified accounts</option><option value="usage-self-service">Stronger usage or self-service</option><option value="launch-entry">A stronger launch or market entry</option><option value="category-visibility">More executive or category visibility</option><option value="other">Another observable event</option></select></label>
-          <label>Why is this important now?<select name="why_now" required><option value="">Choose one</option><option value="founder-bottleneck">The founder still carries too much of the sale</option><option value="growth-inconsistent">Growth has slowed or become inconsistent</option><option value="team-fragmentation">Teams create conflicting explanations</option><option value="launch-market">We are launching or entering a market</option><option value="offer-change">We are changing the offer or positioning</option><option value="category-authority">We need stronger category authority</option><option value="repeat-objection">Buyers repeatedly raise the same objection</option><option value="other-event">Another commercial event is approaching</option></select></label>
-        </div>
-
-        <fieldset data-min="1">
-          <legend>What evidence or expertise can we work with? <small>Select all that apply.</small></legend>
-          <div class="choice-grid three compact">
-            <label class="choice"><input type="checkbox" name="evidence" value="customer-interviews"><span>Customer interviews or calls</span></label>
-            <label class="choice"><input type="checkbox" name="evidence" value="sales-objections"><span>Sales questions and objections</span></label>
-            <label class="choice"><input type="checkbox" name="evidence" value="product-docs"><span>Product documentation</span></label>
-            <label class="choice"><input type="checkbox" name="evidence" value="usage-data"><span>Usage or activation data</span></label>
-            <label class="choice"><input type="checkbox" name="evidence" value="support-questions"><span>Support questions</span></label>
-            <label class="choice"><input type="checkbox" name="evidence" value="case-evidence"><span>Case evidence</span></label>
-            <label class="choice"><input type="checkbox" name="evidence" value="executive-expertise"><span>Executive expertise</span></label>
-            <label class="choice"><input type="checkbox" name="evidence" value="research-data"><span>Research or proprietary data</span></label>
-            <label class="choice"><input type="checkbox" name="evidence" value="content-library"><span>Existing content library</span></label>
-            <label class="choice"><input type="checkbox" name="evidence" value="little-documented"><span>Very little is documented</span></label>
+        <fieldset class="timing">
+          <legend>When would you like the work to begin?</legend>
+          <div class="choice-grid four compact">
+            <label class="choice"><input type="radio" name="preferred_start" value="immediately" required><span>Immediately</span></label>
+            <label class="choice"><input type="radio" name="preferred_start" value="next-30-days"><span>Within the next 30 days</span></label>
+            <label class="choice"><input type="radio" name="preferred_start" value="one-to-three-months"><span>Within one to three months</span></label>
+            <label class="choice"><input type="radio" name="preferred_start" value="exploring"><span>We are exploring for later</span></label>
           </div>
-          <p class="field-error" data-error="evidence"></p>
         </fieldset>
+      </div>
 
-        <div class="form-actions"><button class="back" type="button" data-back="1">← Back</button><button class="btn next" type="button" data-next="3">Continue to readiness →</button></div>
+      <section class="review-boundary" aria-labelledby="after-submit-title">
+        <p class="section-number">04</p>
+        <div>
+          <h2 id="after-submit-title">What happens next</h2>
+          <p>We review your company, preferred engagement and business need before deciding whether a conversation would be useful. You will receive an email with a calendar booking link if we determine that the request is a fit.</p>
+        </div>
       </section>
 
-      <section class="form-step" data-step="3" aria-labelledby="step3-title" hidden>
-        <div class="step-heading">
-          <p>Step 3 of 4</p>
-          <h2 id="step3-title">Can the opportunity become operational?</h2>
-          <span>The questions below change to match the business context and industry.</span>
-        </div>
-
-        <div id="founderBranch" class="branch" hidden>
-          <fieldset><legend>How often does a serious opportunity need the founder before it can progress?</legend><div class="choice-grid four compact"><label class="choice"><input type="radio" name="founder_frequency" value="almost-every-time"><span>Almost every time</span></label><label class="choice"><input type="radio" name="founder_frequency" value="often"><span>Often</span></label><label class="choice"><input type="radio" name="founder_frequency" value="occasionally"><span>Occasionally</span></label><label class="choice"><input type="radio" name="founder_frequency" value="rarely"><span>Rarely</span></label></div></fieldset>
-          <label>Which founder knowledge is hardest for the company to use without you?<select name="founder_knowledge"><option value="">Choose one</option><option value="offer">Explaining the offer</option><option value="objections">Handling objections</option><option value="credibility">Establishing credibility</option><option value="comparison">Comparing alternatives</option><option value="negotiation">Negotiating or closing</option><option value="market">Explaining the market</option><option value="other">Another area</option></select></label>
-          <label>Who would own access, evidence and approvals during our engagement?<select name="founder_owner"><option value="">Choose one</option><option value="assign">I can assign someone</option><option value="founder">I would own it directly</option><option value="identify">We need to identify someone</option><option value="none">No one currently has capacity</option></select></label>
-        </div>
-
-        <div id="businessBranch" class="branch" hidden>
-          <fieldset data-min="1"><legend>Which teams currently hold the knowledge buyers need?</legend><div class="choice-grid three compact"><label class="choice"><input type="checkbox" name="knowledge_teams" value="leadership"><span>Leadership</span></label><label class="choice"><input type="checkbox" name="knowledge_teams" value="sales"><span>Sales</span></label><label class="choice"><input type="checkbox" name="knowledge_teams" value="marketing"><span>Marketing</span></label><label class="choice"><input type="checkbox" name="knowledge_teams" value="product"><span>Product</span></label><label class="choice"><input type="checkbox" name="knowledge_teams" value="success"><span>Customer success</span></label><label class="choice"><input type="checkbox" name="knowledge_teams" value="support"><span>Support</span></label><label class="choice"><input type="checkbox" name="knowledge_teams" value="compliance"><span>Compliance or legal</span></label></div><p class="field-error" data-error="knowledge_teams"></p></fieldset>
-          <label>Where is fragmentation most visible?<select name="business_fragmentation"><option value="">Choose one</option><option value="different-explanations">Teams use different explanations</option><option value="evidence-hard-to-find">Useful evidence is difficult to find</option><option value="sales-repeats">Sales repeats education marketing should provide</option><option value="product-hidden">Product knowledge does not reach buyers</option><option value="support-disconnected">Support questions do not inform acquisition</option><option value="publishing-disconnected">Publishing is disconnected from commercial priorities</option></select></label>
-          <label>Who would protect the priority internally?<select name="executive_sponsor"><option value="">Choose one</option><option value="founder-ceo">Founder or CEO</option><option value="commercial">Commercial leader</option><option value="marketing">Marketing leader</option><option value="product">Product leader</option><option value="other">Another executive</option><option value="none">No executive sponsor yet</option></select></label>
-        </div>
-
-        <div class="sector-question">
-          <p class="sector-kicker">Industry context</p>
-          <label id="sectorQuestionLabel">Which decision risk creates the most hesitation?<select name="sector_risk" id="sectorRisk" required></select></label>
-        </div>
-
-        <fieldset>
-          <legend>Are you willing to publish clear answers supported by your company’s real expertise and evidence?</legend>
-          <div class="choice-grid two compact"><label class="choice"><input type="radio" name="publish_readiness" value="yes" required><span><b>Yes</b><small>With an agreed review and approval process.</small></span></label><label class="choice"><input type="radio" name="publish_readiness" value="not-yet"><span><b>Not yet</b><small>We need to resolve internal concerns first.</small></span></label></div>
-        </fieldset>
-
-        <label class="question">Anything important we should understand before reviewing fit? <small>Optional</small><textarea name="context_note" rows="3" maxlength="700"></textarea><small><span data-count="context_note">0</span>/700</small></label>
-
-        <div class="form-actions"><button class="back" type="button" data-back="2">← Back</button><button class="btn next" type="button" data-next="4">Build my Fit Snapshot →</button></div>
-      </section>
-
-      <section class="form-step" data-step="4" aria-labelledby="step4-title" hidden>
-        <div class="step-heading">
-          <p>Step 4 of 4</p>
-          <h2 id="step4-title">Review your preliminary Fit Snapshot.</h2>
-          <span>This reflects your answers. It is not an automated fit decision.</span>
-        </div>
-
-        <div class="snapshot" id="snapshot" aria-live="polite"></div>
-
-        <div class="assess-box">
-          <h3>What Kryssen will assess</h3>
-          <ul><li>Whether this is genuinely a buyer-education problem</li><li>Whether enough expertise and evidence exist to build from</li><li>Whether an observable commercial signal can be agreed</li><li>Whether the business can support implementation</li><li>Whether Kryssen—or no engagement—is the right next move</li></ul>
-        </div>
-
-        <div class="turnstile-wrap"><div id="applyTurnstile"></div><p id="turnstileStatus" role="status" aria-live="polite">Preparing the security check…</p></div>
-        <label class="consent"><input type="checkbox" name="consent" required><span>By submitting, you ask Kryssen to assess fit and contact you about this application. Read the <a href="privacy.html" target="_blank" rel="noopener">Privacy Policy</a>.</span></label>
-
-        <p class="submit-error" id="submitError" role="alert"></p>
-        <div class="form-actions"><button class="back" type="button" data-back="3">← Edit answers</button><button class="btn submit" type="submit">Apply for a fit review →</button></div>
-      </section>
+      <div class="turnstile-wrap"><div id="applyTurnstile"></div><p id="turnstileStatus" role="status" aria-live="polite">Preparing the security check…</p></div>
+      <label class="consent application-consent" id="applicationConsent"><input type="checkbox" name="consent" required><span><strong>Accept before submitting</strong>I accept that Kryssen will review this request and may contact me about a strategy conversation. Read the <a href="privacy.html" target="_blank" rel="noopener">Privacy Policy</a>.</span></label>
+      <p class="submit-error" id="submitError" role="alert"></p>
+      <div class="submit-row"><button class="btn submit" type="submit" disabled aria-describedby="applicationConsent">Book My Strategy Conversation</button></div>
     </form>
 
-    <section class="not-ready" id="notReady" hidden>
-      <p class="eyebrow">Not ready for the 45-day build yet</p>
-      <h2>Build the customer or usage evidence first.</h2>
-      <p>The fit review is designed for companies with paying customers or recurring usage. A call now would be premature.</p>
-      <div><a class="btn" href="quiz.html?utm_source=apply-v1&amp;utm_medium=not-ready">Take the ELG™ Quiz →</a><button class="back" type="button" id="returnFromGate">← Change my answer</button></div>
-    </section>
-
     <section class="success" id="success" hidden tabindex="-1">
-      <p class="eyebrow" id="successEyebrow">Application status</p>
-      <h2 id="successTitle">Submission status</h2>
-      <p id="successIntro">We will assess the opportunity, evidence, internal ownership and commercial signal before deciding whether a call would be useful.</p>
-      <div class="success-grid">
-        <div><h3>If there is potential fit, the call will answer:</h3><ol><li>Where buyer understanding is breaking</li><li>What expertise and evidence could become the education system</li><li>Which commercial event the first 45 days should be read against</li><li>Whether Kryssen, another route or no engagement is the right next move</li></ol></div>
-        <aside id="successPrep"></aside>
-      </div>
-      <div class="snapshot success-snapshot" id="successSnapshot"></div>
-      <p class="receipt-note" id="receiptNote">A production integration should email this Fit Snapshot to the applicant and route the full record to Kryssen’s review workflow.</p>
+      <p class="eyebrow" id="successEyebrow">Request received</p>
+      <h2 id="successTitle">Your strategy conversation request has been received.</h2>
+      <p id="successIntro">We will review your company, preferred engagement and business need. If the request is a fit, you will receive an email with a calendar booking link.</p>
+      <div class="reference" id="successReference" hidden><span>Request reference</span><strong id="referenceValue"></strong></div>
+      <p class="success-boundary" id="successBoundary">This confirms receipt. It does not confirm scope, results or a scheduled conversation.</p>
+      <a class="text-link" href="index.html">Return to the homepage →</a>
     </section>
   </section>
 </main>
@@ -238,7 +146,7 @@
 <footer><p>© 2026 Kryssen Growth Studio · Education-Led Growth™</p><a href="privacy.html">Privacy</a></footer>
 <script src="https://challenges.cloudflare.com/turnstile/v0/api.js?render=explicit" async defer></script>
 <script src="analytics.js"></script>
-<script src="apply-v1-config.js"></script>
-<script src="apply-v1.js"></script>
+<script src="apply-v2-config.js"></script>
+<script src="apply-v2.js"></script>
 </body>
 </html>
