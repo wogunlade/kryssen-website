@@ -1,0 +1,50 @@
+{
+  "purpose": "Homepage-only overlay package. Copy these site files into the existing repository without deleting other pages or shared infrastructure.",
+  "homepage_version": "v2.06 Change S",
+  "files": [
+    {
+      "path": "index.html",
+      "source": "homepage-v206-S-review.html",
+      "sha256": "148810e9780e17c1fab523e139972e90deceb92a8d287b0bbe10b6576cce8761"
+    },
+    {
+      "path": "assets/oluwole-belt-crop.jpg",
+      "source": "assets/oluwole-belt-crop.jpg",
+      "sha256": "e36fe684eba58f07e613693de461d37cff3182b5684e12ab9d242174fefe7aea"
+    }
+  ],
+  "required_existing_shared_files": [
+    "analytics.js",
+    "apple-touch-icon.png",
+    "assets/adewale-yusuf.jpg",
+    "assets/fonts/inter-var.woff2",
+    "assets/techpoint-africa-logo.png",
+    "favicon-32.png",
+    "favicon.svg",
+    "fonts.css",
+    "k2d.css",
+    "k2d.js",
+    "kryssen-logo.svg",
+    "kryssen-style-tokens.css"
+  ],
+  "required_existing_routes": [
+    "404.html",
+    "about.html",
+    "apply.html",
+    "business.html",
+    "founders.html",
+    "industries.html",
+    "manifesto.html",
+    "privacy.html",
+    "quiz.html",
+    "workshops.html",
+    "industry-fintech.html",
+    "industry-banking-insurance.html",
+    "industry-healthcare.html",
+    "industry-education.html",
+    "industry-energy-solar.html",
+    "industry-real-estate.html",
+    "industry-saas-b2b-technology.html",
+    "industry-professional-services.html"
+  ]
+}

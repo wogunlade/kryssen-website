@@ -1,27 +1,19 @@
-# Kryssen latest page set — review copy
+# Kryssen homepage-only overlay — v2.06 Change S
 
-Compiled on **5 October 2026** for human review only. This folder is not a deployment package and does not replace the production site or prior ZIP.
+This package ships only the revised homepage and its new belt-cropped operator image.
 
-## Homepage source
+## Copy into the existing site root
 
-`index.html` is the cumulative **v2.06 Change Q** review candidate (`homepage-v206-Q-review.html`).
+- `index.html`
+- `assets/oluwole-belt-crop.jpg`
 
-## Updated About page
+Do **not** delete existing pages, shared CSS, JavaScript, images, fonts, Worker configuration, redirects or GitHub workflow files. The homepage intentionally links to the existing About, Apply, Manifesto, service, industry, Quiz, Workshop and Privacy routes.
 
-`about.html` includes the current operator-led rebuild and latest refinements: tighter alignment and spacing; the supplied Adewale Yusuf, VoguePay and Coopify assets; four exact VoguePay figures; the updated Coopify operator record; a LinkedIn button; and one neutral 12-mark organisation wall headed “Where Wole has worked and where his work has been featured.” Individual organisations are not classified or presented as clients.
+## Included changes
 
-## Updated 404 page
+- WhatsApp-green homepage CTA with a WhatsApp mark.
+- Belt-cropped operator portrait matching the About-page treatment.
+- Larger, bolder distribution headline.
+- All cumulative v2.06 changes through Change S.
 
-`404.html` is a dedicated recovery page with the three-link navigation, clear homepage and service routes, useful service/FAQ/About paths, an inline WhatsApp route and the Strategy Conversation close. It uses `404-v2.css` and does not load the legacy behaviour script.
-
-## Complete local routing
-
-The assembled set includes the root-level application, manifesto and privacy pages required by links elsewhere in the review pages. Automated QA checks that every local HTML route, local asset and fragment destination resolves inside this folder.
-
-## Cookie choices
-
-Every assembled page loads the shared `analytics.js` consent layer. A first visit offers **Decline** and **Accept**. The decision is saved under `kryssen-consent-v1`, and the persistent **Cookies** control lets the visitor reopen the panel. GTM is not requested after Decline and is loaded only after an accepted optional category. The consent panel carries its own responsive styling so it works consistently across legacy and dedicated page stylesheets.
-
-## Verification
-
-See `COMPILE-MAP.json` for source mappings and hashes, and `QA-RESULTS.txt` for automated checks. Production remains unchanged and the prior ZIP has not been rebuilt.
+See `HOMEPAGE-MAP.json` for hashes and required existing dependencies.

@@ -1,43 +1,9 @@
-PASS index.html ← homepage-v206-Q-review.html
-PASS workshops.html ← workshops.html
-PASS quiz.html ← quiz.html
-PASS founders.html ← founders.html
-PASS business.html ← business.html
-PASS about.html ← about.html
-PASS 404.html ← 404.html
-PASS apply.html ← apply.html
-PASS manifesto.html ← manifesto.html
-PASS privacy.html ← privacy.html
-PASS industries.html ← industries.html
-PASS industry-fintech.html ← industry-fintech.html
-PASS industry-banking-insurance.html ← industry-banking-insurance.html
-PASS industry-professional-services.html ← industry-professional-services.html
-PASS industry-healthcare.html ← industry-healthcare.html
-PASS industry-real-estate.html ← industry-real-estate.html
-PASS industry-education.html ← industry-education.html
-PASS industry-energy-solar.html ← industry-energy-solar.html
-PASS industry-saas-b2b-technology.html ← industry-saas-b2b-technology.html
-PASS internal routes: 398 HTML links resolve
-PASS fragment routes: 66 anchors resolve
-PASS 404-v2.css: CSS braces balanced
-PASS about-v2.css: CSS braces balanced
-PASS apply-v2.css: CSS braces balanced
-PASS business-v2.css: CSS braces balanced
-PASS fonts.css: CSS braces balanced
-PASS founders-v2.css: CSS braces balanced
-PASS industries-v2.css: CSS braces balanced
-PASS k2d.css: CSS braces balanced
-PASS kryssen-style-tokens.css: CSS braces balanced
-PASS quiz-v2.css: CSS braces balanced
-PASS workshop-v2.css: CSS braces balanced
-PASS analytics.js: JavaScript syntax
-PASS apply-v2-config.js: JavaScript syntax
-PASS apply-v2.js: JavaScript syntax
-PASS k2d.js: JavaScript syntax
-PASS quiz-v2.js: JavaScript syntax
-PASS workshop-v2.js: JavaScript syntax
-PASS cookie consent: Accept stores granted choices and loads GTM only after consent
-PASS cookie consent: Decline stores denied choices and does not load GTM
-PASS cookie consent: persistent Cookies control is created after a decision
-PASS route completeness: no uncompiled local HTML dependencies
+PASS homepage identifies v2.06 Change S
+PASS WhatsApp CTA uses branded green
+PASS operator uses belt-cropped portrait
+PASS distribution headline has stronger type rule
+PASS homepage floating CTA configuration absent
+PASS new local portrait exists
+PASS homepage source hash matches
+PASS CSS braces balance
 QA RESULT: PASS
