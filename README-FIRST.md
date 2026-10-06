@@ -4,7 +4,7 @@ Compiled on **5 October 2026** for human review only. This folder is not a deplo
 
 ## Homepage source
 
-`index.html` is the cumulative **v2.06 Change O** review candidate (`homepage-v206-O-review.html`).
+`index.html` is the cumulative **v2.06 Change Q** review candidate (`homepage-v206-Q-review.html`).
 
 ## Updated About page
 

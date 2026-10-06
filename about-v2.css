@@ -68,3 +68,6 @@ section{padding:82px 0}
 .organisation-mark-featured-size{padding-inline:14px}
 .organisation-mark-featured-size img{width:100%;max-width:100%;max-height:86px}
 @media(max-width:480px){.organisation-mark-featured-size{padding-inline:9px}.organisation-mark-featured-size img{max-height:62px}}
+
+/* Footer closure: remove the orange separator so adjacent sections meet cleanly. */
+.site-footer{border-top:0!important}

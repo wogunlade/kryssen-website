@@ -57,3 +57,6 @@ section{padding:100px 0;border-top:1px solid rgba(14,35,30,.08)}.hero{padding:96
 .industry-page .next-step h2,.industry-hub .next-step h2{max-width:1050px}
 @media(max-width:1000px){.industry-page .knowledge-trail{grid-template-columns:1fr 1fr}.hub-principles ol{grid-template-columns:1fr 1fr}}
 @media(max-width:760px){.industry-page .knowledge-trail,.industry-directory,.hub-principles ol{grid-template-columns:1fr}.industry-directory{gap:0}.industry-directory a{min-height:0}.industry-page .hero-emoji,.industry-hub .hero-emoji{width:60px;height:60px;font-size:31px}}
+
+/* Footer closure: remove the orange separator so adjacent sections meet cleanly. */
+.site-footer{border-top:0!important}

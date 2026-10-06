@@ -1,4 +1,4 @@
-PASS index.html ← homepage-v206-O-review.html
+PASS index.html ← homepage-v206-Q-review.html
 PASS workshops.html ← workshops.html
 PASS quiz.html ← quiz.html
 PASS founders.html ← founders.html
@@ -17,7 +17,7 @@ PASS industry-real-estate.html ← industry-real-estate.html
 PASS industry-education.html ← industry-education.html
 PASS industry-energy-solar.html ← industry-energy-solar.html
 PASS industry-saas-b2b-technology.html ← industry-saas-b2b-technology.html
-PASS internal routes: 397 HTML links resolve
+PASS internal routes: 398 HTML links resolve
 PASS fragment routes: 66 anchors resolve
 PASS 404-v2.css: CSS braces balanced
 PASS about-v2.css: CSS braces balanced

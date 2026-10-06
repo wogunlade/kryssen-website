@@ -60,3 +60,6 @@ section{padding:100px 0;border-top:1px solid rgba(14,35,30,.08)}.hero{padding:96
 .site-footer .sf-bottom a{color:#b9c7c0;text-underline-offset:4px}
 @media(max-width:920px){.site-footer .sf-top{grid-template-columns:1fr 1fr;gap:36px 28px}.site-footer .sf-brand{grid-column:1/-1;max-width:480px}}
 @media(max-width:520px){.site-footer>.wrap{padding:48px 0 25px}.site-footer .sf-top{grid-template-columns:1fr}.site-footer .sf-brand{grid-column:auto}.site-footer .sf-connect,.site-footer .sf-button{width:auto}.site-footer .sf-button{text-align:center}.site-footer .sf-bottom{margin-top:34px}}
+
+/* Footer closure: remove the orange separator so adjacent sections meet cleanly. */
+.site-footer{border-top:0!important}
