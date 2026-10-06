@@ -263,12 +263,58 @@ a,.btn,summary{transition:color .16s ease,background .16s ease,border-color .16s
 .v206e-faq summary{display:flex;align-items:center;justify-content:center;min-height:82px;padding-left:clamp(54px,7vw,118px);padding-right:clamp(54px,7vw,118px);text-align:center;text-wrap:balance}.v206e-faq summary:after{right:clamp(14px,2vw,32px);top:50%;transform:translateY(-50%)}.v206e-faq details p{max-width:none;margin:0 auto;padding-left:clamp(28px,7vw,118px);padding-right:clamp(28px,7vw,118px);text-align:center;text-wrap:pretty}.v206e-faq details[open] p{padding-bottom:34px}
 @media(max-width:760px){.v206e-faq summary{min-height:72px;padding-left:44px;padding-right:44px}.v206e-faq summary:after{right:10px}.v206e-faq details p{padding-left:12px;padding-right:12px;text-align:center}}
 
+
+
+/* v2.06 Change P · stronger homepage hierarchy and footer decision path */
+.v206a-hero{min-height:calc(90vh - 78px);padding:118px 0 112px}
+.v206a-title{width:100%;max-width:1320px;font-size:clamp(64px,8.45vw,118px);font-weight:700;line-height:.88;letter-spacing:-.073em;text-wrap:balance}
+.v206a-title strong{color:var(--orange);font-weight:700}
+.v206b-growth>.wrap>h2{width:100%;max-width:1280px;font-size:clamp(54px,6.6vw,88px);font-weight:600;line-height:.94;letter-spacing:-.064em}
+.v206b-refined .v206b-contrast{grid-template-columns:minmax(270px,.55fr) minmax(0,1.95fr);width:100%;margin-top:58px}
+.v206b-current h3,.v206b-opportunity h3{font-size:clamp(33px,3.6vw,51px);line-height:1.02}
+.v206b-current li{padding:19px 0;font-size:16px}
+.v206b-current>p{font-size:13px}
+.v206b-assets>div{grid-template-columns:minmax(230px,1fr) minmax(330px,1.45fr) minmax(200px,.78fr);gap:30px;padding:27px 0}
+.v206b-assets span{font-size:14px;line-height:1.45}
+.v206b-assets p{font-size:12.5px;line-height:1.7}
+.v206b-assets strong{font-size:11.5px;line-height:1.55}
+.site-footer{padding-top:0;border-top:0!important}
+.home-footer-decision{padding:94px 0 90px;background:var(--pine);border:0}
+.home-footer-decision h2{max-width:1120px;margin:0 auto;color:#fff;font:500 clamp(44px,5.4vw,72px)/.98 var(--serif);letter-spacing:-.058em;text-align:center;text-wrap:balance}
+.home-footer-decision h2:after{content:"";display:block;width:46px;height:2px;margin:24px auto 0;background:var(--lime)}
+.home-footer-decision-grid{display:grid;grid-template-columns:1fr 1fr;gap:1px;margin-top:45px;background:rgba(255,255,255,.18);border:1px solid rgba(255,255,255,.18)}
+.home-footer-decision-grid article{display:flex;flex-direction:column;align-items:center;min-height:330px;padding:38px;background:var(--deep);text-align:center}
+.home-footer-decision-grid article>span{display:grid;place-items:center;width:52px;height:52px;background:var(--lime);border:1px solid var(--pine);font-size:27px;filter:saturate(.72);transform:rotate(-2deg)}
+.home-footer-decision-grid h3{margin-top:25px;color:#fff;font:500 34px/1.08 var(--serif)}
+.home-footer-decision-grid p{max-width:550px;margin:16px auto 25px;color:#adbbb4;font-size:11.5px;line-height:1.7}
+.home-footer-decision-grid .btn{min-height:48px;margin-top:auto;padding-inline:20px}
+.home-footer-decision-grid .secondary{background:transparent;border-color:rgba(255,255,255,.4);color:#fff}
+.home-footer-decision-grid .secondary:hover{background:#fff;border-color:#fff;color:var(--pine)}
+.site-footer>.wrap{width:min(100% - 52px,1320px)}
+@media(max-width:1000px){.v206b-refined .v206b-contrast{grid-template-columns:1fr}.v206b-assets>div{grid-template-columns:1fr 1.5fr}.v206b-assets strong{grid-column:1/3;text-align:left}}
+@media(max-width:760px){.v206a-hero{min-height:auto;padding:88px 0 82px}.v206a-title{font-size:clamp(48px,14.8vw,68px);line-height:.91}.v206b-growth>.wrap>h2{font-size:clamp(44px,12vw,58px)}.v206b-assets>div{grid-template-columns:1fr;gap:10px}.v206b-assets strong{grid-column:1}.home-footer-decision{padding:72px 0 68px}.home-footer-decision h2{font-size:43px}.home-footer-decision-grid{grid-template-columns:1fr;margin-top:34px}.home-footer-decision-grid article{min-height:0;padding:32px 22px}.site-footer>.wrap{width:min(100% - 32px,1320px)}}
+
+
+
+/* v2.06 Change Q · responsive comparison alignment and footer parity */
+.v206b-refined .v206b-contrast{grid-template-columns:minmax(270px,.58fr) minmax(0,1.92fr);align-items:stretch}
+.v206b-contrast>article{height:100%}
+.v206b-assets>div{grid-template-columns:minmax(205px,.95fr) minmax(300px,1.55fr) minmax(185px,.78fr);gap:25px;align-items:center;padding:24px 0}
+.v206b-assets span{font-size:12px;line-height:1.5}
+.v206b-assets p{font-size:11px;line-height:1.68}
+.v206b-assets strong{font-size:10.25px;line-height:1.5;text-align:right}
+.home-footer-decision{border-bottom:0}
+.site-footer{margin-top:0;padding-top:0;border-top:0!important}
+.site-footer .sf-top{padding-top:70px}
+@media(max-width:1000px){.v206b-refined .v206b-contrast{grid-template-columns:1fr}.v206b-assets>div{grid-template-columns:minmax(190px,.9fr) minmax(0,1.6fr);align-items:start}.v206b-assets strong{grid-column:1/3;text-align:left}}
+@media(max-width:760px){.v206b-contrast>article{height:auto}.v206b-assets>div{grid-template-columns:1fr;gap:8px;align-items:start;padding:22px 0}.v206b-assets strong{grid-column:1;text-align:left}.v206b-assets span{font-size:12px}.v206b-assets p{font-size:11px}.v206b-assets strong{font-size:10px}.site-footer .sf-top{padding-top:53px}}
+
 </style>
 </head>
 
-<body data-page="home" data-review-version="v2.06" data-review-change="O" data-ctatext="Request a strategy conversation" data-ctahref="apply.html?utm_source=home-v206&amp;utm_medium=stickybar&amp;utm_content=strategy-conversation&amp;service=sprint" data-wamsg="Hi Kryssen — I want to discuss content that helps buyers understand and choose my company’s products and services.">
+<body data-page="home" data-review-version="v2.06" data-review-change="Q" data-wamsg="Hi Kryssen — I want to discuss content that helps buyers understand and choose my company’s products and services.">
 
-<div class="review-bar">Homepage copy review · v2.06 · Change O · reordered FAQ · not for production</div>
+<div class="review-bar">Homepage copy review · v2.06 · Change Q · footer parity and responsive comparison · not for production</div>
 <header class="site">
   <div class="wrap">
     <a class="logo kryssen-logo" href="index.html" aria-label="Kryssen home"><img src="kryssen-logo.svg" alt="Kryssen Growth Studio" width="250" height="52"></a>
@@ -286,7 +332,7 @@ a,.btn,summary{transition:color .16s ease,background .16s ease,border-color .16s
 <main>
 <section class="hero hp-hero v206a-hero" id="hero">
   <div class="wrap">
-    <h1 class="v206a-title">We create and distribute <strong>education-led content</strong> that drive revenue pipeline and traffic.</h1>
+    <h1 class="v206a-title">We write content that drives <strong>revenue pipeline and traffic</strong> for businesses.</h1>
     <div class="hp-actions v206a-actions">
       <a class="btn js-cta" data-track-location="home-hero" href="apply.html?utm_source=home-v206&amp;utm_medium=hero&amp;utm_content=service-led&amp;service=sprint">Request a strategy conversation →</a>
       <a class="btn wa" data-track-location="home-hero" href="https://wa.me/2348158357418?text=Hi%20Kryssen%20%E2%80%94%20I%20want%20to%20discuss%20customer-education%20content%20for%20my%20company." target="_blank" rel="noopener">WhatsApp us</a>
@@ -430,12 +476,13 @@ a,.btn,summary{transition:color .16s ease,background .16s ease,border-color .16s
   </div>
 </section>
 
-<section class="v126-close" id="closing">
+<section class="home-footer-decision" id="closing" aria-labelledby="home-footer-decision-title">
   <div class="wrap">
-    <h2>Turn your company’s expertise into content buyers, customers and revenue teams can use.</h2>
-    <p>Tell Wole about the product, service, buyer decision or commercial priority you need the content to support.</p>
-    <a class="btn js-cta" data-track-location="home-close" href="apply.html?utm_source=home-v206&amp;utm_medium=close&amp;utm_content=service-led&amp;service=sprint">Request a strategy conversation →</a>
-    <small>No calendar is shown before human review. Requesting a conversation does not commit you to a project.</small>
+    <h2 id="home-footer-decision-title">Turn your company’s expertise into content buyers, customers and revenue teams can use.</h2>
+    <div class="home-footer-decision-grid">
+      <article><span aria-hidden="true">🔎</span><h3>Still investigating?</h3><p>See whether the immediate opportunity is visibility, clarity, decision support, person-dependent knowledge or customer learning.</p><a class="btn secondary" href="manifesto.html?utm_source=home-v206&amp;utm_medium=footer-decision&amp;utm_content=elg-manifesto">Read the ELG™ manifesto</a></article>
+      <article><span aria-hidden="true">💬</span><h3>Already recognise the problem?</h3><p>Tell Kryssen which buyer decision, customer question or fragmented explanation the business needs to connect.</p><a class="btn js-cta" data-track-location="home-footer-decision" href="apply.html?utm_source=home-v206&amp;utm_medium=footer-decision&amp;utm_content=strategy-conversation">Book My Strategy Conversation</a></article>
+    </div>
   </div>
 </section>
 </main>
@@ -446,8 +493,8 @@ a,.btn,summary{transition:color .16s ease,background .16s ease,border-color .16s
         <p class="sf-logo">Kryssen Growth Studio</p>
         <p class="sf-blurb">Kryssen creates content that helps buyers find, understand, choose and use a company’s products and services.</p>
                 <div class="sf-connect">
-          <a class="btn sm" href="apply.html?utm_source=home-v206&amp;utm_medium=footer&amp;utm_content=strategy-conversation&amp;service=sprint">Request a strategy conversation</a>
-          <a class="sf-link wa" href="https://wa.me/2348158357418"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#25D366" d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5.1-1.3A10 10 0 1 0 12 2z"/><path fill="#fff" d="M9.1 7.6c-.2-.4-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.2.3-.9.9-.9 2.1s.9 2.5 1 2.6c.1.2 1.8 2.9 4.5 3.9 2.2.9 2.7.7 3.1.7.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.1-.3-.2-.6-.3l-1.8-.9c-.3-.1-.5-.2-.7.1l-.9 1.1c-.2.2-.3.2-.6.1-.3-.2-1.2-.5-2.3-1.5-.9-.8-1.4-1.7-1.6-2-.2-.3 0-.4.1-.6l.6-.7c.1-.2.1-.3 0-.5l-.8-1.6z"/></svg>+234 815 835 7418</a>
+          <a class="btn sm sf-button" href="apply.html?utm_source=home-v206&amp;utm_medium=footer&amp;utm_content=strategy-conversation">Book My Strategy Conversation</a>
+          <a class="sf-link wa" href="https://wa.me/2348158357418" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#25D366" d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5.1-1.3A10 10 0 1 0 12 2z"/><path fill="#fff" d="M9.1 7.6c-.2-.4-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.2.3-.9.9-.9 2.1s.9 2.5 1 2.6c.1.2 1.8 2.9 4.5 3.9 2.2.9 2.7.7 3.1.7.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.1-.3-.2-.6-.3l-1.8-.9c-.3-.1-.5-.2-.7.1l-.9 1.1c-.2.2-.3.2-.6.1-.3-.2-1.2-.5-2.3-1.5-.9-.8-1.4-1.7-1.6-2-.2-.3 0-.4.1-.6l.6-.7c.1-.2.1-.3 0-.5l-.8-1.6z"/></svg>+234 815 835 7418</a>
           <a class="sf-link" href="mailto:info@kryssengrowth.com">info@kryssengrowth.com</a>
         </div>
       </div>

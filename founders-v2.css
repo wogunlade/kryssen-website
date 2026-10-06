@@ -33,3 +33,6 @@ section{padding:100px 0;border-top:1px solid rgba(14,35,30,.08)}.hero{padding:96
 @media(max-width:1000px){.site-footer .sf-top{grid-template-columns:1fr;gap:48px}.site-footer .sf-blurb{max-width:650px}.service-grid article{min-height:0}}
 @media(max-width:760px){section{padding:74px 0}.hero{padding:76px 0 66px}h2{font-size:41px}.knowledge-trail,.reach-list,.method ol,.service-grid,.faq-list,.next-grid{margin-top:35px}.shift{padding:68px 0}.shift h2{font-size:40px}.shift-grid{margin-top:29px}.shift-grid article{padding:28px 22px}.shift>.wrap>p{margin-top:27px;font-size:21px}.reach-list article{min-height:0;padding:23px 2px}.next-step{padding:74px 0}.next-grid article{min-height:0}.site-footer .sf-top{padding:53px 0 42px}.site-footer .sf-cols{grid-template-columns:1fr 1fr;gap:36px 24px}.site-footer .sf-bottom{padding:20px 0}}
 @media(max-width:480px){.site-footer .sf-cols{grid-template-columns:1fr}.site-footer .sf-connect,.site-footer .sf-button{width:100%}.site-footer .sf-button{text-align:center}}
+
+/* Footer closure: remove the orange separator so adjacent sections meet cleanly. */
+.site-footer{border-top:0!important}

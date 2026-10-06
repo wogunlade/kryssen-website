@@ -1,13 +1,13 @@
 {
   "compiled_on": "2026-10-05",
   "purpose": "Review compilation of explicitly selected latest pages; not a production deployment.",
-  "homepage_rule": "index.html is copied from homepage-v206-O-review.html, not from the older canonical index.html.",
+  "homepage_rule": "index.html is copied from homepage-v206-Q-review.html, not from the older canonical index.html.",
   "pages": [
     {
       "compiled": "index.html",
-      "source": "homepage-v206-O-review.html",
-      "sha256": "a15c111cab187b1d028086a71572769c0d7a0e7cf591ab44844d5f1feaa0ca25",
-      "source_sha256": "a15c111cab187b1d028086a71572769c0d7a0e7cf591ab44844d5f1feaa0ca25"
+      "source": "homepage-v206-Q-review.html",
+      "sha256": "1d5eb364ddec6afbabf74b34bb6120703e0545c61ef19c66fc29620723568871",
+      "source_sha256": "1d5eb364ddec6afbabf74b34bb6120703e0545c61ef19c66fc29620723568871"
     },
     {
       "compiled": "workshops.html",
@@ -30,8 +30,8 @@
     {
       "compiled": "business.html",
       "source": "business.html",
-      "sha256": "fbc80d48fb8a5ef319c6d85e4f091af07cf04372b4b8e0ed739991f1acdd6ba2",
-      "source_sha256": "fbc80d48fb8a5ef319c6d85e4f091af07cf04372b4b8e0ed739991f1acdd6ba2"
+      "sha256": "817539598da43bbd267c5e7ac48c42b6af8854f3deca38a6d3988f59041a5f42",
+      "source_sha256": "817539598da43bbd267c5e7ac48c42b6af8854f3deca38a6d3988f59041a5f42"
     },
     {
       "compiled": "about.html",
@@ -129,7 +129,7 @@
     },
     {
       "path": "k2d.css",
-      "sha256": "8645fd6e3892fb3a486cd0d00e92ffcaaf41ea3060eebff64686f02d74db7df3"
+      "sha256": "8b8034fd79a9ab960663c4eabf3c4a49753b626aa1ffa0d055f67f95410e1599"
     },
     {
       "path": "k2d.js",
@@ -141,27 +141,27 @@
     },
     {
       "path": "founders-v2.css",
-      "sha256": "563188f1e4c91394b6037d9ed610e157e5a0a711b4e4fc10ae0133d8c839578c"
+      "sha256": "d6be081d2d620edeeefb959d8c5d66ab7f15221d08b0b5893eacffe9e9dfbd25"
     },
     {
       "path": "business-v2.css",
-      "sha256": "563188f1e4c91394b6037d9ed610e157e5a0a711b4e4fc10ae0133d8c839578c"
+      "sha256": "d6be081d2d620edeeefb959d8c5d66ab7f15221d08b0b5893eacffe9e9dfbd25"
     },
     {
       "path": "about-v2.css",
-      "sha256": "6fa7f0bd14019cbf2471d25bd5488c5e48de39a2210b8dcfff19c45e4c24af51"
+      "sha256": "ed033ad4c6f973b41b8177279d1d874492d516672ebc3c3c32a1589be46ce8a1"
     },
     {
       "path": "404-v2.css",
-      "sha256": "2d045b6917990cad13a77741df089a39288cb26b84df8bdab310409924a62574"
+      "sha256": "3394c524333f5c5d4640afdd88112a3e9985a8abf0f47ac7ffc61f68ac9c61db"
     },
     {
       "path": "industries-v2.css",
-      "sha256": "d06c9b980d7b6838712086b6ccd9858ae7f87888b6a43e26d9aaad72023c91d7"
+      "sha256": "28e11fb652df74fe5617785de966c88b13d32d44cb47f29333148345cc1b48bd"
     },
     {
       "path": "workshop-v2.css",
-      "sha256": "f28a2bada6296f79124718e8ef3c773fc2874ae428395f871b7229d750c28f45"
+      "sha256": "bca4b9f9ab3fec78d547ec42b295645d28da4f9c1af3ebe3158e554a5c40acbb"
     },
     {
       "path": "workshop-v2.js",
@@ -285,8 +285,8 @@
     }
   ],
   "excluded_older_files": [
-    "k2d-site/index.html (older than homepage-v206-O-review.html)",
-    "all homepage-v206-*-review files other than Change O",
+    "k2d-site/index.html (older than homepage-v206-Q-review.html)",
+    "all homepage-v206-*-review files other than Change Q",
     "legacy Workshop, Quiz, Founder, Business and Industry variants",
     "the prior kryssen-growth-studio-v1.1.zip"
   ]
