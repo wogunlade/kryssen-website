@@ -1,0 +1,363 @@
+{
+  "package": "Kryssen Growth Studio v2",
+  "type": "complete front-end merge package",
+  "homepage": "v2.06 Change U",
+  "deployment_status": "not deployed",
+  "files": [
+    {
+      "path": "404-v2.css",
+      "bytes": 9603,
+      "sha256": "3394c524333f5c5d4640afdd88112a3e9985a8abf0f47ac7ffc61f68ac9c61db"
+    },
+    {
+      "path": "404.html",
+      "bytes": 6506,
+      "sha256": "c7050f05006a9efdfaddcb8a0d6c1dbcc8425d69042aa3fe890d023acbf72c23"
+    },
+    {
+      "path": "COMPILE-MAP.json",
+      "bytes": 11942,
+      "sha256": "6abb802d930dcb8bd4776de48a44d860dd819bdce3ed27aa410384af4191283c"
+    },
+    {
+      "path": "MERGE-INSTRUCTIONS.md",
+      "bytes": 1692,
+      "sha256": "ba47b4123834b230b1732c5931ed207502bdff34652ccbe316f9965ef98b660f"
+    },
+    {
+      "path": "QA-RESULTS.txt",
+      "bytes": 1981,
+      "sha256": "8488196a671a0a1bd1c6a3b1c8a9bae13d1d763d940c5544f51516e61b540fcc"
+    },
+    {
+      "path": "README-FIRST.md",
+      "bytes": 2000,
+      "sha256": "6b0dcbd5e2e2ce35e5a393a547a3d582822e39e7cfd85a47d72662a40e7c95c5"
+    },
+    {
+      "path": "V2-QA-RESULTS.txt",
+      "bytes": 29082,
+      "sha256": "3a395c547b2839227e905ef0e0a25f50a4d6d4a4673cf0f556bc6e617853ceda"
+    },
+    {
+      "path": "VERSION.md",
+      "bytes": 227,
+      "sha256": "42f7ae6c293c259db166fb341b88c8fe8f2f6aa73adba5bd25c54cc0638dbb00"
+    },
+    {
+      "path": "about-v2.css",
+      "bytes": 16736,
+      "sha256": "ed033ad4c6f973b41b8177279d1d874492d516672ebc3c3c32a1589be46ce8a1"
+    },
+    {
+      "path": "about.html",
+      "bytes": 12305,
+      "sha256": "a465f0fc235c5764ad85143c557b69d3b7fb0927d84838829ca35a7bbdb1b2d3"
+    },
+    {
+      "path": "analytics.js",
+      "bytes": 7008,
+      "sha256": "8c2d1d0ce3eb9daed8cad9e67015a7ebfd0297a93741d34172ec4c025d3243d6"
+    },
+    {
+      "path": "apple-touch-icon.png",
+      "bytes": 782,
+      "sha256": "bcfa876bc8b48180e7eb51cce53f0fbcd423b8d5cad9f1ef90607e6e81811e49"
+    },
+    {
+      "path": "apply-v2-config.js",
+      "bytes": 311,
+      "sha256": "9b9b8ca24241ad7a2ced704014c608a6652f33c61d8807ec719d75ea9fd6ecea"
+    },
+    {
+      "path": "apply-v2.css",
+      "bytes": 13102,
+      "sha256": "89923779ff382a136ab2306cc10c8b55b89c104acf3328ca2a38e8c1e27f7f51"
+    },
+    {
+      "path": "apply-v2.js",
+      "bytes": 13147,
+      "sha256": "0e906e7fa10d7c531aedd7bfd0d028ade79410013edf6ced5d162bb8ceda237a"
+    },
+    {
+      "path": "apply.html",
+      "bytes": 11470,
+      "sha256": "54c8bcd3c9af5c86ad5181dbb98820d9dd28cbd3fed9f53455acc40b3e7b28e5"
+    },
+    {
+      "path": "assets/adewale-yusuf-businessfront.png",
+      "bytes": 97691,
+      "sha256": "72ee16db8f4a6f6af9b32bb4fa1cd1765324cc4e5c38bbbf11861f030e349455"
+    },
+    {
+      "path": "assets/adewale-yusuf.jpg",
+      "bytes": 37536,
+      "sha256": "4be81b7bd44ede8846772a69036db0ec1c0ccc08c3cf7eb9ba28df5c064de33e"
+    },
+    {
+      "path": "assets/coopify-logo-provided.png",
+      "bytes": 6126,
+      "sha256": "455099a0c765feb1ca9b31572adc905ce208ef30635a64d49116999a0dc220a9"
+    },
+    {
+      "path": "assets/fonts/inter-var.woff2",
+      "bytes": 48256,
+      "sha256": "3100e775e8616cd2611beecfa23a4263d7037586789b43f035236a2e6fbd4c62"
+    },
+    {
+      "path": "assets/oluwole-belt-crop.jpg",
+      "bytes": 118966,
+      "sha256": "e36fe684eba58f07e613693de461d37cff3182b5684e12ab9d242174fefe7aea"
+    },
+    {
+      "path": "assets/oluwole.jpg",
+      "bytes": 108664,
+      "sha256": "cd865f9c1b097b44b9d24bd77e7d4386c229f01530017452657d4ebdfcd98c0c"
+    },
+    {
+      "path": "assets/operator-logos/businessday.png",
+      "bytes": 246188,
+      "sha256": "9448dc2fe854b35aca91228b5c831a3dfdb9392ff9265c9df0ae6e95460199c0"
+    },
+    {
+      "path": "assets/operator-logos/google.png",
+      "bytes": 13504,
+      "sha256": "262084257c2103702ef8a25705e3f8dbc1fa3823103ad7b954d54bdb77e6d89d"
+    },
+    {
+      "path": "assets/operator-logos/guardian-cropped.png",
+      "bytes": 19467,
+      "sha256": "3a3ef41ba6ca66636addc98e240da4bb00640068868234b64dba73cdd7d101ba"
+    },
+    {
+      "path": "assets/operator-logos/max.svg",
+      "bytes": 3952,
+      "sha256": "f9a9f330e032f24c30b5fa41eb9960285745c002dda6fbc958cfdc9d09bf04cc"
+    },
+    {
+      "path": "assets/operator-logos/rensource-energy.png",
+      "bytes": 16182,
+      "sha256": "83ff1bca2161776be10fe04e8b4322b634bdb164d15c53483ed9e4dd07e61d8f"
+    },
+    {
+      "path": "assets/operator-logos/sabi.svg",
+      "bytes": 2993,
+      "sha256": "262cae3d7ce58948751ca106f9771f3361ce86169744ab782cb089f77022f879"
+    },
+    {
+      "path": "assets/operator-logos/techcabal.png",
+      "bytes": 10884,
+      "sha256": "f186aef4229a6bddfe6663e8a771cd179cb61a5d31469e8e84f4c36deeb8d90c"
+    },
+    {
+      "path": "assets/operator-logos/techeconomy-cropped.png",
+      "bytes": 23254,
+      "sha256": "b2dad257bc4e92760ac48919ea5c2f2977c64f644dc41cc341defb5e5e43a902"
+    },
+    {
+      "path": "assets/operator-logos/technext.png",
+      "bytes": 12572,
+      "sha256": "dd9b2d0d5ae5da6cb72baf592c3f90c7401449813689ad062b439e8b4f67b5af"
+    },
+    {
+      "path": "assets/operator-logos/techpoint.png",
+      "bytes": 13025,
+      "sha256": "414737aa69deab1470b8ab540a499aa96a4808750e69f7db65a1aaca65b7cf1e"
+    },
+    {
+      "path": "assets/operator-logos/tef.png",
+      "bytes": 99591,
+      "sha256": "e4b0e7a677908d9484a70037b52f435957ea077f53c0810a351be8e54501e72c"
+    },
+    {
+      "path": "assets/operator-logos/tekedia-provided.png",
+      "bytes": 5071,
+      "sha256": "fae80209bbacd19c286b6af77fedd7acc489875e32659a77872664cf01b5b4c1"
+    },
+    {
+      "path": "assets/rotor-chatgpt.png",
+      "bytes": 10617,
+      "sha256": "b3438fdf987393268cf3f4e99bffc260b4353ea5734c2ccb3d34c75c4e0e3667"
+    },
+    {
+      "path": "assets/rotor-claude.png",
+      "bytes": 35436,
+      "sha256": "e436557749e7b68d048452789b9712c08a5f415306c3cc902fd24bd0e419d0d1"
+    },
+    {
+      "path": "assets/rotor-deepseek.png",
+      "bytes": 5023,
+      "sha256": "a7e75abfe3c4a1cc9088d866df2c55dfb3470d1b96570fb0f98416c30e264b12"
+    },
+    {
+      "path": "assets/rotor-grok.png",
+      "bytes": 43480,
+      "sha256": "f9c43199428a81618ce112fb6be837f9d30168ee61a37efe5e7b7d1270137792"
+    },
+    {
+      "path": "assets/rotor-perplexity.png",
+      "bytes": 6429,
+      "sha256": "3fa4dc20fffe2f9daa14626e132a289cadf0880af215399ec2d9ebeadbe2a6df"
+    },
+    {
+      "path": "assets/techpoint-africa-logo.png",
+      "bytes": 13025,
+      "sha256": "414737aa69deab1470b8ab540a499aa96a4808750e69f7db65a1aaca65b7cf1e"
+    },
+    {
+      "path": "assets/voguepay-logo-provided.png",
+      "bytes": 1891,
+      "sha256": "a1f805b6b6a1bb0d30b47f3bf3549398a5dac78bfea5514d3c72cf1f1ac263ed"
+    },
+    {
+      "path": "business-v2.css",
+      "bytes": 20033,
+      "sha256": "d6be081d2d620edeeefb959d8c5d66ab7f15221d08b0b5893eacffe9e9dfbd25"
+    },
+    {
+      "path": "business.html",
+      "bytes": 16864,
+      "sha256": "817539598da43bbd267c5e7ac48c42b6af8854f3deca38a6d3988f59041a5f42"
+    },
+    {
+      "path": "favicon-32.png",
+      "bytes": 245,
+      "sha256": "e52f4168b6c47170d50c7d01d6f20e68f3a7d0db52af3d378944e874c0c7f686"
+    },
+    {
+      "path": "favicon.svg",
+      "bytes": 434,
+      "sha256": "f78aa543fc8dd977a2d4b8ddaf18a803442bd5d5801470d988d8b248a37b1d3b"
+    },
+    {
+      "path": "fonts.css",
+      "bytes": 253,
+      "sha256": "235c0e3a576239306232bac6821881ee9a3e61991fc998412268cbe1daffba30"
+    },
+    {
+      "path": "founders-v2.css",
+      "bytes": 20033,
+      "sha256": "d6be081d2d620edeeefb959d8c5d66ab7f15221d08b0b5893eacffe9e9dfbd25"
+    },
+    {
+      "path": "founders.html",
+      "bytes": 16119,
+      "sha256": "3d694e8d8066533c65172717fccb3845167f18e1dfd24334ca7933f302d47a88"
+    },
+    {
+      "path": "index.html",
+      "bytes": 102574,
+      "sha256": "2e4968f55df6d98b26c3cca0f82fbc75a7bb1fc5c5d768f34e343117f172d724"
+    },
+    {
+      "path": "industries-v2.css",
+      "bytes": 22821,
+      "sha256": "28e11fb652df74fe5617785de966c88b13d32d44cb47f29333148345cc1b48bd"
+    },
+    {
+      "path": "industries.html",
+      "bytes": 13920,
+      "sha256": "f506ffad3fd08833b191faabab1031ffec6acd137aeba9c5475ce19ac818a5e9"
+    },
+    {
+      "path": "industry-banking-insurance.html",
+      "bytes": 14008,
+      "sha256": "4001919e5a291b4001f8cc8388203dc7ed85b4e9b9593f9dbf429c060e832526"
+    },
+    {
+      "path": "industry-education.html",
+      "bytes": 13843,
+      "sha256": "757eec5474f809997a3e423e186cc6349bf9195eaf06f254eb52f4b78f6aeb70"
+    },
+    {
+      "path": "industry-energy-solar.html",
+      "bytes": 14000,
+      "sha256": "483972ea7007e408de140acf3295a26306bb63274cf9be7f93721688b21d1104"
+    },
+    {
+      "path": "industry-fintech.html",
+      "bytes": 13972,
+      "sha256": "4fcb32cdc1c0d6d80dfd506a9fc703539827cf85a83034775ae952c1f432849e"
+    },
+    {
+      "path": "industry-healthcare.html",
+      "bytes": 14006,
+      "sha256": "0a553e569b3da5a7e2f2ec3e5b9863310c6762e458d60da812ea1c6dd62483dd"
+    },
+    {
+      "path": "industry-professional-services.html",
+      "bytes": 14131,
+      "sha256": "df73926563b54fdb9b8d1f735650022b1166416bf446d1383af9f03371ac22b0"
+    },
+    {
+      "path": "industry-real-estate.html",
+      "bytes": 13891,
+      "sha256": "eb5f941b03cdab0f77e1f651a8d1523d490249ce581b203ca800ec20a48ee9dc"
+    },
+    {
+      "path": "industry-saas-b2b-technology.html",
+      "bytes": 13988,
+      "sha256": "aa7f521ac4b029c72a592d37bfa46c757f83fa6ed77cc75a1fa3cd5e46da704c"
+    },
+    {
+      "path": "k2d.css",
+      "bytes": 165014,
+      "sha256": "8b8034fd79a9ab960663c4eabf3c4a49753b626aa1ffa0d055f67f95410e1599"
+    },
+    {
+      "path": "k2d.js",
+      "bytes": 30195,
+      "sha256": "5a0a386685a0c5fdcadae086c0958b637fbec794c44d3c1126a5e350189aaad7"
+    },
+    {
+      "path": "kryssen-logo.svg",
+      "bytes": 808,
+      "sha256": "ead2c9d76e878dfb83d7231447a0c359d27e7fd0922d7d6132ae292142a10ed2"
+    },
+    {
+      "path": "kryssen-style-tokens.css",
+      "bytes": 3518,
+      "sha256": "937626a9ddad6a25d8d6f3dabae6840054045de56f5f2346e87cbe2e129ba231"
+    },
+    {
+      "path": "manifesto.html",
+      "bytes": 9785,
+      "sha256": "2767378c3de2266ade14ecfe0bb32f72dee8fc241fe25440c8032395f519287d"
+    },
+    {
+      "path": "privacy.html",
+      "bytes": 9164,
+      "sha256": "71b1c6b6c42e56ecb52b5e573658507ce0eb51dcc4ecaa6937435b39a5d1eb6e"
+    },
+    {
+      "path": "quiz-v2.css",
+      "bytes": 12440,
+      "sha256": "8e328b45f50fc176452648bd733f68cdfc34260158144b045c6241436f82305b"
+    },
+    {
+      "path": "quiz-v2.js",
+      "bytes": 18702,
+      "sha256": "9cabd3b3dd92611687dc4d0a977cc338b05b9c0206ad8f6d42260f682f0f2cd9"
+    },
+    {
+      "path": "quiz.html",
+      "bytes": 6392,
+      "sha256": "0622389a834391e0c18bfcd97609d3513eaaefc0e3270d2037e576ea4dc28154"
+    },
+    {
+      "path": "workshop-v2.css",
+      "bytes": 27622,
+      "sha256": "bca4b9f9ab3fec78d547ec42b295645d28da4f9c1af3ebe3158e554a5c40acbb"
+    },
+    {
+      "path": "workshop-v2.js",
+      "bytes": 5687,
+      "sha256": "fd9cf93f94fc85669b37096bdd17beec3baf389cbe1b7b60cb500c13c851b2e8"
+    },
+    {
+      "path": "workshops.html",
+      "bytes": 10025,
+      "sha256": "455fcf53636977d2b4cead4dc2ef424d11a04131c7af949f2b29efd7ee1db0fd"
+    }
+  ]
+}
