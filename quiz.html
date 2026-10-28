@@ -1,124 +1,55 @@
-<!doctype html>
+<!DOCTYPE html>
+
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>What are your buyers still trying to figure out—and could better content fix it? · Kryssen Growth Studio</title>
-<meta name="description" content="Find out how you can use content to drive better business outcome.">
-<meta property="og:title" content="What are your buyers still trying to figure out—and could better content fix it? · Kryssen Growth Studio">
-<meta property="og:description" content="A short Kryssen discovery quiz about visibility, buyer understanding, decision support and customer learning.">
-<meta property="og:type" content="website">
-<meta property="og:image" content="https://kryssengrowth.com/share.png">
-<link rel="canonical" href="https://kryssengrowth.com/quiz.html">
-<link rel="stylesheet" href="quiz-v2.css">
-<link rel="icon" type="image/svg+xml" href="favicon.svg">
-<link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
-<link rel="apple-touch-icon" href="apple-touch-icon.png">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://kryssengrowth.com/"},{"@type":"ListItem","position":2,"name":"Buyer Understanding Quiz","item":"https://kryssengrowth.com/quiz.html"}]}</script>
-</head>
-<body data-page="quiz-v2">
-<header class="quiz-head">
-  <a class="quiz-logo" href="index.html" aria-label="Kryssen home"><img src="kryssen-logo.svg" alt="Kryssen Growth Studio" width="250" height="52"></a>
-  <a class="quiz-exit" href="index.html">Exit quiz</a>
-</header>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<title>Find your next Growth Playbook priority · Kryssen Growth Studio</title>
+<meta content="Explore whether Content that sells, AEO and GEO, Product marketing or Growth strategy is the most useful place to begin. No score, grading or email required." name="description"/>
+<meta content="noindex,follow" name="robots"/>
+<meta content="Find your next Growth Playbook priority · Kryssen Growth Studio" property="og:title"/>
+<meta content="Explore whether Content that sells, AEO and GEO, Product marketing or Growth strategy is the most useful place to begin. No score, grading or email required." property="og:description"/>
+<meta content="website" property="og:type"/>
+<meta content="https://kryssengrowth.com/share.png" property="og:image"/>
+<link href="https://kryssengrowth.com/quiz.html" rel="canonical"/>
+<link href="fonts.css" rel="stylesheet"/>
+<link href="v3-design-tokens.css" rel="stylesheet"/>
+<link href="v3-homepage.css" rel="stylesheet"/>
+<link href="quiz-v3.css" rel="stylesheet"/>
+<link href="favicon.svg" rel="icon" type="image/svg+xml"/>
+<link href="favicon-32.png" rel="icon" sizes="32x32" type="image/png"/>
+<link href="apple-touch-icon.png" rel="apple-touch-icon"/>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://kryssengrowth.com/"},{"@type":"ListItem","position":2,"name":"Growth Playbook Quiz","item":"https://kryssengrowth.com/quiz.html"}]}</script>
+<link href="v3-global-footer.css" rel="stylesheet"/><meta content="https://kryssengrowth.com/quiz.html" property="og:url"/><script data-seo-schema="quiz-app" type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","@id":"https://kryssengrowth.com/quiz.html#application","name":"Kryssen Growth Playbook priority finder","url":"https://kryssengrowth.com/quiz.html","applicationCategory":"BusinessApplication","operatingSystem":"Any","description":"Explore whether Content that sells, AEO and GEO, Product marketing or Growth strategy is the most useful place to begin. No score, grading or email required.","provider":{"@id":"https://kryssengrowth.com/#organization"}}</script></head>
+<body class="v3-quiz" data-page="quiz-v3">
 
-<main>
-  <section class="quiz-intro" id="quizIntro" aria-labelledby="introTitle">
-    <div class="intro-copy">
-      <p class="intro-mark" aria-hidden="true">?</p>
-      <h1 id="introTitle">What are your buyers still trying to figure out—and could better content fix it?</h1>
-      <p>Find out how you can use content to drive better business outcome.</p>
-      <button class="button" id="startQuiz" type="button">Take the Quiz <span aria-hidden="true">→</span></button>
-      <div class="intro-boundaries" aria-label="Quiz expectations"><span>No score</span><span>No audit</span><span>No email required</span></div>
-    </div>
-    <aside class="intro-note" aria-label="A useful idea before you begin">
-      <span class="note-emoji" aria-hidden="true">💡</span>
-      <p>Sometimes the company already knows the answer. The problem is that buyers cannot find it when they need it.</p>
-    </aside>
-  </section>
-
-  <section class="quiz-stage" id="quizStage" hidden aria-live="polite">
-    <div class="progress-head">
-      <button class="quiet-button" id="backButton" type="button">← Back</button>
-      <p><span id="stepCount">1</span> of 4</p>
-    </div>
-    <div class="progress-track" id="progressTrack" aria-label="Quiz progress"></div>
-    <div class="question-layout">
-      <aside class="question-context">
-        <span class="question-emoji" id="questionEmoji" aria-hidden="true">🔎</span>
-        <p id="questionLabel">Start here</p>
-        <small id="questionContext">Think about what normally happens—not what should happen.</small>
-      </aside>
-      <div class="question-main">
-        <h2 id="questionText" tabindex="-1"></h2>
-        <div class="answer-list" id="answerList"></div>
-        <div class="answer-insight" id="answerInsight" hidden><span aria-hidden="true">✦</span><p id="insightText"></p></div>
-        <div class="question-actions"><button class="button" id="continueButton" type="button" disabled>Next question <span aria-hidden="true">→</span></button></div>
-      </div>
-    </div>
-  </section>
-
-  <section class="quiz-result" id="quizResult" hidden tabindex="-1" aria-labelledby="resultTitle">
-    <div class="result-hero">
-      <div>
-        <p class="result-kicker">One place to investigate</p>
-        <span class="result-emoji" id="resultEmoji" aria-hidden="true">🔎</span>
-        <h1 id="resultTitle"></h1>
-        <p id="resultSummary"></p>
-      </div>
-      <aside class="result-pattern">
-        <span>Why this appeared</span>
-        <p id="resultWhy"></p>
-      </aside>
-    </div>
-
-    <div class="result-body">
-      <section class="result-interesting">
-        <p class="section-label">The interesting part</p>
-        <h2 id="resultInteresting"></h2>
-      </section>
-
-      <section class="result-investigate">
-        <div>
-          <p class="section-label">Look at this next</p>
-          <h2 id="resultActionTitle"></h2>
-          <p id="resultAction"></p>
-          <div class="result-extra" id="resultExtra" hidden></div>
-        </div>
-        <aside>
-          <span aria-hidden="true">📝</span>
-          <p id="resultPrompt"></p>
-        </aside>
-      </section>
-
-      <section class="result-content">
-        <div>
-          <p class="section-label">A possible content direction</p>
-          <h2>What clearer education could look like</h2>
-          <p>These are examples to investigate—not confirmed scope or a promised result.</p>
-        </div>
-        <ul id="resultContentList"></ul>
-      </section>
-
-      <section class="result-commercial">
-        <p class="section-label">The business connection</p>
-        <p id="resultCommercial"></p>
-      </section>
-
-      <section class="result-next">
-        <div><p class="section-label">Your next step</p><h2 id="resultInvitation">Want to explore the answer with Kryssen?</h2><p>The quiz identifies a possible education opportunity. It does not score the business, audit visibility or decide which service you need.</p></div>
-        <div class="result-actions">
-          <a class="button" id="bookConversation" href="apply.html?utm_source=quiz&amp;utm_medium=result">Book My Strategy Conversation</a>
-          <a class="button secondary" id="quizWhatsApp" href="https://wa.me/2348158357418" target="_blank" rel="noopener">Chat with us on WhatsApp</a>
-          <button class="quiet-button" id="retakeQuiz" type="button">↺ Retake the quiz</button>
-        </div>
-      </section>
-    </div>
-  </section>
+<header class="site-header header-minimal" id="top"><div class="shell header-inner"><a aria-label="Kryssen Growth Studio home" class="brand" href="index.html"><img alt="Kryssen Growth Studio" height="52" src="kryssen-logo.svg" width="250"/></a><a class="quiz-exit" href="index.html">Exit quiz</a></div></header>
+<main id="main">
+<section aria-labelledby="introTitle" class="quiz-intro shell" id="quizIntro">
+<div class="intro-copy">
+<p class="eyebrow">The Growth Playbook quiz</p>
+<h1 id="introTitle">Where could better marketing create the most useful movement?</h1>
+<p class="intro-lede">Explore four possible starting points: Content that sells, AEO and GEO, Product marketing and Education-Led Growth™ strategy.</p>
+<button class="button button-lime quiz-start" id="startQuiz" type="button">Start the quiz <span aria-hidden="true">→</span></button>
+<div aria-label="Quiz expectations" class="intro-boundaries"><span>No score or grade</span><span>No automated audit</span><span>No email required</span></div>
+</div>
+</section>
+<section aria-live="polite" class="quiz-stage shell" hidden="" id="quizStage">
+<div class="progress-head"><button class="quiet-button" id="backButton" type="button">← Back</button><p><span id="stepCount">1</span> of <span id="stepTotal">5</span></p></div>
+<div aria-label="Quiz progress" class="progress-track" id="progressTrack"></div>
+<div class="question-layout">
+<aside class="question-context"><span aria-hidden="true" class="question-emoji" id="questionEmoji">01</span><p id="questionLabel">Start here</p><small id="questionContext">Choose what is closest to the situation today.</small></aside>
+<div class="question-main"><h2 id="questionText" tabindex="-1"></h2><div class="answer-list" id="answerList"></div><div class="answer-insight" hidden="" id="answerInsight"><span aria-hidden="true">✦</span><p id="insightText"></p></div><div class="question-actions"><button class="button button-dark" disabled="" id="continueButton" type="button">Next question <span aria-hidden="true">→</span></button></div></div>
+</div>
+</section>
+<section aria-labelledby="resultTitle" class="quiz-result" hidden="" id="quizResult" tabindex="-1">
+<div class="shell result-hero"><div><p class="result-kicker">A possible starting point—not a grade</p><span aria-hidden="true" class="result-emoji" id="resultEmoji">01</span><h2 id="resultTitle"></h2><p id="resultSummary"></p></div><aside class="result-pattern"><span>Why this appeared</span><p id="resultWhy"></p></aside></div>
+<div class="shell result-body">
+<section class="result-content"><div><p class="section-label">What our services could address</p><h2>Turn the signal into useful work.</h2><p>These are directions to investigate—not a score, automatic audit, fixed scope or promised result.</p></div><ul id="resultContentList"></ul></section>
+<section class="result-next"><div><p class="section-label">Your next step</p><h2 id="resultInvitation">Let's have a strategy conversation before the gap gets wider.</h2><p>Your competitors will not wait while important buyer questions stay unanswered. A gap in content, discovery, product understanding or growth coordination can leave additional growth on the table. Talk to Kryssen about the priority worth addressing first.</p></div><div class="result-actions"><a class="button button-lime" href="apply.html?utm_source=quiz&amp;utm_medium=result" id="bookConversation">Talk to us</a><a class="button button-whatsapp" href="https://wa.me/2348158357418" id="quizWhatsApp" rel="noopener" target="_blank">WhatsApp us</a><button class="quiet-button" id="retakeQuiz" type="button">↺ Retake the quiz</button></div></section>
+</div>
+</section>
 </main>
-
-<footer class="quiz-footer"><p>© 2026 Kryssen Growth Studio · Education-Led Growth™</p><div><a href="index.html">Home</a><a href="privacy.html">Privacy</a></div></footer>
-<script src="quiz-v2.js"></script>
-<script src="analytics.js"></script>
-</body>
-</html>
+<footer class="site-footer v3-global-footer"><div class="shell footer-grid"><div class="footer-brand"><img alt="Kryssen Growth Studio" height="52" src="kryssen-logo.svg" width="250"/><p>Growth strategy, product marketing and content for B2B founders and growth-stage companies. Based in Lagos, Nigeria; delivered remotely and entirely online.</p><a class="button button-lime" href="apply.html?utm_source=site-footer&amp;utm_medium=footer&amp;utm_content=talk-to-us">Talk to us</a></div><div><h3>Growth Playbook</h3><a href="content-that-sells.html">Content that sells</a><a href="aeo-geo-discovery.html">AEO and GEO</a><a href="product-marketing-ai.html">Product Marketing</a><a href="growth-strategy-education-led.html">Growth Strategy</a></div><div><h3>Who we help</h3><a href="founders.html">Founders</a><a href="business.html">Growth-stage companies</a><a href="industries.html">Industries</a></div><div><h3>Company</h3><a href="about.html">About Us</a><a href="manifesto.html">Education-led Marketing</a><a href="privacy.html">Privacy policy</a></div></div><div class="shell footer-bottom"><p>© 2026 Kryssen Growth Studio</p><a href="mailto:info@kryssengrowth.com">info@kryssengrowth.com</a><a href="https://wa.me/2348158357418" rel="noopener" target="_blank">WhatsApp</a></div></footer>
+<script src="quiz-v3.js"></script><script src="analytics.js"></script>
+</body></html>

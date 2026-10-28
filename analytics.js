@@ -48,6 +48,27 @@
   window.kryssenTrack=track;
   window.KryssenAnalytics={track:track,getConsent:function(){return Object.assign({},consent);}};
 
+  function referralContext(){
+    var params=new URLSearchParams(window.location.search);
+    var source=params.get('utm_source')||'';
+    var referrerHost='';
+    try{referrerHost=document.referrer?new URL(document.referrer).hostname:'';}catch(e){}
+    if(!source&&/chatgpt\.com$/i.test(referrerHost))source='chatgpt.com';
+    return cleanPayload({campaign_source:source,referrer_host:referrerHost});
+  }
+
+  function installEnquiryTracking(){
+    document.addEventListener('click',function(event){
+      var link=event.target.closest&&event.target.closest('a[href]');
+      if(!link)return;
+      var href=link.getAttribute('href')||'';
+      var placement=(link.closest('header')&&'header')||(link.closest('footer')&&'footer')||(link.closest('main')&&'main')||'other';
+      if(/^https:\/\/wa\.me\//i.test(href))track('whatsapp_click',{placement:placement,link_text:(link.textContent||'').trim().slice(0,80)});
+      else if(/^mailto:/i.test(href))track('email_click',{placement:placement});
+      else if(/(?:^|\/)apply\.html(?:[?#]|$)/i.test(href))track('application_start',{placement:placement,link_text:(link.textContent||'').trim().slice(0,80)});
+    });
+  }
+
   function applyConsent(choice){
     consent={analytics:Boolean(choice.analytics),marketing:Boolean(choice.marketing),decided:true};
     gtag('consent','update',{
@@ -63,7 +84,7 @@
     });
     /* Do not request GTM until the visitor accepts an optional category. */
     if(consent.analytics||consent.marketing)loadGTM();
-    if(consent.analytics)track('page_view',{consent_state:'granted'});
+    if(consent.analytics)track('page_view',Object.assign({consent_state:'granted'},referralContext()));
   }
 
   function installConsentStyles(){
@@ -134,6 +155,6 @@
     }
   }
 
-  if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',initConsent);
-  else initConsent();
+  if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',function(){installEnquiryTracking();initConsent();});
+  else{installEnquiryTracking();initConsent();}
 })();

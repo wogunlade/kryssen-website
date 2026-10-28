@@ -1,0 +1,22 @@
+:root{
+  --v3-pine-950:#0c261f;
+  --v3-pine-800:#173e34;
+  --v3-pine-700:#205246;
+  --v3-paper:#f7f2e8;
+  --v3-sand:#eee6d8;
+  --v3-white:#fff;
+  --v3-orange:#c84e1b;
+  --v3-lime:#d7f36b;
+  --v3-slate:#65736d;
+  --v3-ink:#17211d;
+  --v3-rule:#d9d2c6;
+  --v3-danger:#9f2f1b;
+  --v3-shadow:0 24px 70px rgba(12,38,31,.12);
+  --v3-shadow-soft:0 14px 40px rgba(12,38,31,.08);
+  --v3-radius-sm:10px;
+  --v3-radius:18px;
+  --v3-radius-lg:28px;
+  --v3-max:1320px;
+  --v3-reading:740px;
+  --v3-ease:cubic-bezier(.2,.75,.2,1);
+}

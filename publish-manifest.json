@@ -1,0 +1,415 @@
+{
+  "name": "Kryssen Growth Studio V3 publication package",
+  "entry": "index.html",
+  "source_entry": "v3-homepage-candidate.html",
+  "production_ready_not_deployed": true,
+  "indexable_html": 20,
+  "utility_noindex_follow": [
+    "apply.html",
+    "privacy.html",
+    "quiz.html"
+  ],
+  "crawler_policy": {
+    "general": "allow",
+    "OAI-SearchBot": "allow",
+    "GPTBot": "disallow"
+  },
+  "file_count": 79,
+  "files": [
+    {
+      "path": "about-v3.css",
+      "bytes": 7401,
+      "sha256": "356ef317a39f1db7df69054069ee771246870088a7f139fcd491a94255f63ce2"
+    },
+    {
+      "path": "about.html",
+      "bytes": 12852,
+      "sha256": "691e8ab6ad7b3951ed2656d62a8f2b7c1e6e80cb7b6b3f1a98e43429ef35d0d3"
+    },
+    {
+      "path": "aeo-geo-discovery.html",
+      "bytes": 15530,
+      "sha256": "7e5838c3b60278039ad4ca1bcc0fe4253f0002171a72791e8165e6a45a380df7"
+    },
+    {
+      "path": "analytics.js",
+      "bytes": 8274,
+      "sha256": "afd9070fab745a2c144fae6312969c9c49ea7832fee3877ba78897b10c269d19"
+    },
+    {
+      "path": "apple-touch-icon.png",
+      "bytes": 782,
+      "sha256": "bcfa876bc8b48180e7eb51cce53f0fbcd423b8d5cad9f1ef90607e6e81811e49"
+    },
+    {
+      "path": "apply-v2-config.js",
+      "bytes": 311,
+      "sha256": "9b9b8ca24241ad7a2ced704014c608a6652f33c61d8807ec719d75ea9fd6ecea"
+    },
+    {
+      "path": "apply-v2.js",
+      "bytes": 14558,
+      "sha256": "f14b45a79daebef14a748f689ed0a3c69463aaab6841210c92203d6c1b4fdb73"
+    },
+    {
+      "path": "apply-v3.css",
+      "bytes": 8587,
+      "sha256": "9c172cb82b4ac18b5309cfa8ac31e56102b227bec81430a02329bc855368c2db"
+    },
+    {
+      "path": "apply.html",
+      "bytes": 17563,
+      "sha256": "4a4bdc2ca3def9296ebefd20b72cc2d7ac0f01a3338e8033f04f6232f1617ff0"
+    },
+    {
+      "path": "assets/adetayo-bamiduro.webp",
+      "bytes": 42138,
+      "sha256": "0adc56c28d4c936954b3910afbdb15f944cb8759bf0ab4fccb07bef9ed064678"
+    },
+    {
+      "path": "assets/adewale-yusuf-businessfront.png",
+      "bytes": 97691,
+      "sha256": "72ee16db8f4a6f6af9b32bb4fa1cd1765324cc4e5c38bbbf11861f030e349455"
+    },
+    {
+      "path": "assets/coopify-logo-provided.png",
+      "bytes": 6126,
+      "sha256": "455099a0c765feb1ca9b31572adc905ce208ef30635a64d49116999a0dc220a9"
+    },
+    {
+      "path": "assets/fonts/inter-var.woff2",
+      "bytes": 48256,
+      "sha256": "3100e775e8616cd2611beecfa23a4263d7037586789b43f035236a2e6fbd4c62"
+    },
+    {
+      "path": "assets/ibrahim-mohammed-jega.webp",
+      "bytes": 49266,
+      "sha256": "d3742f56a987ae252fc4932909ac321755a467875d26dd7e341114cb20467c16"
+    },
+    {
+      "path": "assets/oluwole-belt-crop.jpg",
+      "bytes": 118966,
+      "sha256": "e36fe684eba58f07e613693de461d37cff3182b5684e12ab9d242174fefe7aea"
+    },
+    {
+      "path": "assets/operator-logos/businessday.png",
+      "bytes": 246188,
+      "sha256": "9448dc2fe854b35aca91228b5c831a3dfdb9392ff9265c9df0ae6e95460199c0"
+    },
+    {
+      "path": "assets/operator-logos/coopify-transparent.png",
+      "bytes": 13608,
+      "sha256": "37c2ed3db2c42d51afd57f99524ff57b56e4c1e998843ea44f522d29a3f089e7"
+    },
+    {
+      "path": "assets/operator-logos/google.png",
+      "bytes": 13504,
+      "sha256": "262084257c2103702ef8a25705e3f8dbc1fa3823103ad7b954d54bdb77e6d89d"
+    },
+    {
+      "path": "assets/operator-logos/guardian-cropped.png",
+      "bytes": 19467,
+      "sha256": "3a3ef41ba6ca66636addc98e240da4bb00640068868234b64dba73cdd7d101ba"
+    },
+    {
+      "path": "assets/operator-logos/guardian-transparent.png",
+      "bytes": 19404,
+      "sha256": "598e8077170e4cd28ee4912d73e10fae7cd3cbdbee0b1435eb9d111859ccef6c"
+    },
+    {
+      "path": "assets/operator-logos/max.svg",
+      "bytes": 3952,
+      "sha256": "f9a9f330e032f24c30b5fa41eb9960285745c002dda6fbc958cfdc9d09bf04cc"
+    },
+    {
+      "path": "assets/operator-logos/rensource-energy.png",
+      "bytes": 16182,
+      "sha256": "83ff1bca2161776be10fe04e8b4322b634bdb164d15c53483ed9e4dd07e61d8f"
+    },
+    {
+      "path": "assets/operator-logos/sabi.svg",
+      "bytes": 2993,
+      "sha256": "262cae3d7ce58948751ca106f9771f3361ce86169744ab782cb089f77022f879"
+    },
+    {
+      "path": "assets/operator-logos/techcabal.png",
+      "bytes": 10884,
+      "sha256": "f186aef4229a6bddfe6663e8a771cd179cb61a5d31469e8e84f4c36deeb8d90c"
+    },
+    {
+      "path": "assets/operator-logos/techeconomy-cropped.png",
+      "bytes": 23254,
+      "sha256": "b2dad257bc4e92760ac48919ea5c2f2977c64f644dc41cc341defb5e5e43a902"
+    },
+    {
+      "path": "assets/operator-logos/techeconomy-transparent.png",
+      "bytes": 23313,
+      "sha256": "6db3165a574ee58e14718568b13bb5222c4b37d8011c8b5326f81cb978533505"
+    },
+    {
+      "path": "assets/operator-logos/technext.png",
+      "bytes": 12572,
+      "sha256": "dd9b2d0d5ae5da6cb72baf592c3f90c7401449813689ad062b439e8b4f67b5af"
+    },
+    {
+      "path": "assets/operator-logos/techpoint.png",
+      "bytes": 13025,
+      "sha256": "414737aa69deab1470b8ab540a499aa96a4808750e69f7db65a1aaca65b7cf1e"
+    },
+    {
+      "path": "assets/operator-logos/tef.png",
+      "bytes": 99591,
+      "sha256": "e4b0e7a677908d9484a70037b52f435957ea077f53c0810a351be8e54501e72c"
+    },
+    {
+      "path": "assets/operator-logos/tekedia-provided.png",
+      "bytes": 5071,
+      "sha256": "fae80209bbacd19c286b6af77fedd7acc489875e32659a77872664cf01b5b4c1"
+    },
+    {
+      "path": "assets/operator-logos/tekedia-transparent.png",
+      "bytes": 13691,
+      "sha256": "f96075e6c0a04c341df573bfb99b2f025d44aec7a5fe0e961f185796907ee9f7"
+    },
+    {
+      "path": "assets/operator-logos/voguepay-transparent.png",
+      "bytes": 4824,
+      "sha256": "aaf7aa5dfc5528be63c7f6848cf33ec4cd308c280d08451e88ef48a391e1044d"
+    },
+    {
+      "path": "assets/operator-logos/wesley-transparent.png",
+      "bytes": 36959,
+      "sha256": "35f199d2b691a29498058f0c6a9864669a7ebb4919f6ebfb1e5aa49b1eb7ad56"
+    },
+    {
+      "path": "assets/sir-demola-aladekomo.webp",
+      "bytes": 24736,
+      "sha256": "ab0ca4248486e8a32866d94d6e03a16b302e080fcc6ba090cff3da66e047831d"
+    },
+    {
+      "path": "assets/voguepay-logo-provided.png",
+      "bytes": 1891,
+      "sha256": "a1f805b6b6a1bb0d30b47f3bf3549398a5dac78bfea5514d3c72cf1f1ac263ed"
+    },
+    {
+      "path": "assets/wole-growth-partner.webp",
+      "bytes": 35840,
+      "sha256": "49454955b5029ef13df04b474b00f95ffe5f304861d75053c958ed292da40b1d"
+    },
+    {
+      "path": "business-v3.css",
+      "bytes": 6105,
+      "sha256": "ef88556fef771fce49cd2f4b177b93b8d7d6e5f4983d5d44d9c8ca03c1aec07c"
+    },
+    {
+      "path": "business.html",
+      "bytes": 16211,
+      "sha256": "fe97ca3c9e9e9755e576fb3194d5e41411a1b2d78d11cf09e1f1ee5c0be62c46"
+    },
+    {
+      "path": "content-that-sells.html",
+      "bytes": 15167,
+      "sha256": "949910cb5f64d0827f094c94c6389da3a0a5aef6c864ca155fce9c9a255ee016"
+    },
+    {
+      "path": "favicon-32.png",
+      "bytes": 245,
+      "sha256": "e52f4168b6c47170d50c7d01d6f20e68f3a7d0db52af3d378944e874c0c7f686"
+    },
+    {
+      "path": "favicon.svg",
+      "bytes": 434,
+      "sha256": "f78aa543fc8dd977a2d4b8ddaf18a803442bd5d5801470d988d8b248a37b1d3b"
+    },
+    {
+      "path": "fonts.css",
+      "bytes": 253,
+      "sha256": "235c0e3a576239306232bac6821881ee9a3e61991fc998412268cbe1daffba30"
+    },
+    {
+      "path": "founders-v3.css",
+      "bytes": 6010,
+      "sha256": "8a212af2188379b1a55a64eefe6bbe981a8e8c9a784eaa994335e43387d4cef1"
+    },
+    {
+      "path": "founders.html",
+      "bytes": 15846,
+      "sha256": "386c0578a2c9e80131dd28ffaadb76ac02f0c22a906bc82dd74c1cc578256204"
+    },
+    {
+      "path": "growth-strategy-education-led.html",
+      "bytes": 15787,
+      "sha256": "feeeed7e5c8e2a3702ed223f67c1308014349a47ce7bc78f5d2103ddbff7a8e1"
+    },
+    {
+      "path": "index.html",
+      "bytes": 24194,
+      "sha256": "4d3e16491495e8f12eaf3ac3150c42f73f4a8d1bd414cf6c8503d5495c970d23"
+    },
+    {
+      "path": "industries-v3.css",
+      "bytes": 5299,
+      "sha256": "88301dc1cde01cf4a68026b971192f53e2e937791958f93231b362544dd20743"
+    },
+    {
+      "path": "industries.html",
+      "bytes": 14837,
+      "sha256": "06f7f49e01e4f31eed971b65fe7e496a0771610cc516d2bbfbb7d6ebea05eda7"
+    },
+    {
+      "path": "industry-banking-insurance.html",
+      "bytes": 16263,
+      "sha256": "ef814dfefc381cfc07c90e492123cb42de1f3d62bfe389b6492f71a9781313d2"
+    },
+    {
+      "path": "industry-education.html",
+      "bytes": 16005,
+      "sha256": "95193fa30f9d6d80f325790bf93cc4a3715c0bfc29ff067420cdafb9a7d3d83b"
+    },
+    {
+      "path": "industry-energy-solar.html",
+      "bytes": 16163,
+      "sha256": "e9ff217062cd800ddc67b8520a2656524d5de7fc317f6ff1256ea13865c5e3b6"
+    },
+    {
+      "path": "industry-fintech.html",
+      "bytes": 16119,
+      "sha256": "dacfde6a92a6069a6ba9621163f529bc8b1089d19f2d1992f0507934f18ee2b2"
+    },
+    {
+      "path": "industry-healthcare.html",
+      "bytes": 16117,
+      "sha256": "e4d637143a6901883dd97fb6b35163b8d328acb02dcc6f90ad1e260856e36183"
+    },
+    {
+      "path": "industry-professional-services.html",
+      "bytes": 16763,
+      "sha256": "381a5681be21a17915aee4445ac5cd1e60b0325169ab395f0fb7566447a3e345"
+    },
+    {
+      "path": "industry-real-estate.html",
+      "bytes": 16017,
+      "sha256": "58ba0122f4dead49a3a1c662adb4075ff44cc3825010e451c2a1295ead63bde9"
+    },
+    {
+      "path": "industry-saas-b2b-technology.html",
+      "bytes": 16221,
+      "sha256": "67f9b5723630c1aaa0b0cb1a8ae4699aceb982cf61c635987f26d6901f50bc9b"
+    },
+    {
+      "path": "k2d.css",
+      "bytes": 165014,
+      "sha256": "8b8034fd79a9ab960663c4eabf3c4a49753b626aa1ffa0d055f67f95410e1599"
+    },
+    {
+      "path": "k2d.js",
+      "bytes": 30195,
+      "sha256": "5a0a386685a0c5fdcadae086c0958b637fbec794c44d3c1126a5e350189aaad7"
+    },
+    {
+      "path": "kryssen-logo.svg",
+      "bytes": 808,
+      "sha256": "ead2c9d76e878dfb83d7231447a0c359d27e7fd0922d7d6132ae292142a10ed2"
+    },
+    {
+      "path": "kryssen-style-tokens.css",
+      "bytes": 3518,
+      "sha256": "937626a9ddad6a25d8d6f3dabae6840054045de56f5f2346e87cbe2e129ba231"
+    },
+    {
+      "path": "llms.txt",
+      "bytes": 1352,
+      "sha256": "500abf1b9008fff76c0522333a2715b702a04801758a3a14efdebeae222d545b"
+    },
+    {
+      "path": "manifesto.html",
+      "bytes": 10586,
+      "sha256": "03d8fdacdbbeab0f06c79578040b9a38931db6b40301aed431627d644793ece4"
+    },
+    {
+      "path": "privacy-v3.css",
+      "bytes": 7866,
+      "sha256": "fb5c99670fe2f946b9fc2c4143c272febd045fe222e654c08bff6c29df49a2dc"
+    },
+    {
+      "path": "privacy.html",
+      "bytes": 11609,
+      "sha256": "676f27140b9d224c491332a773a44b8570736cf9b80d9b8c2e2d031ad85eed38"
+    },
+    {
+      "path": "product-marketing-ai.html",
+      "bytes": 15184,
+      "sha256": "fa5bbeee8260511a57dccb9e346d351f5b8b97a515e5a049dd7a778a4efbc753"
+    },
+    {
+      "path": "quiz-v3.css",
+      "bytes": 17989,
+      "sha256": "211795b537c2235bcb184de80c2f8ca221c09c95b7d68138bdb191be15290fe0"
+    },
+    {
+      "path": "quiz-v3.js",
+      "bytes": 18501,
+      "sha256": "43f844833b0a40dca39f348bbb5a0c966007d0495b4433211d13352299979a46"
+    },
+    {
+      "path": "quiz.html",
+      "bytes": 7457,
+      "sha256": "00aa4a72dfffdb19e1b0c564e7a43dc32be13263c60d6d9b7614ed7e766884a0"
+    },
+    {
+      "path": "robots.txt",
+      "bytes": 139,
+      "sha256": "0a43d2bff3738c23a539275cd89cedf6838464285debc163a8adb2779a52f2d0"
+    },
+    {
+      "path": "service-platform-rotor.js",
+      "bytes": 749,
+      "sha256": "c0a7013b1d621583a1137c7640130152d981ab0c39605b060b10d9757e9fa194"
+    },
+    {
+      "path": "share.png",
+      "bytes": 53919,
+      "sha256": "1ed7140a282a5ffd279fc4c8f45c017a137e94d0613c00c3070341d83a8e844c"
+    },
+    {
+      "path": "sitemap.xml",
+      "bytes": 2612,
+      "sha256": "91bd7a30c14d459fe530aa4b1e90b1ea06c5fe763eaf7010148ca34b935d032b"
+    },
+    {
+      "path": "v3-design-tokens.css",
+      "bytes": 519,
+      "sha256": "992fef8db3ec83462706640ecd4e3a7e3779c8ad118588ccc434ebd8f280a3ed"
+    },
+    {
+      "path": "v3-global-footer.css",
+      "bytes": 2429,
+      "sha256": "f37d3e2addce3bacd70c2a730aa02dfd1eed05aa418d3f9aadecc8349eca02d6"
+    },
+    {
+      "path": "v3-homepage.css",
+      "bytes": 97201,
+      "sha256": "a5529856c6b25be603bc39787700a386ecccc34d8424a3a28c3170bbc10d128a"
+    },
+    {
+      "path": "v3-homepage.js",
+      "bytes": 6146,
+      "sha256": "bafd9d99f0cace9aa880d3672970937a607494896c917f8b9eee1859cd0773b6"
+    },
+    {
+      "path": "v3-industry.css",
+      "bytes": 14617,
+      "sha256": "57ecb989508f89bf8c3df2e4f07e709f9d5aeca4ab47adf7e2ff34cc033501ba"
+    },
+    {
+      "path": "work-coopify.html",
+      "bytes": 7997,
+      "sha256": "e2771fa77dd0fa93349b0157ed549bb6efca797fe6824d934d94f8d33255a7c1"
+    },
+    {
+      "path": "work-voguepay.html",
+      "bytes": 8832,
+      "sha256": "c8c40a245b80fd0c361e19738277f24a831995eeac43b63abc81dc429399e19a"
+    }
+  ]
+}

@@ -4,8 +4,14 @@ var config=window.KRYSSEN_APPLY_V2_CONFIG||{};
 var form=document.getElementById('strategyForm');
 var params=new URLSearchParams(location.search);
 var turnstileToken='';
-var draftKey='kryssen-strategy-conversation-v2-1';
-var serviceLabels={'content-sprint':'Content Sprint','monthly-retainer':'Monthly Retainer','project-based':'Project-Based','not-sure':'I’m not sure yet'};
+var draftKey='kryssen-strategy-conversation-v3';
+var serviceLabels={'content-sprint':'Sprint','monthly-retainer':'Retainership','project-based':'Project','not-sure':'Let’s decide together'};
+var scopeMap={
+  'content-that-sells':'content-that-sells','content':'content-that-sells',
+  'aeo-geo':'aeo-geo','aeo-geo-discovery':'aeo-geo',
+  'product-marketing':'product-marketing','product-marketing-ai':'product-marketing',
+  'growth-strategy':'growth-strategy','growth-strategy-education-led':'growth-strategy'
+};
 var legacyServiceMap={
   'sprint':'content-sprint',
   'content-sprint':'content-sprint',
@@ -20,29 +26,29 @@ var legacyServiceMap={
 };
 var needCopy={
   'content-sprint':{
-    q:'What buyer or customer decision should the 45-day Sprint clarify?',
-    h:'Tell us what people need to understand and any related content assets you think may be useful.',
-    p:'Describe the decision, the people involved and what currently makes it difficult.'
+    q:'If we begin with a Sprint, what should be clearer, easier or working better by the end?',
+    h:'Describe the focused change, the people affected and why it matters now.',
+    p:'Imagine the Sprint is complete. What can buyers, customers or your team now understand or do more easily?'
   },
   'monthly-retainer':{
-    q:'What ongoing content work should Kryssen help your company own each month?',
-    h:'Include the customer journey, content priorities or distribution routes that matter.',
-    p:'Describe the recurring content need and where the work should be used.'
+    q:'If we work together on a retainership, what should we help the business improve consistently?',
+    h:'Include the recurring priorities, teams and distribution routes we would need to coordinate.',
+    p:'Imagine we are reviewing a successful quarter together. What has become more consistent or effective?'
   },
   'project-based':{
-    q:'What specific content project do you need?',
-    h:'Describe the expected deliverable and what it should help the business accomplish.',
-    p:'Describe the project, intended audience and business purpose.'
+    q:'If we agree a defined Project, what should the finished work make possible?',
+    h:'Describe the business purpose, intended audience and change the project should support.',
+    p:'Imagine the Project has been delivered. What is now ready, clearer or easier to act on?'
   },
   'not-sure':{
-    q:'What are you trying to help buyers or customers understand or do?',
-    h:'Describe the business need in your own words. You do not need to diagnose the content solution.',
-    p:'Tell us what needs to change and why it matters now.'
+    q:'If we agree to work together, what should be different by the end?',
+    h:'Describe the business change in your own words. We can shape the service mix together.',
+    p:'Imagine the work is complete. What is now clearer, easier or working better?'
   }
 };
 function qs(sel,root){return (root||document).querySelector(sel)}
 function qsa(sel,root){return Array.prototype.slice.call((root||document).querySelectorAll(sel))}
-function track(name,data){if(typeof window.kryssenTrack==='function')return window.kryssenTrack(name,Object.assign({page:'apply-v2'},data||{}));return false}
+function track(name,data){if(typeof window.kryssenTrack==='function')return window.kryssenTrack(name,Object.assign({page:'apply-v3'},data||{}));return false}
 function selected(name){var el=qs('[name="'+name+'"]:checked',form);return el?el.value:''}
 function setHidden(id,value){var el=document.getElementById(id);if(el)el.value=value||''}
 function syncSubmitState(){
@@ -85,6 +91,9 @@ function prefillContext(){
     var input=qs('[name="service_interest"][value="'+normalized+'"]',form);if(input&&!selected('service_interest'))input.checked=true;
     var note=document.getElementById('routeNotice');note.hidden=false;note.textContent='You arrived from the '+serviceLabels[normalized]+' option. It is shown below, but you can choose another way to work.';
   }
+  var rawScope=params.get('opportunity')||params.get('service_route')||params.get('utm_content')||'';
+  var normalizedScope=scopeMap[String(rawScope).toLowerCase()]||'';
+  if(normalizedScope){var scopeInput=qs('[name="service_scope"][value="'+normalizedScope+'"]',form);if(scopeInput)scopeInput.checked=true}
   syncNeedCopy();
 }
 function setupSubmissionFields(){
@@ -97,9 +106,13 @@ function clearInvalid(){qsa('.is-invalid',form).forEach(function(el){el.classLis
 function validateForm(){
   clearInvalid();var ok=true;
   qsa('input,select,textarea',form).forEach(function(el){if(el.disabled||el.type==='hidden'||el.classList.contains('hp'))return;if(!el.checkValidity()){el.classList.add('is-invalid');el.setAttribute('aria-invalid','true');ok=false}});
-  var readiness=qsa('[name="work_readiness"]:checked',form).length;
-  if(!readiness){qs('[data-error="work_readiness"]',form).textContent='Choose at least one.';ok=false}
-  if(!ok){var first=qs('.is-invalid',form)||qs('.field-error:not(:empty)',form);if(first)first.scrollIntoView({behavior:'smooth',block:'center'})}
+  qsa('fieldset[data-min]',form).forEach(function(group){
+    var firstInput=qs('input[type="checkbox"],input[type="radio"]',group);if(!firstInput)return;
+    var name=firstInput.name,min=Number(group.getAttribute('data-min')||1),count=qsa('[name="'+name+'"]:checked',group).length;
+    var message=qs('[data-error="'+name+'"]',group);
+    if(count<min){if(message)message.textContent='Choose at least '+min+'.';ok=false}else if(message)message.textContent='';
+  });
+  if(!ok){var first=qs('.is-invalid',form)||qsa('.field-error',form).filter(function(x){return x.textContent.trim()})[0];if(first)first.scrollIntoView({behavior:'smooth',block:'center'})}
   return ok
 }
 function saveDraft(){
@@ -158,8 +171,12 @@ form.addEventListener('change',function(e){
   if(e.target.name==='work_readiness'&&e.target.checked){
     if(e.target.value==='organising')qsa('[name="work_readiness"]',form).forEach(function(x){if(x!==e.target)x.checked=false});
     else{var organising=qs('[name="work_readiness"][value="organising"]',form);if(organising)organising.checked=false}
-    var readinessError=qs('[data-error="work_readiness"]',form);if(readinessError)readinessError.textContent='';
   }
+  if(e.target.name==='service_scope'&&e.target.checked){
+    if(e.target.value==='not-sure')qsa('[name="service_scope"]',form).forEach(function(x){if(x!==e.target)x.checked=false});
+    else{var unsure=qs('[name="service_scope"][value="not-sure"]',form);if(unsure)unsure.checked=false}
+  }
+  if(e.target.name){var groupError=qs('[data-error="'+e.target.name+'"]',form);if(groupError)groupError.textContent=''}
   if(e.target.classList.contains('is-invalid')){e.target.classList.remove('is-invalid');e.target.removeAttribute('aria-invalid')}
 });
 form.addEventListener('input',function(e){if(e.target.name==='engagement_need'){var c=qs('[data-count="engagement_need"]');if(c)c.textContent=e.target.value.length}if(e.target.classList.contains('is-invalid')){e.target.classList.remove('is-invalid');e.target.removeAttribute('aria-invalid')}});
