@@ -1,5 +1,10 @@
 User-agent: *
 Allow: /
-Disallow: /privacy.html
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: GPTBot
+Disallow: /
 
 Sitemap: https://kryssengrowth.com/sitemap.xml
