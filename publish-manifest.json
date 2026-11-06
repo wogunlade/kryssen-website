@@ -7,15 +7,21 @@
   "utility_noindex_follow": [
     "apply.html",
     "privacy.html",
-    "quiz.html"
+    "quiz.html",
+    "404.html"
   ],
   "crawler_policy": {
     "general": "allow",
     "OAI-SearchBot": "allow",
     "GPTBot": "disallow"
   },
-  "file_count": 79,
+  "file_count": 80,
   "files": [
+    {
+      "path": "404.html",
+      "bytes": 5316,
+      "sha256": "4ef0e36cfa407a1be0c9affe5d6f266b8d5ed3fe6b6f12ba24b86f4f2d2060fd"
+    },
     {
       "path": "about-v3.css",
       "bytes": 7401,
@@ -23,13 +29,13 @@
     },
     {
       "path": "about.html",
-      "bytes": 12852,
-      "sha256": "691e8ab6ad7b3951ed2656d62a8f2b7c1e6e80cb7b6b3f1a98e43429ef35d0d3"
+      "bytes": 15904,
+      "sha256": "f513f6d24895362965df32d457b20eb5a3c65b7c46438c14ef5a60ef146fb547"
     },
     {
       "path": "aeo-geo-discovery.html",
-      "bytes": 15530,
-      "sha256": "7e5838c3b60278039ad4ca1bcc0fe4253f0002171a72791e8165e6a45a380df7"
+      "bytes": 15952,
+      "sha256": "dad443995383d1315b5fb30dc6f972dd5c251d8d3d33cde79a6a3be3044acc31"
     },
     {
       "path": "analytics.js",
@@ -58,8 +64,8 @@
     },
     {
       "path": "apply.html",
-      "bytes": 17563,
-      "sha256": "4a4bdc2ca3def9296ebefd20b72cc2d7ac0f01a3338e8033f04f6232f1617ff0"
+      "bytes": 17952,
+      "sha256": "d234f1fa97d1b6b705ec0f26205fc6f76dc10ab4f82162da9e90f33f8350aa4f"
     },
     {
       "path": "assets/adetayo-bamiduro.webp",
@@ -203,13 +209,13 @@
     },
     {
       "path": "business.html",
-      "bytes": 16211,
-      "sha256": "fe97ca3c9e9e9755e576fb3194d5e41411a1b2d78d11cf09e1f1ee5c0be62c46"
+      "bytes": 16571,
+      "sha256": "26eb2643f913983656faf7dbacd37d67bd54d4a8b93b0585580e8bc397f092d9"
     },
     {
       "path": "content-that-sells.html",
-      "bytes": 15167,
-      "sha256": "949910cb5f64d0827f094c94c6389da3a0a5aef6c864ca155fce9c9a255ee016"
+      "bytes": 15582,
+      "sha256": "e0daa552e514d2078b4c568b92990fcf3c0a03b7d6634dd4a125b3cdaac0f996"
     },
     {
       "path": "favicon-32.png",
@@ -233,18 +239,18 @@
     },
     {
       "path": "founders.html",
-      "bytes": 15846,
-      "sha256": "386c0578a2c9e80131dd28ffaadb76ac02f0c22a906bc82dd74c1cc578256204"
+      "bytes": 16251,
+      "sha256": "4c6ab75440987588fbc43e77c24adcf9f70e56ef820f41cfd3cb024f53e9aa92"
     },
     {
       "path": "growth-strategy-education-led.html",
-      "bytes": 15787,
-      "sha256": "feeeed7e5c8e2a3702ed223f67c1308014349a47ce7bc78f5d2103ddbff7a8e1"
+      "bytes": 16197,
+      "sha256": "021576504606b3fe1d0f3f99d8c5f4eb1ce2a57513a81f1f8afcaec8765e5759"
     },
     {
       "path": "index.html",
-      "bytes": 24194,
-      "sha256": "4d3e16491495e8f12eaf3ac3150c42f73f4a8d1bd414cf6c8503d5495c970d23"
+      "bytes": 25678,
+      "sha256": "06728872be6531c2befea3608a944055741ec708bd6afab49f44318b1db36233"
     },
     {
       "path": "industries-v3.css",
@@ -253,48 +259,48 @@
     },
     {
       "path": "industries.html",
-      "bytes": 14837,
-      "sha256": "06f7f49e01e4f31eed971b65fe7e496a0771610cc516d2bbfbb7d6ebea05eda7"
+      "bytes": 15226,
+      "sha256": "ae568579cf38313bfee9ba5485112b9de1351e58120bb874f63c12b59531aadd"
     },
     {
       "path": "industry-banking-insurance.html",
-      "bytes": 16263,
-      "sha256": "ef814dfefc381cfc07c90e492123cb42de1f3d62bfe389b6492f71a9781313d2"
+      "bytes": 16598,
+      "sha256": "92243ed44c25c23f05673705cb3312334f9f0a94ce17d1ee44923af6b82fc840"
     },
     {
       "path": "industry-education.html",
-      "bytes": 16005,
-      "sha256": "95193fa30f9d6d80f325790bf93cc4a3715c0bfc29ff067420cdafb9a7d3d83b"
+      "bytes": 16332,
+      "sha256": "6a42e1f85edef3acfcbd552417f25364ec159335708afa0d8c68eb5a197beb5d"
     },
     {
       "path": "industry-energy-solar.html",
-      "bytes": 16163,
-      "sha256": "e9ff217062cd800ddc67b8520a2656524d5de7fc317f6ff1256ea13865c5e3b6"
+      "bytes": 16544,
+      "sha256": "905f8763e894b31fd7eca0365f21dc5db0ab9866ce813d2121f497c972160cb8"
     },
     {
       "path": "industry-fintech.html",
-      "bytes": 16119,
-      "sha256": "dacfde6a92a6069a6ba9621163f529bc8b1089d19f2d1992f0507934f18ee2b2"
+      "bytes": 16452,
+      "sha256": "1b43adac55d47e2597d71e70a55a9c427264180de42f2c2a9ff85cfc5e9efdbe"
     },
     {
       "path": "industry-healthcare.html",
-      "bytes": 16117,
-      "sha256": "e4d637143a6901883dd97fb6b35163b8d328acb02dcc6f90ad1e260856e36183"
+      "bytes": 16446,
+      "sha256": "5726d34efaec1d122580d799f4448401666a8cfb8e28c2a2c31200838d05cd68"
     },
     {
       "path": "industry-professional-services.html",
-      "bytes": 16763,
-      "sha256": "381a5681be21a17915aee4445ac5cd1e60b0325169ab395f0fb7566447a3e345"
+      "bytes": 17177,
+      "sha256": "0b28d8ff8e0168e50d12c25543895aea075de09a0aaa91199834a8c44fd6825f"
     },
     {
       "path": "industry-real-estate.html",
-      "bytes": 16017,
-      "sha256": "58ba0122f4dead49a3a1c662adb4075ff44cc3825010e451c2a1295ead63bde9"
+      "bytes": 16388,
+      "sha256": "3fbc832b49a30a8c16c40ffbb93bcffb54afd8016b0bf8a34cc2247b5119a8cb"
     },
     {
       "path": "industry-saas-b2b-technology.html",
-      "bytes": 16221,
-      "sha256": "67f9b5723630c1aaa0b0cb1a8ae4699aceb982cf61c635987f26d6901f50bc9b"
+      "bytes": 16560,
+      "sha256": "c0bcd18e3d7d8bcc277c256a4f4d60fef0f3a07c9943c45f23ced8afb55b77c5"
     },
     {
       "path": "k2d.css",
@@ -318,13 +324,13 @@
     },
     {
       "path": "llms.txt",
-      "bytes": 1352,
-      "sha256": "500abf1b9008fff76c0522333a2715b702a04801758a3a14efdebeae222d545b"
+      "bytes": 1325,
+      "sha256": "475bdba5856cd417c57bb2e6f29aaad120fe9364074a265d3d4be92e311df3ee"
     },
     {
       "path": "manifesto.html",
-      "bytes": 10586,
-      "sha256": "03d8fdacdbbeab0f06c79578040b9a38931db6b40301aed431627d644793ece4"
+      "bytes": 10994,
+      "sha256": "2888927b67c4e8571a3c79fafff5cb07dee8cc6b75ce58e5b164fca11380c70c"
     },
     {
       "path": "privacy-v3.css",
@@ -333,13 +339,13 @@
     },
     {
       "path": "privacy.html",
-      "bytes": 11609,
-      "sha256": "676f27140b9d224c491332a773a44b8570736cf9b80d9b8c2e2d031ad85eed38"
+      "bytes": 11952,
+      "sha256": "ad9aba5ca902da4080f4bc605bc6552cfad18f8a79c47ebc9c361e032755bfc7"
     },
     {
       "path": "product-marketing-ai.html",
-      "bytes": 15184,
-      "sha256": "fa5bbeee8260511a57dccb9e346d351f5b8b97a515e5a049dd7a778a4efbc753"
+      "bytes": 15555,
+      "sha256": "c567741aaa594ef448c28ea4207324fd854e53c9a8ee7590bd5a399e7b13c765"
     },
     {
       "path": "quiz-v3.css",
@@ -353,8 +359,8 @@
     },
     {
       "path": "quiz.html",
-      "bytes": 7457,
-      "sha256": "00aa4a72dfffdb19e1b0c564e7a43dc32be13263c60d6d9b7614ed7e766884a0"
+      "bytes": 7854,
+      "sha256": "27afd66e7ffa8ea9cdeb3238e421de8e796e5d5e4d836d2020c110d0f66625a4"
     },
     {
       "path": "robots.txt",
@@ -374,7 +380,7 @@
     {
       "path": "sitemap.xml",
       "bytes": 2612,
-      "sha256": "91bd7a30c14d459fe530aa4b1e90b1ea06c5fe763eaf7010148ca34b935d032b"
+      "sha256": "ea11c448b8f3a8d8da1d0f70226bdc3635b9316744e7fe722dea442185406c1d"
     },
     {
       "path": "v3-design-tokens.css",
@@ -388,8 +394,8 @@
     },
     {
       "path": "v3-homepage.css",
-      "bytes": 97201,
-      "sha256": "a5529856c6b25be603bc39787700a386ecccc34d8424a3a28c3170bbc10d128a"
+      "bytes": 97030,
+      "sha256": "be782d1906792eff4690e3589451b7df8a1c4a6ab751ad639c5a33452f196620"
     },
     {
       "path": "v3-homepage.js",
@@ -403,13 +409,13 @@
     },
     {
       "path": "work-coopify.html",
-      "bytes": 7997,
-      "sha256": "e2771fa77dd0fa93349b0157ed549bb6efca797fe6824d934d94f8d33255a7c1"
+      "bytes": 8512,
+      "sha256": "18f93ad5008082804009697fad1463baf83afa04d285b39cad26c30946a6ad61"
     },
     {
       "path": "work-voguepay.html",
-      "bytes": 8832,
-      "sha256": "c8c40a245b80fd0c361e19738277f24a831995eeac43b63abc81dc429399e19a"
+      "bytes": 9371,
+      "sha256": "fc582da282a3451c9be4369b0f916026c2366fbe90448672e5f8ec3d13c544d7"
     }
   ]
 }
